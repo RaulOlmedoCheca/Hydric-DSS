@@ -175,117 +175,246 @@ public class RegisterHydricResourceTest {
 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 	 */
 	@Test
- 	public void invalidJSONFormat() {
+ 	public void invalidJSONFormatTest() {
  		try {
- 			manager.RegisterHydricResources("nonexists.json");
- 			fail("An input can not be found but no exception was risen");
+ 			manager.RegisterHydricResources("data/hdss-rf01-invalidJson.json");
+			fail("Equivalence class test HDSS-FN1-EQ4 failed");
  		} catch (HydricDSSException e) {
- 			assertEquals(e.getMessage(), "An input data file is not found");
+ 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
  		}
  	}
-
 
 	 /* Test case: HDSS-FN1-TC-5
  	 * Equivalence class: HDSS-FN1-EQ-5
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void emptyFileTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-empty.json");
+			fail("Equivalence class test HDSS-FN1-EQ5 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-6
  	 * Equivalence class: HDSS-FN1-EQ-7
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "Tried to record an irrigation basin with an existing name"
  	 */
+	@Test
+	public void existingIrrigationBasinTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-existingIrrigationBasinName.json");
+			fail("Equivalence class test HDSS-FN1-EQ7 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "Tried to record an irrigation basin with an existing name");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-7
  	 * Equivalence class: HDSS-FN1-EQ-10
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
-
+	@Test
+	public void longIrrigationBasinNameTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-longIrrigationBasinName.json");
+			fail("Equivalence class test HDSS-FN1-EQ10 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
+	
 	 /* Test case: HDSS-FN1-TC-8
  	 * Equivalence class: HDSS-FN1-EQ-11
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
-
+	@Test
+	public void noIrrigationBasinNameTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-noIrrigationBasinName.json");
+			fail("Equivalence class test HDSS-FN1-EQ11 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
+	
 	 /* Test case: HDSS-FN1-TC-9
  	 * Equivalence class: HDSS-FN1-EQ-12
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void severalIrrigationBasinNamesTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-severalIrrigationBasinNames.json");
+			fail("Equivalence class test HDSS-FN1-EQ12 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-10
  	 * Equivalence class: HDSS-FN1-EQ-14
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void noResourcesListTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-noResourcesList.json");
+			fail("Equivalence class test HDSS-FN1-EQ14 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-11
  	 * Equivalence class: HDSS-FN1-EQ-15
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void severalResourcesListsTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-severalResourcesLists.json");
+			fail("Equivalence class test HDSS-FN1-EQ15 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-12
  	 * Equivalence class: HDSS-FN1-EQ-17
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "Tried to record a resource basin with an existing name"
  	 */
+	@Test
+	public void existingResourceNameTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-existingResourceName.json");
+			fail("Equivalence class test HDSS-FN1-EQ17 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "Tried to record a resource basin with an existing name");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-13
  	 * Equivalence class: HDSS-FN1-EQ-20
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void longResourceNameTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-longResourceName.json");
+			fail("Equivalence class test HDSS-FN1-EQ20 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-14
  	 * Equivalence class: HDSS-FN1-EQ-21
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void noResourceNameTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-noResourceName.json");
+			fail("Equivalence class test HDSS-FN1-EQ21 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-15
  	 * Equivalence class: HDSS-FN1-EQ-22
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void severalResourceNamesTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-severalResourceNames.json");
+			fail("Equivalence class test HDSS-FN1-EQ22 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-16
  	 * Equivalence class: HDSS-FN1-EQ-27
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void notValidResourceTypeTest() {
+		// TODO: Resource_Type = "My mom"
+	}
 
 	 /* Test case: HDSS-FN1-TC-17
  	 * Equivalence class: HDSS-FN1-EQ-28
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void noResourceTypeTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-noResourceTypeNames.json");
+			fail("Equivalence class test HDSS-FN1-EQ28 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-18
  	 * Equivalence class: HDSS-FN1-EQ-29
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void severalResourceTypesTest() {
+		try {
+			manager.RegisterHydricResources("data/hdss-rf01-severalResourceTypesNames.json");
+			fail("Equivalence class test HDSS-FN1-EQ29 failed");
+		}catch (HydricDSSException e) {
+			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+		}
+	}
 
 	 /* Test case: HDSS-FN1-TC-19
  	 * Equivalence class: HDSS-FN1-EQ-31
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void negativeResourceCapacityTest() {
+		// TODO: Negative capacity
+	}
 
 	 /* Test case: HDSS-FN1-TC-20
  	 * Equivalence class: HDSS-FN1-EQ-33
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	@Test
+	public void notValidResourceCapacityTest() {
+		// TODO: Capacity is not a number "2.23"
+	}
 
 	 /* Test case: HDSS-FN1-TC-21
  	 * Equivalence class: HDSS-FN1-EQ-35
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	
 
 	 /* Test case: HDSS-FN1-TC-22
  	 * Equivalence class: HDSS-FN1-EQ-37
