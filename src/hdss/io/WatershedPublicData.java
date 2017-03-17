@@ -3,12 +3,12 @@ package hdss.io;
 import java.util.*;
 
 public class WatershedPublicData {
-	private String name;	
+	private String name;
 	private List<ReservoirPublicData> reservoirList;
 	private List<AquiferPublicData> aquiferList;
 	private List<DesalinationPlantPublicData> desalinationPlantList;
 	private float maxCapacity;
-	
+
 	public WatershedPublicData ()
 	{
 		name = "";
@@ -38,5 +38,12 @@ public class WatershedPublicData {
 		return maxCapacity;
 	}
 
+	public float getCurrentReservoirCapacity() {
+		return 0.0f;
+	}
+
+	public float getCurrentDesalinationPlantCapacity() {
+		return 0.0f;
+	}
 
 }
