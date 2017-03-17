@@ -23,7 +23,44 @@ public class RegisterHydricResourceTest {
 	 * HDSS-FN1-EQ-16, HDSS-FN1-EQ-18, HDSS-FN1-EQ-19, HDSS-FN1-EQ-23, HDSS-FN1-EQ-24, HDSS-FN1-EQ-25, HDSS-FN1-EQ-26,
 	 * HDSS-FN1-EQ-30, HDSS-FN1-EQ-32, HDSS-FN1-EQ-34, HDSS-FN1-EQ-36, HDSS-FN1-EQ-39, HDSS-FN1-EQ-40
 	 * Testing technique: Equivalence Classes Analysis
- 	 * Expected value: validRegisterHydricResourcesCase.json
+ 	 * Expected value:
+	 {
+	  "shortName" :
+	  { "resources": [
+	    {"reservoirs": {
+	        "amount": 1,
+	        "capacity": 2.23,
+	        "list" : [
+	          {
+	            "name" : "shortName",
+	            "capacity" : 2.23
+	          }
+	        ]
+	      }
+	    },
+	    {"plants": {
+	        "amount": 1,
+	        "capacity": 23.46,
+	        "list" : [
+	          {
+	            "name" : "plant1",
+	            "capacity" : 23.46
+	          }
+	        ]
+	      }
+	    },
+	    {"aquifers": {
+	        "amount": 1,
+	        "list" : [
+	          {
+	            "name" : "aquifer1",
+	            "capacity" : 2.23
+	          }
+	        ]
+	      }
+	    }
+	  ]}
+	}
 	*/
 	@Test
 	public void basicValidtest() throws HydricDSSException {
@@ -73,7 +110,7 @@ public class RegisterHydricResourceTest {
 	/* Test case: HDSS-FN1-TC-2
 	 * Equivalence class: HDSS-FN1-EQ-1
 	 * Testing technique: Equivalence Classes Analysis
- 	 * Expected value: Throws Exception. Error message: �An input data file is not found�
+ 	 * Expected value: Throws Exception. Error message: "An input data file is not found"
 	*/
 	@Test
 	public void notFoundFiletest() {
