@@ -169,4 +169,130 @@ public class RegisterHydricResourceTest {
 		assertEquals(reservoir.getMaxCapacity(), 0.00, 0.001);
 	}
 
+	/* Test case: HDSS-FN1-TC-4
+	 * Equivalence class: HDSS-FN1-EQ-4
+	 * Testing technique: Equivalence Classes Analysis
+	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+	 */
+
+	 /* Test case: HDSS-FN1-TC-5
+ 	 * Equivalence class: HDSS-FN1-EQ-5
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-6
+ 	 * Equivalence class: HDSS-FN1-EQ-7
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "Tried to record an irrigation basin with an existing name"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-7
+ 	 * Equivalence class: HDSS-FN1-EQ-10
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-8
+ 	 * Equivalence class: HDSS-FN1-EQ-11
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-9
+ 	 * Equivalence class: HDSS-FN1-EQ-12
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-10
+ 	 * Equivalence class: HDSS-FN1-EQ-14
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-11
+ 	 * Equivalence class: HDSS-FN1-EQ-15
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-12
+ 	 * Equivalence class: HDSS-FN1-EQ-17
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "Tried to record a resource basin with an existing name"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-13
+ 	 * Equivalence class: HDSS-FN1-EQ-20
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-14
+ 	 * Equivalence class: HDSS-FN1-EQ-21
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-15
+ 	 * Equivalence class: HDSS-FN1-EQ-22
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-16
+ 	 * Equivalence class: HDSS-FN1-EQ-27
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-17
+ 	 * Equivalence class: HDSS-FN1-EQ-28
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-18
+ 	 * Equivalence class: HDSS-FN1-EQ-29
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-19
+ 	 * Equivalence class: HDSS-FN1-EQ-31
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-20
+ 	 * Equivalence class: HDSS-FN1-EQ-33
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-21
+ 	 * Equivalence class: HDSS-FN1-EQ-35
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-22
+ 	 * Equivalence class: HDSS-FN1-EQ-37
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-23
+ 	 * Equivalence class: HDSS-FN1-EQ-38
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
+	 /* Test case: HDSS-FN1-TC-24
+ 	 * Equivalence class: HDSS-FN1-EQ-41
+ 	 * Testing technique: Equivalence Classes Analysis
+ 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+ 	 */
+
 }
