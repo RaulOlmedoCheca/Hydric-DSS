@@ -1,0 +1,19 @@
+{
+  "irrigationBasinName" : "Empty Basin",
+  "resources" : [
+    "reservoirs" : [
+      "amount" : 0,
+      "capacity" : 0,
+      "list" : []
+    ],
+    "plants" : [
+      "amount" : 0,
+      "capacity" : 0,
+      "list" : []
+    ],
+    "aquifers" : [
+      "amount" : 0,
+      "list" : []
+    ]
+  ]
+}
