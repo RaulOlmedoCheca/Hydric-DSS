@@ -174,6 +174,16 @@ public class RegisterHydricResourceTest {
 	 * Testing technique: Equivalence Classes Analysis
 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 	 */
+	@Test
+ 	public void invalidJSONFormat() {
+ 		try {
+ 			manager.RegisterHydricResources("nonexists.json");
+ 			fail("An input can not be found but no exception was risen");
+ 		} catch (HydricDSSException e) {
+ 			assertEquals(e.getMessage(), "An input data file is not found");
+ 		}
+ 	}
+
 
 	 /* Test case: HDSS-FN1-TC-5
  	 * Equivalence class: HDSS-FN1-EQ-5
