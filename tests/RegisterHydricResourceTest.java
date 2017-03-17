@@ -28,7 +28,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void basicValidtest() throws HydricDSSException {
 		WatershedsListPublicData result;
-		result = manager.RegisterHydricResources("data/validRegisterHydricResourcesCase.json");
+		result = manager.RegisterHydricResources("data/hdss-rf01-validRegisterHydricResourcesCase.json");
 
 		List<WatershedPublicData> watershedList;
 		watershedList = result.getWatershedList();
@@ -109,7 +109,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void zeroCapacityBasinTest() throws HydricDSSException {
 		WatershedsListPublicData result;
-		result = manager.RegisterHydricResources("capacity-zero.json");
+		result = manager.RegisterHydricResources("data/hdss-rf01-capacity-zero.json");
 
 		List<WatershedPublicData> watershedList;
 		watershedList = result.getWatershedList();
