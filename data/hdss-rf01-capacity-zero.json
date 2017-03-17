@@ -1,6 +1,6 @@
 {
   "irrigation_basin_name" : "zero-capacity-basin",
-  [
+  "resources": [
     {
       "name" : "zero-capacity-reservoir",
       "type" : "reservoir",
