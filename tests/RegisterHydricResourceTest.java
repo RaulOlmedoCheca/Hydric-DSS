@@ -355,9 +355,9 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
 	@Test
-	public void notValidResourceTypeTest() {
+	public void invalidResourceTypeTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-notValidResourceType.json");
+			manager.RegisterHydricResources("data/hdss-rf01-invalidResourceType.json");
 			fail("Equivalence class test HDSS-FN1-EQ-27 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
