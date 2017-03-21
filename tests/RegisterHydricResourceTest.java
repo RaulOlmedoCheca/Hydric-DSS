@@ -124,7 +124,7 @@ public class RegisterHydricResourceTest {
 
 	/* Test case: HDSS-FN1-TC-3
 	 * Equivalence class: HDSS-FN1-BL-7
-	 * Testing technique: Equivalence Classes Analysis
+	 * Testing technique: Boundary Limit Analysis
  	 * Expected value:
 	 	 {
 		  "zero-capacity-basin" :
@@ -456,5 +456,12 @@ public class RegisterHydricResourceTest {
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+
+	 //Mis mierdas
+	 /* Test case: HDSS-FN1-TC-25
+ 	 * Boundary limit:  HDSS-FN1-BL-1
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
 
 }
