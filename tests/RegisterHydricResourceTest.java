@@ -457,11 +457,202 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
 
-	 //Mis mierdas
+	 //Raul's mierdas ----> NO TOQUES!
+
 	 /* Test case: HDSS-FN1-TC-25
  	 * Boundary limit:  HDSS-FN1-BL-1
  	 * Testing technique: Boundary Limit Analysis
  	 * Expected value:
      */
+	 @Test
+	 public void validIrrigationBasinName49charTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-valid-irrigation-basin-name-49.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-1 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-26
+ 	 * Boundary limit:  HDSS-FN1-BL-2
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void validIrrigationBasinName50charTest(){
+		 try {
+			 manager.RegisterHydricResources("hdss-rf01-valid-irrigation-basin-name-50.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-2 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-27
+ 	 * Boundary limit:  HDSS-FN1-BL-3
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void invalidIrrigationBasinNameTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-invalid-irrigation-basin-name.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-3 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-28
+ 	 * Boundary limit:  HDSS-FN1-BL-4
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void validResourceName49charTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-name-49.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-4 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-29
+ 	 * Boundary limit:  HDSS-FN1-BL-5
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void validResourceName50charTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-name-50.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-5 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-30
+ 	 * Boundary limit:  HDSS-FN1-BL-6
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void invalidResourceNameTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-invalid-resource-name.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-6 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+		 }
+	 }
+
+	 //FIX esta mierda ya esta puesta en el ejemplo que dio el pibe
+	 /* Test case: HDSS-FN1-TC-31
+ 	 * Boundary limit:  HDSS-FN1-BL-7
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     *//*
+	 @Test
+	 public void (){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-zero.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-7 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }*/
+
+	 /* Test case: HDSS-FN1-TC-32
+ 	 * Boundary limit:  HDSS-FN1-BL-8
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void validResourceCapacityTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-0.01.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-8 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-33
+ 	 * Boundary limit:  HDSS-FN1-BL-9
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void invalidResourceCapacity(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-invalid-resource-capacity.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-9 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-34
+ 	 * Boundary limit:  HDSS-FN1-BL-10
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void validResourceCapacityTwoDecimalsTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-2-decimals.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-10 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-35
+ 	 * Boundary limit:  HDSS-FN1-BL-11
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void validResourceCapacityOneDecimalTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-1-decimal.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-11 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-36
+ 	 * Boundary limit:  HDSS-FN1-BL-12
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void validResourceCapacityZeroDecimalsTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-zero-decimals.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-12 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "Valid case");
+		 }
+	 }
+
+	 /* Test case: HDSS-FN1-TC-37
+ 	 * Boundary limit:  HDSS-FN1-BL-13
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+	 @Test
+	 public void invalidResourceCapacityThreeDecimalsTest(){
+		 try {
+			 manager.RegisterHydricResources("data/hdss-rf01-invalid-resource-capacity-3-decimals.json");
+			 fail("Boundary limit class test HDSS-FN1-BL-13 failed")
+		 }catch (HydricDSSException e){
+			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+		 }
+	 }
 
 }

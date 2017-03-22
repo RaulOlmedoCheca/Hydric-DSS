@@ -2,9 +2,9 @@
   "irrigation_basin_name" : "shortName",
   "resources" : [
     {
-      "name" : "reallyreallyreallyreallyreallyreallyreallyLongNam",
+      "name" : "shortName",
       "type" : "reservoir",
-      "capacity" : 2.23
+      "capacity" : 2.2
     }
   ]
 }

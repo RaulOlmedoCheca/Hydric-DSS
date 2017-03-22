@@ -1,5 +1,5 @@
 {
-  "irrigation_basin_name" : "reallyreallyreallyreallyreallyreallyreallyLongNam",
+  "irrigation_basin_name" : "shortName",
   "resources" : [
     {
       "name" : "shortName",
