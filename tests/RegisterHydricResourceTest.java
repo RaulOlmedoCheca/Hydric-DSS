@@ -457,9 +457,82 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
 
-	 //Mis mierdas
+	 //Raul's mierdas ----> NO TOQUES!
+
 	 /* Test case: HDSS-FN1-TC-25
  	 * Boundary limit:  HDSS-FN1-BL-1
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-26
+ 	 * Boundary limit:  HDSS-FN1-BL-2
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-27
+ 	 * Boundary limit:  HDSS-FN1-BL-3
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-28
+ 	 * Boundary limit:  HDSS-FN1-BL-4
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-29
+ 	 * Boundary limit:  HDSS-FN1-BL-5
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-30
+ 	 * Boundary limit:  HDSS-FN1-BL-6
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-31
+ 	 * Boundary limit:  HDSS-FN1-BL-7
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-32
+ 	 * Boundary limit:  HDSS-FN1-BL-8
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-33
+ 	 * Boundary limit:  HDSS-FN1-BL-9
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-34
+ 	 * Boundary limit:  HDSS-FN1-BL-10
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-35
+ 	 * Boundary limit:  HDSS-FN1-BL-11
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-36
+ 	 * Boundary limit:  HDSS-FN1-BL-12
+ 	 * Testing technique: Boundary Limit Analysis
+ 	 * Expected value:
+     */
+
+	 /* Test case: HDSS-FN1-TC-37
+ 	 * Boundary limit:  HDSS-FN1-BL-13
  	 * Testing technique: Boundary Limit Analysis
  	 * Expected value:
      */
