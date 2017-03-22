@@ -164,3 +164,56 @@
 - Equivalence class: HDSS-FN1-EQ-41
   - Input: One or more resource types found and resource type is not “aquifer”
   - Result: Error: “The input file has no data or doesn’t match the expected format”
+
+### Boundary limits
+- Boundary limit: HDSS-FN1-BL-1
+  - Input: 49 chars irrigation basin name “reallyreallyreallyreallyreallyreallyreallyLongNam”
+  - Result: valid case
+
+- Boundary limit: HDSS-FN1-BL-2
+  - Input: 50 chars irrigation basin name “reallyreallyreallyreallyreallyreallyreallyLongName”
+  - Result: valid case
+
+- Boundary limit: HDSS-FN1-BL-3
+  - Input: 51 chars irrigation basin name “reallyreallyreallyreallyreallyreallyreallyLongNamee”
+  - Result: Error: “The input file has no data or doesn’t match the expected format”
+
+- Boundary limit: HDSS-FN1-BL-4
+  - Input: 49 chars resource name “reallyreallyreallyreallyreallyreallyreallyLongNam”
+  - Result: valid case
+
+- Boundary limit: HDSS-FN1-BL-5
+  - Input: 50 chars resource name “reallyreallyreallyreallyreallyreallyreallyLongName”
+  - Result: valid case
+
+- Boundary limit: HDSS-FN1-BL-6
+  - Input: 51 chars resource name “reallyreallyreallyreallyreallyreallyreallyLongNamee”
+  - Result: Error: “The input file has no data or doesn’t match the expected format”
+
+- Boundary limit: HDSS-FN1-BL-7
+  - Input: Capacity value 0.00
+  - Result: valid case
+
+- Boundary limit: HDSS-FN1-BL-8
+  - Input: Capacity value 0.01
+  - Result: valid case
+
+- Boundary limit:HDSS-FN1-BL-9
+  - Input: Capacity value -0.01
+  - Result: Error: “The input file has no data or doesn’t match the expected format”
+
+- Boundary limit: HDSS-FN1-BL-10
+  - Input capacity: capacity with 2 decimals “2.23”
+  - Result: valid case
+
+- Boundary limit: HDSS-FN1-BL-11
+  - Input capacity: capacity with 1 decimal “2.2”
+  - Result: valid case
+
+- Boundary limit: HDSS-FN1-BL-12
+  - Input capacity: capacity with no decimals “2”
+  - Result: valid case
+
+- Boundary limit: HDSS-FN1-BL-13
+  - Input capacity: capacity with 3 decimal “2.223”
+  - Result: Error: “The input file has no data or doesn’t match the expected format”
