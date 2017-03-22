@@ -198,7 +198,7 @@
   - Input: Capacity value 0.01
   - Result: valid case
 
-- Boundary limit:HDSS-FN1-BL-9
+- Boundary limit: HDSS-FN1-BL-9
   - Input: Capacity value -0.01
   - Result: Error: “The input file has no data or doesn’t match the expected format”
 
@@ -217,3 +217,112 @@
 - Boundary limit: HDSS-FN1-BL-13
   - Input capacity: capacity with 3 decimal “2.223”
   - Result: Error: “The input file has no data or doesn’t match the expected format”
+
+## Test classes
+### HDSS-FN1-TC-1
+- Equivalence classes considered:   HDSS-FN1-EQ-2, HDSS-FN1-EQ-3, HDSS-FN1-EQ-6, HDSS-FN1-EQ-8, HDSS-FN1-EQ-9, HDSS-FN1-EQ-13, HDSS-FN1-EQ-16, HDSS-FN1-EQ-18, HDSS-FN1-EQ-19, HDSS-FN1-EQ-23, HDSS-FN1-EQ-24, HDSS-FN1-EQ-25, HDSS-FN1-EQ-26, HDSS-FN1-EQ-30, HDSS-FN1-EQ-32, HDSS-FN1-EQ-34, HDSS-FN1-EQ-36, HDSS-FN1-EQ-39, HDSS-FN1-EQ-40
+- Input:
+  - Filename: “validRegisterHydricResourcesCase.json”
+  - Content:
+```JSON
+{
+  "irrigation_basin_name" : "shortName",
+  "resources": [
+    {
+      "name" : "shortName",
+      "type" : "reservoir",
+      "capacity": 2.23
+    },
+    {
+      "name" : "plant1",
+      "type" : "desalination plant",
+      "capacity" : 23.46
+    },
+    {
+      "name" : "aquifer1",
+      "type" : "aquifer"
+    }
+  ]
+}
+```
+  - Output:
+```JSON
+{
+  "shortName" :
+  { "resources": [
+     {"reservoirs": {
+     "amount": 1,
+     "capacity": 2.23,
+     "list" : [
+           {
+           "name" : "shortName",
+           "capacity" : 2.23
+           }
+     ]
+     }
+     },
+     {"plants": {
+     "amount": 1,
+     "capacity": 23.46,
+     "list" : [
+           {
+           "name" : "plant1",
+           "capacity" : 23.46
+           }
+     ]
+     }
+     },
+     {"aquifers": {
+     "amount": 1,
+     "list" : [
+          {
+          "name" : "aquifer1",
+          "capacity" : 2.23
+         }
+] } }
+]}
+}
+```
+
+### HDSS-FN1-TC-2
+- Equivalence class considered: HDSS-FN1-EQ-1
+- Input:
+  - Filename “nonexists.json”
+  - Expected output: Throws Exception. Error message: “An input data file is not found”
+
+### HDSS-FN1-TC-3
+- Boundary limit considered: HDSS-FN1-BL-7
+- Input:
+  - Filename “capacity-zero.json”
+```JSON  
+{
+  "irrigation_basin_name" : "zero-capacity-basin",
+  "resources" :[
+    {
+      "name" : "zero-capacity-reservoir",
+      "type" : "reservoir",
+      "capacity": 0.00
+    }
+  ]
+}
+```
+- Expected output:
+```JSON
+{
+  "zero-capacity-basin" :
+  { "resources": [
+     {"reservoirs": {
+     "amount": 1,
+     "capacity": 0.00,
+     "list" : [
+           {
+           "name" : "zero-capacity-reservoir",
+           "capacity" : 0.00
+           }
+      ]
+      }
+    }
+    ]
+  }    
+}
+```
