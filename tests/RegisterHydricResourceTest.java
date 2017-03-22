@@ -465,7 +465,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void validIrrigationBasinName49charTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-valid-irrigation-basin-name-49.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-1 failed")
@@ -480,7 +480,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void validIrrigationBasinName50charTest(){
 		 try {
 			 manager.RegisterHydricResources("hdss-rf01-valid-irrigation-basin-name-50.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-2 failed")
@@ -495,7 +495,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void invalidIrrigationBasinNameTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-invalid-irrigation-basin-name.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-3 failed")
@@ -510,7 +510,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void validResourceName49charTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-name-49.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-4 failed")
@@ -525,7 +525,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void validResourceName50charTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-name-50.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-5 failed")
@@ -540,7 +540,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void invalidResourceNameTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-invalid-resource-name.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-6 failed")
@@ -549,11 +549,12 @@ public class RegisterHydricResourceTest {
 		 }
 	 }
 
+	 //FIX esta mierda ya esta puesta en el ejemplo que dio el pibe
 	 /* Test case: HDSS-FN1-TC-31
  	 * Boundary limit:  HDSS-FN1-BL-7
  	 * Testing technique: Boundary Limit Analysis
  	 * Expected value:
-     */
+     *//*
 	 @Test
 	 public void (){
 		 try {
@@ -562,7 +563,7 @@ public class RegisterHydricResourceTest {
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "Valid case");
 		 }
-	 }
+	 }*/
 
 	 /* Test case: HDSS-FN1-TC-32
  	 * Boundary limit:  HDSS-FN1-BL-8
@@ -570,7 +571,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void validResourceCapacityTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-0.01.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-8 failed")
@@ -585,7 +586,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void invalidResourceCapacity(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-invalid-resource-capacity.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-9 failed")
@@ -600,7 +601,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void validResourceCapacityTwoDecimalsTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-2-decimals.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-10 failed")
@@ -615,7 +616,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void validResourceCapacityOneDecimalTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-1-decimal.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-11 failed")
@@ -630,7 +631,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void validResourceCapacityZeroDecimalsTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-zero-decimals.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-12 failed")
@@ -645,7 +646,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value:
      */
 	 @Test
-	 public void (){
+	 public void invalidResourceCapacityThreeDecimalsTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-invalid-resource-capacity-3-decimals.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-13 failed")
