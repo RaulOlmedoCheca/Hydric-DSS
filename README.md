@@ -1,15 +1,15 @@
 # Guided exercise 3 - Hydric-DSS
 ## HDSS-RF-01
 ### Equivalence classes
--Equivalence class: HDSS-FN1-EQ-1
+- Equivalence class: HDSS-FN1-EQ-1
 Input:  Non existing filename
 Result: Error. “An input data file is not found”
 
--Equivalence class: HDSS-FN1-EQ-2
+- Equivalence class: HDSS-FN1-EQ-2
 Input: Valid filename “validRegisterHydricResourcesCase.json”
 Result: valid case
 
--Equivalence class: HDSS-FN1-EQ-3
+- Equivalence class: HDSS-FN1-EQ-3
 Input: Valid JSON file
 Result: valid case
 
