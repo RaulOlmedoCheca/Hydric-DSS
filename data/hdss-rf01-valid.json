@@ -1,12 +1,12 @@
 {
-  "irrigationBasinName" : "New Name",
+  "irrigation_basin_name" : "New Name",
   "resources": [
     {
       "name" : "reservoir 1",
       "type" : "reservoir",
       "capacity" : 0
     },
-    { 
+    {
       "name" : "plant 1",
       "type": "desalination-plant",
       "capacity": 10000.2

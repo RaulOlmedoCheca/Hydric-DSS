@@ -372,7 +372,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void noResourceTypeTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-noResourceTypeNames.json");
+			manager.RegisterHydricResources("data/hdss-rf01-noResourceType.json");
 			fail("Equivalence class test HDSS-FN1-EQ-28 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -387,7 +387,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void severalResourceTypesTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-severalResourceTypesNames.json");
+			manager.RegisterHydricResources("data/hdss-rf01-severalResourceTypes.json");
 			fail("Equivalence class test HDSS-FN1-EQ-29 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
