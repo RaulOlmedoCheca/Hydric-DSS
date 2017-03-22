@@ -5,15 +5,6 @@
       "name" : "reallyreallyreallyreallyreallyreallyreallyLongNam",
       "type" : "reservoir",
       "capacity" : 2.23
-    },
-    {
-      "name" : "plant1",
-      "type" : "desalination plant",
-      "capacity" : 23.46
-    },
-    {
-      "name" : "aquifer1",
-      "type" : "aquifer"
     }
   ]
 }
