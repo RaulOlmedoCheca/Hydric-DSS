@@ -293,7 +293,7 @@
 ### HDSS-FN1-TC-3
 - Boundary limit considered: HDSS-FN1-BL-7
 - Input:
-  - Filename “capacity-zero.json”
+  - Filename “hdss-rf01-capacity-zero.json”
 ```JSON  
 {
   "irrigation_basin_name" : "zero-capacity-basin",
@@ -326,3 +326,129 @@
   }    
 }
 ```
+
+### HDSS-FN1-TC-4
+- Equivalence class considered: HDSS-FN1-EQ-4
+- Input:
+  - Filename “hdss-rf01-invalidJson.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-5
+- Equivalence class considered: HDSS-FN1-EQ-5
+- Input:
+  - Filename “hdss-rf01-empty.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-6
+- Equivalence class considered: HDSS-FN1-EQ-7
+- Input:
+  - Filename “hdss-rf01-existingIrrigationBasinName.json”
+  - Expected output: Throws Exception. Error message: “Tried to record an irrigation basin with an existing name”
+
+### HDSS-FN1-TC-7
+- Equivalence class considered: HDSS-FN1-EQ-10
+- Input:
+  - Filename “hdss-rf01-longIrrigationBasinName.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-8
+- Equivalence class considered: HDSS-FN1-EQ-11
+- Input:
+  - Filename “hdss-rf01-noIrrigationBasinName.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-9
+- Equivalence class considered: HDSS-FN1-EQ-12
+- Input:
+  - Filename “hdss-rf01-severalIrrigationBasinNames.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-10
+- Equivalence class considered: HDSS-FN1-EQ-14
+- Input:
+  - Filename “hdss-rf01-noResourcesList.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-11
+- Equivalence class considered: HDSS-FN1-EQ-15
+- Input:
+  - Filename “hdss-rf01-severalResourcesLists.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-12
+- Equivalence class considered: HDSS-FN1-EQ-17
+- Input:
+  - Filename “hdss-rf01-existingResourceName.json”
+  - Expected output: Throws Exception. Error message: “Tried to record a resource basin with an existing name”
+
+### HDSS-FN1-TC-13
+- Equivalence class considered: HDSS-FN1-EQ-20
+- Input:
+  - Filename “hdss-rf01-longResourceName.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-14
+- Equivalence class considered: HDSS-FN1-EQ-21
+- Input:
+  - Filename “hdss-rf01-noResourceName.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-15
+- Equivalence class considered: HDSS-FN1-EQ-22
+- Input:
+  - Filename “hdss-rf01-severalResourceNames.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-16
+- Equivalence class considered: HDSS-FN1-EQ-27
+- Input:
+  - Filename “hdss-rf01-invalidResourceType.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-17
+- Equivalence class considered: HDSS-FN1-EQ-28
+- Input:
+  - Filename “hdss-rf01-noResourceType.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-18
+- Equivalence class considered: HDSS-FN1-EQ-29
+- Input:
+  - Filename “hdss-rf01-severalResourceTypes.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-19
+- Equivalence class considered: HDSS-FN1-EQ-31
+- Input:
+  - Filename “hdss-rf01-negativeResourceCapacity.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-20
+- Equivalence class considered: HDSS-FN1-EQ-33
+- Input:
+  - Filename “hdss-rf01-notValidResourceCapacity.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-21
+- Equivalence class considered: HDSS-FN1-EQ-35
+- Input:
+  - Filename “hdss-rf01-notValidResourceCapacityDecimalFormat.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-22
+- Equivalence class considered: HDSS-FN1-EQ-37
+- Input:
+  - Filename “nonexists.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-23
+- Equivalence class considered: HDSS-FN1-EQ-38
+- Input:
+  - Filename “nonexists.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
+
+### HDSS-FN1-TC-24
+- Equivalence class considered: HDSS-FN1-EQ-41
+- Input:
+  - Filename “nonexists.json”
+  - Expected output: Throws Exception. Error message: “The input file has no data or does not match the expected format”
