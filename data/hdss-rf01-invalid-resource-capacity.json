@@ -1,0 +1,10 @@
+{
+  "irrigation_basin_name" : "shortName",
+  "resources" : [
+    {
+      "name" : "shortName",
+      "type" : "reservoir",
+      "capacity" : -0.01
+    }
+  ]
+}
