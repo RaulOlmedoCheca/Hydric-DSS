@@ -23,47 +23,10 @@ public class RegisterHydricResourceTest {
 	 * HDSS-FN1-EQ-16, HDSS-FN1-EQ-18, HDSS-FN1-EQ-19, HDSS-FN1-EQ-23, HDSS-FN1-EQ-24, HDSS-FN1-EQ-25, HDSS-FN1-EQ-26,
 	 * HDSS-FN1-EQ-30, HDSS-FN1-EQ-32, HDSS-FN1-EQ-34, HDSS-FN1-EQ-36, HDSS-FN1-EQ-39, HDSS-FN1-EQ-40
 	 * Testing technique: Equivalence Classes Analysis
- 	 * Expected value:
-	 {
-	  "shortName" :
-	  { "resources": [
-	    {"reservoirs": {
-	        "amount": 1,
-	        "capacity": 2.23,
-	        "list" : [
-	          {
-	            "name" : "shortName",
-	            "capacity" : 2.23
-	          }
-	        ]
-	      }
-	    },
-	    {"plants": {
-	        "amount": 1,
-	        "capacity": 23.46,
-	        "list" : [
-	          {
-	            "name" : "plant1",
-	            "capacity" : 23.46
-	          }
-	        ]
-	      }
-	    },
-	    {"aquifers": {
-	        "amount": 1,
-	        "list" : [
-	          {
-	            "name" : "aquifer1",
-	            "capacity" : 2.23
-	          }
-	        ]
-	      }
-	    }
-	  ]}
-	}
-	*/
+ 	 * Expected value: hdss-rf01-expectedValidRegisterHydricResourcesCase.json
+	 */
 	@Test
-	public void basicValidtest() throws HydricDSSException {
+	public void basicValidTest() throws HydricDSSException {
 		WatershedsListPublicData result;
 		result = manager.RegisterHydricResources("data/hdss-rf01-validRegisterHydricResourcesCase.json");
 
@@ -113,7 +76,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws Exception. Error message: "An input data file is not found"
 	*/
 	@Test
-	public void notFoundFiletest() {
+	public void notFoundFileTest() {
 		try {
 			manager.RegisterHydricResources("nonexists.json");
 			fail("An input can not be found but no exception was risen");
@@ -125,24 +88,8 @@ public class RegisterHydricResourceTest {
 	/* Test case: HDSS-FN1-TC-3
 	 * Equivalence class: HDSS-FN1-BL-7
 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
-	 	 {
-		  "zero-capacity-basin" :
-		  { "resources": [
-		    {"reservoirs": {
-		        "amount": 1,
-		        "capacity": 0.00,
-		        "list" : [
-		          {
-		            "name" : "zero-capacity-reservoir",
-		            "capacity" : 0.00
-		          }
-		        ]
-		      }
-		    }
-		  ]}
-		}
-	*/
+ 	 * Expected value: hdss-rf01-expectedCapacityZero.json
+	 */
 	@Test
 	public void zeroCapacityBasinTest() throws HydricDSSException {
 		WatershedsListPublicData result;
@@ -418,7 +365,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void notValidResourceCapacityTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-notValidResourceCapacity.json");
+			manager.RegisterHydricResources("data/hdss-rf01-invalidResourceCapacity.json");
 			fail("Equivalence class test HDSS-FN1-EQ-33 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -457,8 +404,6 @@ public class RegisterHydricResourceTest {
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
-
-	 //Raul's mierdas ----> NO TOQUES!
 
 	 /* Test case: HDSS-FN1-TC-25
  	 * Boundary limit:  HDSS-FN1-BL-1
@@ -597,22 +542,6 @@ public class RegisterHydricResourceTest {
 		 }
 	 }
 
-	 //TODO esta mierda ya esta puesta en el ejemplo que dio el pibe
-	 /* Test case: HDSS-FN1-TC-31
- 	 * Boundary limit:  HDSS-FN1-BL-7
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
-     *//*
-	 @Test
-	 public void (){
-		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-validResourceCapacityZero.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-7 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
-	 }*/
-
 	 /* Test case: HDSS-FN1-TC-32
  	 * Boundary limit:  HDSS-FN1-BL-8
  	 * Testing technique: Boundary Limit Analysis
@@ -650,7 +579,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
      */
 	 @Test
-	 public void invalidResourceCapacity(){
+	 public void invalidResourceCapacityTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-invalidResourceCapacity.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-9 failed")

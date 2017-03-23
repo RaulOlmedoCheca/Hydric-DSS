@@ -1,0 +1,18 @@
+{
+  "zero-capacity-basin": {
+    "resources": [
+      {
+        "reservoirs": {
+          "amount": 1,
+          "capacity": 0.00,
+          "list": [
+            {
+              "name": "zero-capacity-reservoir",
+              "capacity": 0.00
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

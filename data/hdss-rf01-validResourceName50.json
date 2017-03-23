@@ -1,10 +1,10 @@
 {
-  "irrigation_basin_name" : "shortName",
-  "resources" : [
+  "irrigation_basin_name": "shortName",
+  "resources": [
     {
-      "name" : "reallyreallyreallyreallyreallyreallyreallyLongName",
-      "type" : "reservoir",
-      "capacity" : 2.23
+      "name": "reallyreallyreallyreallyreallyreallyreallyLongName",
+      "type": "reservoir",
+      "capacity": 2.23
     }
   ]
 }

@@ -1,12 +1,10 @@
 {
-  "irrigation_basin_name" : "reallyreallyreallyreallyreallyreallyreallyLongNam",
-    "resources" : [
-      {
-        "name" : "shortName",
-        "type" : "reservoir",
-        "capacity" : 2.23
-      }
-    ]
+  "irrigation_basin_name": "reallyreallyreallyreallyreallyreallyreallyLongNam",
+  "resources": [
+    {
+      "name": "shortName",
+      "type": "reservoir",
+      "capacity": 2.23
+    }
+  ]
 }
-//TODO make valid expected values jsons and make chnges in the valid tests to use them
-//TODO make expected value the error appearing in the paper
