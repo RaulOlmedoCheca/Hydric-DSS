@@ -21,11 +21,11 @@
 
 - Equivalence class: HDSS-FN1-EQ-2
   - Input: Valid filename "validRegisterHydricResourcesCase.json"
-  - Result: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-3
   - Input: Valid JSON file
-  - Result: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-4
   - Input: Non JSON format
@@ -37,7 +37,7 @@
 
 - Equivalence class: HDSS-FN1-EQ-6
   - Input: Non empty file
-  - Result: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-7
   - Input: Existing irrigation basin name
@@ -45,11 +45,11 @@
 
 - Equivalence class: HDSS-FN1-EQ-8
   - Input: Non existing irrigation basin name
-  - Result: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-9
   - Input: Under 50 chars irrigation basin name "shortName"
-  - Result: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-10
   - Input: Over 50 chars irrigation basin name "reallyreallyreallyreallyreallyreallyreallyreallyLongName"
@@ -85,11 +85,11 @@
 
 - Equivalence class: HDSS-FN1-EQ-18
   - Input: Non existing resource name
-  - Result: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-19
   - Input: Under 50 chars resource basin name "shortName"
-  - Result: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-20
   - Input: Over 50 chars resource name "reallyreallyreallyreallyreallyreallyreallyreallyLongName"
@@ -619,7 +619,7 @@
 
 - Equivalence class: HDSS-FN2-EQ-36
   - Input: Capacity values is a number with 2 or less decimals "2.23"
-  - Result: Error: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-37
   - Input: No resource type found and resource type is not "aquifer"
@@ -681,60 +681,60 @@
   - Input: One date found
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-49
+- Equivalence class: HDSS-FN2-EQ-52
   - Input: Scope type value = "Reservoir"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-50
+- Equivalence class: HDSS-FN2-EQ-53
   - Input: Scope type value = "Desalination plant"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-51
+- Equivalence class: HDSS-FN2-EQ-54
   - Input: Scope type value = "Aquifer"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-52
+- Equivalence class: HDSS-FN2-EQ-55
   - Input: Scope type value = "WrongValue"
   - Result: Error: "The output file has no data or does not match the expected format"
 
-- Equivalence class: HDSS-FN2-EQ-53
+- Equivalence class: HDSS-FN2-EQ-56
   - Input: No scope type found
   - Result: Error: "The output file has no data or does not match the expected format"
 
-- Equivalence class: HDSS-FN2-EQ-54
+- Equivalence class: HDSS-FN2-EQ-57
   - Input: Two or more scope types found
   - Result: Error: "The output file has no data or does not match the expected format"
 
-- Equivalence class: HDSS-FN2-EQ-55
+- Equivalence class: HDSS-FN2-EQ-58
   - Input: One scope type found
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-56
+- Equivalence class: HDSS-FN2-EQ-59
   - Input: State value = "PLENTY"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-57
+- Equivalence class: HDSS-FN2-EQ-60
   - Input: State value = "NORMALITY"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-58
+- Equivalence class: HDSS-FN2-EQ-61
   - Input: State value = "SHORTAGE"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-59
+- Equivalence class: HDSS-FN2-EQ-62
   - Input: State value = "WRONGVALUE"
   - Result: Error: "The output file has no data or does not match the expected format"
 
-- Equivalence class: HDSS-FN2-EQ-60
+- Equivalence class: HDSS-FN2-EQ-63
   - Input: No state value found
   - Result: Error: "The output file has no data or does not match the expected format"
 
-- Equivalence class: HDSS-FN2-EQ-61
+- Equivalence class: HDSS-FN2-EQ-64
   - Input: Two or more state values found
   - Result: Error: "The output file has no data or does not match the expected format"
 
-- Equivalence class: HDSS-FN2-EQ-62
-  - Input: One scope state value found
+- Equivalence class: HDSS-FN2-EQ-65
+  - Input: One state value found
   - Result: Valid case
 
 ### Boundary limits
