@@ -1,6 +1,6 @@
 # Guided exercise 3 - Hydric-DSS
 ## Index
-- HDSS-RF-01
+- [HDSS-RF-01](#HDSS-RF-01)
   - Equivalence classes
   - Boundary limits
   - Test cases
@@ -12,7 +12,7 @@
   - Syntax analysis
 - HDSS-RF-03
   - Syntax analysis
-  
+
 ## HDSS-RF-01
 ### Equivalence classes
 - Equivalence class: HDSS-FN1-EQ-1
