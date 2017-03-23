@@ -474,6 +474,84 @@
   - Filename "nonexists.json"
   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
+#### HDSS-FN1-TC-25
+- Equivalence class considered: HDSS-FN1-BL-1
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-26
+- Equivalence class considered: HDSS-FN1-BL-2
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-27
+- Equivalence class considered: HDSS-FN1-BL-3
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-28
+- Equivalence class considered: HDSS-FN1-BL-4
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-29
+- Equivalence class considered: HDSS-FN1-BL-5
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-30
+- Equivalence class considered: HDSS-FN1-BL-6
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-31
+- Equivalence class considered: HDSS-FN1-BL-7
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-32
+- Equivalence class considered: HDSS-FN1-BL-8
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-33
+- Equivalence class considered: HDSS-FN1-BL-9
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-34
+- Equivalence class considered: HDSS-FN1-BL-10
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-35
+- Equivalence class considered: HDSS-FN1-BL-11
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-36
+- Equivalence class considered: HDSS-FN1-BL-12
+- Input:
+    - Filename
+    - Expected output:
+
+#### HDSS-FN1-TC-37
+- Equivalence class considered: HDSS-FN1-BL-13
+- Input:
+    - Filename
+    - Expected output:
+
 
 ## HDSS-RF-02
 ### Equivalence classes
