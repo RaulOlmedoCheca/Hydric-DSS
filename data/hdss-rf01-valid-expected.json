@@ -1,7 +1,7 @@
 {
   "irrigationBasinName" : "New Basin",
-  "resources" : [
-    "reservoirs" : [
+  "resources" : {
+    "reservoirs" : {
       "amount" : 1,
       "capacity" : 0,
       "list" : [
@@ -10,8 +10,8 @@
           "capacity" : 0
         }
       ]
-    ],
-    "plants" : [
+    },
+    "plants" : {
       "amount" : 1,
       "capacity" : 10000.2,
       "list" : [
@@ -20,14 +20,14 @@
           "capacity" : 0
         }
       ]
-    ],
-    "aquifers" : [
-      "amount" : 1,      
+    },
+    "aquifers" : {
+      "amount" : 1,
       "list" : [
         {
-          "name" : "aquifer 23"       
+          "name" : "aquifer 23"
         }
       ]
-    ]
-  ]
+    }
+  }
 }

@@ -1,19 +1,19 @@
 {
-  "irrigationBasinName" : "New Basin",
-  "resources" : [
-    "reservoirs" : [
+  "irrigation_basin_name" : "New Basin",
+  "resources" : {
+    "reservoirs" : {
       "amount" : 0,
       "capacity" : 0,
       "list" : []
-    ],
-    "plants" : [
+    },
+    "plants" : {
       "amount" : 0,
       "capacity" : 0,
       "list" : []
-    ],
-    "aquifers" : [
+    },
+    "aquifers" : {
       "amount" : 0,
       "list" : []
-    ]
-  ]
+    }
+  }
 }
