@@ -26,7 +26,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value: hdss-rf01-expectedValidRegisterHydricResourcesCase.json
 	 */
 	@Test
-	public void basicValidtest() throws HydricDSSException {
+	public void basicValidTest() throws HydricDSSException {
 		WatershedsListPublicData result;
 		result = manager.RegisterHydricResources("data/hdss-rf01-validRegisterHydricResourcesCase.json");
 
@@ -76,7 +76,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws Exception. Error message: "An input data file is not found"
 	*/
 	@Test
-	public void notFoundFiletest() {
+	public void notFoundFileTest() {
 		try {
 			manager.RegisterHydricResources("nonexists.json");
 			fail("An input can not be found but no exception was risen");
@@ -579,7 +579,7 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
      */
 	 @Test
-	 public void invalidResourceCapacity(){
+	 public void invalidResourceCapacityTest(){
 		 try {
 			 manager.RegisterHydricResources("data/hdss-rf01-invalidResourceCapacity.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-9 failed")
