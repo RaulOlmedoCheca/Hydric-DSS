@@ -462,38 +462,53 @@ public class RegisterHydricResourceTest {
 
 	 /* Test case: HDSS-FN1-TC-25
  	 * Boundary limit:  HDSS-FN1-BL-1
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: hdss-rf01-expected-valid-irrigation-basin-name-49.json
      */
 	 @Test
-	 public void validIrrigationBasinName49charTest(){
-		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-valid-irrigation-basin-name-49.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-1 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
+	 public void validIrrigationBasinName49charTest() throws HydricDSSException{
+		 WatershedsListPublicData result;
+		 result = manager.RegisterHydricResources("data/hdss-rf01-valid-irrigation-basin-name-49.json");
+
+		 List<WatershedPublicData> watershedList;
+		 watershedList = result.getWatershedList();
+
+		 assertEquals(watershedList.size(), 1);
+
+		 WatershedPublicData watershed;
+		 watershed = watershedList.get(0);
+
+		 assertEquals(watershed.getName(), "reallyreallyreallyreallyreallyreallyreallyLongNam");
+		 assertEquals(watershed.getName().getLength(), 49, 0.01);
+
 	 }
 
 	 /* Test case: HDSS-FN1-TC-26
  	 * Boundary limit:  HDSS-FN1-BL-2
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: hdss-rf01-expected-valid-irrigation-basin-name-50.json
      */
 	 @Test
-	 public void validIrrigationBasinName50charTest(){
-		 try {
-			 manager.RegisterHydricResources("hdss-rf01-valid-irrigation-basin-name-50.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-2 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
+	 public void validIrrigationBasinName50charTest() throws HydricDSSException{
+		 WatershedsListPublicData result;
+		 result = manager.RegisterHydricResources("data/hdss-rf01-valid-irrigation-basin-name-50.json");
+
+		 List<WatershedPublicData> watershedList;
+		 watershedList = result.getWatershedList();
+
+		 assertEquals(watershedList.size(), 1);
+
+		 WatershedPublicData watershed;
+		 watershed = watershedList.get(0);
+
+		 assertEquals(watershed.getName(), "reallyreallyreallyreallyreallyreallyreallyLongName");
+		 assertEquals(watershed.getName().getLength(), 50, 0.01);
 	 }
 
 	 /* Test case: HDSS-FN1-TC-27
  	 * Boundary limit:  HDSS-FN1-BL-3
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
      */
 	 @Test
 	 public void invalidIrrigationBasinNameTest(){
@@ -507,38 +522,70 @@ public class RegisterHydricResourceTest {
 
 	 /* Test case: HDSS-FN1-TC-28
  	 * Boundary limit:  HDSS-FN1-BL-4
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: hdss-rf01-expected-valid-resource-name-49.json
      */
 	 @Test
-	 public void validResourceName49charTest(){
-		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-name-49.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-4 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
+	 public void validResourceName49charTest() throws HydricDSSException{
+		 WatershedsListPublicData result;
+		 result = manager.RegisterHydricResources("data/hdss-rf01-valid-resource-name-49.json");
+
+		 List<WatershedPublicData> watershedList;
+		 watershedList = result.getWatershedList();
+
+		 assertEquals(watershedList.size(), 1);
+
+		 WatershedPublicData watershed;
+		 watershed = watershedList.get(0);
+
+		 assertEquals(watershed.getName(), "shortName");
+
+		 List<ReservoirPublicData> reservoirList;
+		 reservoirList = watershed.getReservoirList();
+
+		 assertEquals(reservoirList.size(), 1);
+
+		 ReservoirPublicData reservoir = reservoirList.get(0);
+
+		 assertEquals(reservoir.getMyName(), "reallyreallyreallyreallyreallyreallyreallyLongNam");
+		 assertEquals(reservoir.getMyName().getLength(), 49, 0.001);
 	 }
 
 	 /* Test case: HDSS-FN1-TC-29
  	 * Boundary limit:  HDSS-FN1-BL-5
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: hdss-rf01-expected-valid-resource-name-50.json
      */
 	 @Test
-	 public void validResourceName50charTest(){
-		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-name-50.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-5 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
+	 public void validResourceName50charTest() throws HydricDSSException{
+		 WatershedsListPublicData result;
+		 result = manager.RegisterHydricResources("data/hdss-rf01-valid-resource-name-50.json");
+
+		 List<WatershedPublicData> watershedList;
+		 watershedList = result.getWatershedList();
+
+		 assertEquals(watershedList.size(), 1);
+
+		 WatershedPublicData watershed;
+		 watershed = watershedList.get(0);
+
+		 assertEquals(watershed.getName(), "shortName");
+
+		 List<ReservoirPublicData> reservoirList;
+		 reservoirList = watershed.getReservoirList();
+
+		 assertEquals(reservoirList.size(), 1);
+
+		 ReservoirPublicData reservoir = reservoirList.get(0);
+
+		 assertEquals(reservoir.getMyName(), "reallyreallyreallyreallyreallyreallyreallyLongName");
+		 assertEquals(reservoir.getMyName().getLength(), 50, 0.001);
 	 }
 
 	 /* Test case: HDSS-FN1-TC-30
  	 * Boundary limit:  HDSS-FN1-BL-6
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
      */
 	 @Test
 	 public void invalidResourceNameTest(){
@@ -550,7 +597,7 @@ public class RegisterHydricResourceTest {
 		 }
 	 }
 
-	 //FIX esta mierda ya esta puesta en el ejemplo que dio el pibe
+	 //TODO esta mierda ya esta puesta en el ejemplo que dio el pibe
 	 /* Test case: HDSS-FN1-TC-31
  	 * Boundary limit:  HDSS-FN1-BL-7
  	 * Testing technique: Boundary Limit Analysis
@@ -569,22 +616,38 @@ public class RegisterHydricResourceTest {
 	 /* Test case: HDSS-FN1-TC-32
  	 * Boundary limit:  HDSS-FN1-BL-8
  	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Expected value: hdss-rf01-expected-valid-resource-capacity-0.01.json
      */
 	 @Test
-	 public void validResourceCapacityTest(){
-		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-0.01.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-8 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
+	 public void validResourceCapacityTest() throws HydricDSSException{
+		 WatershedsListPublicData result;
+		 result = manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-0.01.json");
+
+		 List<WatershedPublicData> watershedList;
+		 watershedList = result.getWatershedList();
+
+		 assertEquals(watershedList.size(), 1);
+
+		 WatershedPublicData watershed;
+		 watershed = watershedList.get(0);
+
+		 assertEquals(watershed.getName(), "shortName");
+
+		 List<ReservoirPublicData> reservoirList;
+		 reservoirList = watershed.getReservoirList();
+
+		 assertEquals(reservoirList.size(), 1);
+
+		 ReservoirPublicData reservoir = reservoirList.get(0);
+
+		 assertEquals(reservoir.getMyName(), "shortName");
+		 assertEquals(reservoir.getMaxCapacity(), 0.01, 0.001);
 	 }
 
 	 /* Test case: HDSS-FN1-TC-33
  	 * Boundary limit:  HDSS-FN1-BL-9
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
      */
 	 @Test
 	 public void invalidResourceCapacity(){
@@ -598,53 +661,101 @@ public class RegisterHydricResourceTest {
 
 	 /* Test case: HDSS-FN1-TC-34
  	 * Boundary limit:  HDSS-FN1-BL-10
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: hdss-rf01-expected-valid-resource-capacity-2-decimals.json
      */
 	 @Test
-	 public void validResourceCapacityTwoDecimalsTest(){
-		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-2-decimals.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-10 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
+	 public void validResourceCapacityTwoDecimalsTest() throws HydricDSSException{
+		 WatershedsListPublicData result;
+		 result = manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-2-decimals.json");
+
+		 List<WatershedPublicData> watershedList;
+		 watershedList = result.getWatershedList();
+
+		 assertEquals(watershedList.size(), 1);
+
+		 WatershedPublicData watershed;
+		 watershed = watershedList.get(0);
+
+		 assertEquals(watershed.getName(), "shortName");
+
+		 List<ReservoirPublicData> reservoirList;
+		 reservoirList = watershed.getReservoirList();
+
+		 assertEquals(reservoirList.size(), 1);
+
+		 ReservoirPublicData reservoir = reservoirList.get(0);
+
+		 assertEquals(reservoir.getMyName(), "shortName");
+		 assertEquals(reservoir.getMaxCapacity(), 2.23, 0.001);
 	 }
 
 	 /* Test case: HDSS-FN1-TC-35
  	 * Boundary limit:  HDSS-FN1-BL-11
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: hdss-rf01-expected-valid-resource-capacity-1-decimal.json
      */
 	 @Test
-	 public void validResourceCapacityOneDecimalTest(){
-		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-1-decimal.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-11 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
+	 public void validResourceCapacityOneDecimalTest() throws HydricDSSException{
+		 WatershedsListPublicData result;
+		 result = manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-1-decimal.json");
+
+		 List<WatershedPublicData> watershedList;
+		 watershedList = result.getWatershedList();
+
+		 assertEquals(watershedList.size(), 1);
+
+		 WatershedPublicData watershed;
+		 watershed = watershedList.get(0);
+
+		 assertEquals(watershed.getName(), "shortName");
+
+		 List<ReservoirPublicData> reservoirList;
+		 reservoirList = watershed.getReservoirList();
+
+		 assertEquals(reservoirList.size(), 1);
+
+		 ReservoirPublicData reservoir = reservoirList.get(0);
+
+		 assertEquals(reservoir.getMyName(), "shortName");
+		 assertEquals(reservoir.getMaxCapacity(), 2.2, 0.001);
 	 }
 
 	 /* Test case: HDSS-FN1-TC-36
  	 * Boundary limit:  HDSS-FN1-BL-12
- 	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Testing technique: Boundary Values Limits
+ 	 * Expected value: hdss-rf01-expected-valid-resource-capacity-zero-decimals.json
      */
 	 @Test
-	 public void validResourceCapacityZeroDecimalsTest(){
-		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-valid-resource-capacity-zero-decimals.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-12 failed")
-		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "Valid case");
-		 }
+	 public void validResourceCapacityZeroDecimalsTest() throws HydricDSSException{
+		 WatershedsListPublicData result;
+		 result = manager.RegisterHydricResources("hdss-rf01-valid-resource-capacity-zero-decimals.json");
+
+		 List<WatershedPublicData> watershedList;
+		 watershedList = result.getWatershedList();
+
+		 assertEquals(watershedList.size(), 1);
+
+		 WatershedPublicData watershed;
+		 watershed = watershedList.get(0);
+
+		 assertEquals(watershed.getName(), "shortName");
+
+		 List<ReservoirPublicData> reservoirList;
+		 reservoirList = watershed.getReservoirList();
+
+		 assertEquals(reservoirList.size(), 1);
+
+		 ReservoirPublicData reservoir = reservoirList.get(0);
+
+		 assertEquals(reservoir.getMyName(), "shortName");
+		 assertEquals(reservoir.getMaxCapacity(), 2, 0.001);
 	 }
 
 	 /* Test case: HDSS-FN1-TC-37
  	 * Boundary limit:  HDSS-FN1-BL-13
  	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value:
+ 	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
      */
 	 @Test
 	 public void invalidResourceCapacityThreeDecimalsTest(){
