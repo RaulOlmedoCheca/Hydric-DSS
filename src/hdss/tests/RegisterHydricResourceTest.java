@@ -296,8 +296,9 @@ public class RegisterHydricResourceTest {
  	 */
 	@Test
 	public void existingResourceNameTest() {
+		manager.RegisterHydricResources("data/hdss-rf01-validRegisterHydricResourcesCase.json");
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-existingResourceName.json");
+			manager.RegisterHydricResources("data/hdss-rf01-validRegisterHydricResourcesCase.json");
 			fail("Equivalence class test HDSS-FN1-EQ-17 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "Tried to record a resource basin with an existing name");

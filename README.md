@@ -135,7 +135,7 @@
 
 - Equivalence class: HDSS-FN1-EQ-34
   - Input: Capacity values is a number “2.23”
-  - Result: Error: Valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-35
   - Input: Capacity values is a number with more than 2 decimals “2.231”
@@ -613,3 +613,11 @@
 - Equivalence class: HDSS-FN3-EQ-23
   - Input: One state value found
   - Result: valid case
+
+- Equivalence class: HDSS-FN1-EQ-24
+  - Input: Negative amount
+  - Result: Error: “The input file has no data or does not match the expected format”
+
+- Equivalence class: HDSS-FN1-EQ-25
+  - Input: Positive amount
+  - Result: Valid case

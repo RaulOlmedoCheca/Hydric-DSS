@@ -3,8 +3,7 @@
   "resources" : [
     {
       "name" : "shortName",
-      "type" : "reservoir",
-      "type" : "aquifer",
+      "type" : ["reservoir", "aquifer"],
       "capacity" : 2.23
     }
   ]

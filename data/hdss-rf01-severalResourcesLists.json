@@ -1,35 +1,37 @@
 {
   "irrigation_basin_name" : "shortName",
   "resources" : [
-    {
-      "name" : "shortName",
-      "type" : "reservoir",
-      "capacity" : 2.23
-    },
-    {
-      "name" : "plant1",
-      "type" : "desalination plant",
-      "capacity" : 23.46
-    },
-    {
-      "name" : "aquifer1",
-      "type" : "aquifer"
-    }
-  ],
-  "resources" : [
-    {
-      "name" : "shortName2",
-      "type" : "reservoir",
-      "capacity" : 2.23
-    },
-    {
-      "name" : "plant2",
-      "type" : "desalination plant",
-      "capacity" : 23.46
-    },
-    {
-      "name" : "aquifer2",
-      "type" : "aquifer"
-    }
+    [
+      {
+        "name" : "shortName",
+        "type" : "reservoir",
+        "capacity" : 2.23
+      },
+      {
+        "name" : "plant1",
+        "type" : "desalination plant",
+        "capacity" : 23.46
+      },
+      {
+        "name" : "aquifer1",
+        "type" : "aquifer"
+      }
+    ],
+    [
+      {
+        "name" : "shortName2",
+        "type" : "reservoir",
+        "capacity" : 2.23
+      },
+      {
+        "name" : "plant2",
+        "type" : "desalination plant",
+        "capacity" : 23.46
+      },
+      {
+        "name" : "aquifer2",
+        "type" : "aquifer"
+      }
+    ]
   ]
 }
