@@ -1,4 +1,18 @@
 # Guided exercise 3 - Hydric-DSS
+## Index
+- HDSS-RF-01
+  - Equivalence classes
+  - Boundary limits
+  - Test cases
+  - Syntax analysis
+- HDSS-RF-02
+  - Equivalence classes
+  - Boundary limits
+  - Test cases
+  - Syntax analysis
+- HDSS-RF-03
+  - Syntax analysis
+  
 ## HDSS-RF-01
 ### Equivalence classes
 - Equivalence class: HDSS-FN1-EQ-1
@@ -218,7 +232,7 @@
   - Input capacity: capacity with 3 decimal "2.223"
   - Result: Error: "The input file has no data or does not match the expected format"
 
-## Test classes
+## Test cases
 ### HDSS-FN1-TC-1
 - Equivalence classes considered:   HDSS-FN1-EQ-2, HDSS-FN1-EQ-3, HDSS-FN1-EQ-6, HDSS-FN1-EQ-8, HDSS-FN1-EQ-9, HDSS-FN1-EQ-13, HDSS-FN1-EQ-16, HDSS-FN1-EQ-18, HDSS-FN1-EQ-19, HDSS-FN1-EQ-23, HDSS-FN1-EQ-24, HDSS-FN1-EQ-25, HDSS-FN1-EQ-26, HDSS-FN1-EQ-30, HDSS-FN1-EQ-32, HDSS-FN1-EQ-34, HDSS-FN1-EQ-36, HDSS-FN1-EQ-39, HDSS-FN1-EQ-40
 - Input:
