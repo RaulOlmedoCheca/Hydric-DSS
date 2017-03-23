@@ -226,61 +226,67 @@
   - Content:
 ```JSON
 {
-  "irrigation_basin_name" : "shortName",
-  "resources": [
-    {
-      "name" : "shortName",
-      "type" : "reservoir",
-      "capacity": 2.23
-    },
-    {
-      "name" : "plant1",
-      "type" : "desalination plant",
-      "capacity" : 23.46
-    },
-    {
-      "name" : "aquifer1",
-      "type" : "aquifer"
-    }
-  ]
+	"irrigation_basin_name": "shortName",
+	"resources": [
+		{
+			"name": "shortName",
+			"type": "reservoir",
+			"capacity": 2.23
+		},
+		{
+			"name": "plant1",
+			"type": "desalination plant",
+			"capacity": 23.46
+		},
+		{
+			"name": "aquifer1",
+			"type": "aquifer"
+		}
+	]
 }
 ```
   - Output:
 ```JSON
 {
-  "shortName" :
-  { "resources": [
-     {"reservoirs": {
-     "amount": 1,
-     "capacity": 2.23,
-     "list" : [
-           {
-           "name" : "shortName",
-           "capacity" : 2.23
-           }
-     ]
-     }
-     },
-     {"plants": {
-     "amount": 1,
-     "capacity": 23.46,
-     "list" : [
-           {
-           "name" : "plant1",
-           "capacity" : 23.46
-           }
-     ]
-     }
-     },
-     {"aquifers": {
-     "amount": 1,
-     "list" : [
-          {
-          "name" : "aquifer1",
-          "capacity" : 2.23
-         }
-] } }
-]}
+	"shortName": {
+		"resources": [
+			{
+				"reservoirs": {
+					"amount": 1,
+					"capacity": 2.23,
+					"list": [
+						{
+							"name": "shortName",
+							"capacity": 2.23
+						}
+					]
+				}
+			},
+			{
+				"plants": {
+					"amount": 1,
+					"capacity": 23.46,
+					"list": [
+						{
+							"name": "plant1",
+							"capacity": 23.46
+						}
+					]
+				}
+			},
+			{
+				"aquifers": {
+					"amount": 1,
+					"list": [
+						{
+							"name": "aquifer1",
+							"capacity": 2.23
+						}
+					]
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -296,34 +302,35 @@
   - Filename “hdss-rf01-capacity-zero.json”
 ```JSON  
 {
-  "irrigation_basin_name" : "zero-capacity-basin",
-  "resources" :[
-    {
-      "name" : "zero-capacity-reservoir",
-      "type" : "reservoir",
-      "capacity": 0.00
-    }
-  ]
+	"irrigation_basin_name": "zero-capacity-basin",
+	"resources": [
+		{
+			"name": "zero-capacity-reservoir",
+			"type": "reservoir",
+			"capacity": 0.00
+		}
+	]
 }
 ```
 - Expected output:
 ```JSON
 {
-  "zero-capacity-basin" :
-  { "resources": [
-     {"reservoirs": {
-     "amount": 1,
-     "capacity": 0.00,
-     "list" : [
-           {
-           "name" : "zero-capacity-reservoir",
-           "capacity" : 0.00
-           }
-      ]
-      }
-    }
-    ]
-  }    
+	"zero-capacity-basin": {
+		"resources": [
+			{
+				"reservoirs": {
+					"amount": 1,
+					"capacity": 0.00,
+					"list": [
+						{
+							"name": "zero-capacity-reservoir",
+							"capacity": 0.00
+						}
+					]
+				}
+			}
+		]
+	}
 }
 ```
 
