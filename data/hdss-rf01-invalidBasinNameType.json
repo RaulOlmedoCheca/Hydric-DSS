@@ -1,19 +1,19 @@
 {
-  "irrigationBasinName" : 22,
+  "irrigationBasinName": 22,
   "resources": [
     {
-      "name" : "reservoir 1",
-      "type" : "reservoir",
-      "capacity" : 0
+      "name": "reservoir 1",
+      "type": "reservoir",
+      "capacity": 0
     },
     {
-      "name" : "plant 1",
+      "name": "plant 1",
       "type": "desalination-plant",
       "capacity": 10000.2
-     },
-     {
-       "name" : "aquifer 23",
-       "type" : "aquifer"
-     }
+    },
+    {
+      "name": "aquifer 23",
+      "type": "aquifer"
+    }
   ]
- }
+}

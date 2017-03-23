@@ -1,10 +1,10 @@
 {
-  "irrigation_basin_name" : "zero-capacity-basin",
+  "irrigation_basin_name": "zero-capacity-basin",
   "resources": [
     {
-      "name" : "zero-capacity-reservoir",
-      "type" : "reservoir",
-      "capacity" : 0.00
+      "name": "zero-capacity-reservoir",
+      "type": "reservoir",
+      "capacity": 0.00
     }
   ]
 }

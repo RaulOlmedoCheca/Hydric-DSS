@@ -1,19 +1,19 @@
 {
-  "irrigation_basin_name" : "shortName",
-  "resources" : [
+  "irrigation_basin_name": "shortName",
+  "resources": [
     {
-      "name" : "shortName",
-      "type" : "reservoir",
-      "capacity" : 2.23
+      "name": "shortName",
+      "type": "reservoir",
+      "capacity": 2.23
     },
     {
-      "name" : "plant1",
-      "type" : "desalination plant",
-      "capacity" : 23.46
+      "name": "plant1",
+      "type": "desalination plant",
+      "capacity": 23.46
     },
     {
-      "name" : "aquifer1",
-      "type" : "aquifer"
+      "name": "aquifer1",
+      "type": "aquifer"
     }
   ]
 }

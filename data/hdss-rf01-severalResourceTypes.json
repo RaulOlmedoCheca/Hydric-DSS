@@ -1,10 +1,13 @@
 {
-  "irrigation_basin_name" : "shortName",
-  "resources" : [
+  "irrigation_basin_name": "shortName",
+  "resources": [
     {
-      "name" : "shortName",
-      "type" : ["reservoir", "aquifer"],
-      "capacity" : 2.23
+      "name": "shortName",
+      "type": [
+        "reservoir",
+        "aquifer"
+      ],
+      "capacity": 2.23
     }
   ]
 }
