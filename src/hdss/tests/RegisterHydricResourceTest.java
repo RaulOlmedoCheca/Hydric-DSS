@@ -28,7 +28,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void basicValidTest() throws HydricDSSException {
 		WatershedsListPublicData result;
-		result = manager.RegisterHydricResources("data/hdss-rf01-validRegisterHydricResourcesCase.json");
+		result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validRegisterHydricResourcesCase.json");
 
 		List<WatershedPublicData> watershedList;
 		watershedList = result.getWatershedList();
@@ -93,7 +93,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void zeroCapacityBasinTest() throws HydricDSSException {
 		WatershedsListPublicData result;
-		result = manager.RegisterHydricResources("data/hdss-rf01-capacityZero.json");
+		result = manager.RegisterHydricResources("data/RF01/hdss-rf01-capacityZero.json");
 
 		List<WatershedPublicData> watershedList;
 		watershedList = result.getWatershedList();
@@ -124,7 +124,7 @@ public class RegisterHydricResourceTest {
 	@Test
  	public void invalidJSONFormatTest() {
  		try {
- 			manager.RegisterHydricResources("data/hdss-rf01-invalidJson.json");
+ 			manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidJson.json");
 			fail("Equivalence class test HDSS-FN1-EQ-4 failed");
  		} catch (HydricDSSException e) {
  			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -139,7 +139,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void emptyFileTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-empty.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-empty.json");
 			fail("Equivalence class test HDSS-FN1-EQ-5 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -154,7 +154,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void existingIrrigationBasinTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-existingIrrigationBasinName.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-existingIrrigationBasinName.json");
 			fail("Equivalence class test HDSS-FN1-EQ-7 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "Tried to record an irrigation basin with an existing name");
@@ -169,7 +169,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void longIrrigationBasinNameTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-longIrrigationBasinName.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-longIrrigationBasinName.json");
 			fail("Equivalence class test HDSS-FN1-EQ-10 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -184,7 +184,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void noIrrigationBasinNameTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-noIrrigationBasinName.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-noIrrigationBasinName.json");
 			fail("Equivalence class test HDSS-FN1-EQ-11 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -199,7 +199,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void severalIrrigationBasinNamesTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-severalIrrigationBasinNames.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-severalIrrigationBasinNames.json");
 			fail("Equivalence class test HDSS-FN1-EQ-12 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -214,7 +214,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void noResourcesListTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-noResourcesList.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-noResourcesList.json");
 			fail("Equivalence class test HDSS-FN1-EQ-14 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -229,7 +229,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void severalResourcesListsTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-severalResourcesLists.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-severalResourcesLists.json");
 			fail("Equivalence class test HDSS-FN1-EQ-15 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -243,9 +243,9 @@ public class RegisterHydricResourceTest {
  	 */
 	@Test
 	public void existingResourceNameTest() {
-		manager.RegisterHydricResources("data/hdss-rf01-validRegisterHydricResourcesCase.json");
+		manager.RegisterHydricResources("data/RF01/hdss-rf01-validRegisterHydricResourcesCase.json");
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-validRegisterHydricResourcesCase.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-validRegisterHydricResourcesCase.json");
 			fail("Equivalence class test HDSS-FN1-EQ-17 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "Tried to record a resource basin with an existing name");
@@ -260,7 +260,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void longResourceNameTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-longResourceName.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-longResourceName.json");
 			fail("Equivalence class test HDSS-FN1-EQ-20 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -275,7 +275,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void noResourceNameTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-noResourceName.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-noResourceName.json");
 			fail("Equivalence class test HDSS-FN1-EQ-21 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -290,7 +290,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void severalResourceNamesTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-severalResourceNames.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-severalResourceNames.json");
 			fail("Equivalence class test HDSS-FN1-EQ-22 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -305,7 +305,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void invalidResourceTypeTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-invalidResourceType.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceType.json");
 			fail("Equivalence class test HDSS-FN1-EQ-27 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -320,7 +320,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void noResourceTypeTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-noResourceType.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-noResourceType.json");
 			fail("Equivalence class test HDSS-FN1-EQ-28 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -335,7 +335,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void severalResourceTypesTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-severalResourceTypes.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-severalResourceTypes.json");
 			fail("Equivalence class test HDSS-FN1-EQ-29 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -350,7 +350,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void negativeResourceCapacityTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-negativeResourceCapacity.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-negativeResourceCapacity.json");
 			fail("Equivalence class test HDSS-FN1-EQ-31 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -365,7 +365,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void notValidResourceCapacityTest() {
 		try {
-			manager.RegisterHydricResources("data/hdss-rf01-invalidResourceCapacity.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceCapacity.json");
 			fail("Equivalence class test HDSS-FN1-EQ-33 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -380,7 +380,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void notValidResourceCapacityDecimalFormatTest() {
  		try {
- 			manager.RegisterHydricResources("data/hdss-rf01-notValidResourceCapacityDecimalFormat.json");
+ 			manager.RegisterHydricResources("data/RF01/hdss-rf01-notValidResourceCapacityDecimalFormat.json");
  			fail("Equivalence class test HDSS-FN1-EQ-35 failed");
  		}catch (HydricDSSException e) {
  			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -413,7 +413,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void validIrrigationBasinName49charTest() throws HydricDSSException{
 		 WatershedsListPublicData result;
-		 result = manager.RegisterHydricResources("data/hdss-rf01-validIrrigationBasinName49.json");
+		 result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validIrrigationBasinName49.json");
 
 		 List<WatershedPublicData> watershedList;
 		 watershedList = result.getWatershedList();
@@ -436,7 +436,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void validIrrigationBasinName50charTest() throws HydricDSSException{
 		 WatershedsListPublicData result;
-		 result = manager.RegisterHydricResources("data/hdss-rf01-validIrrigationBasinName50.json");
+		 result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validIrrigationBasinName50.json");
 
 		 List<WatershedPublicData> watershedList;
 		 watershedList = result.getWatershedList();
@@ -458,7 +458,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void invalidIrrigationBasinNameTest(){
 		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-invalidIrrigationBasinName.json");
+			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidIrrigationBasinName.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-3 failed")
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
@@ -473,7 +473,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void validResourceName49charTest() throws HydricDSSException{
 		 WatershedsListPublicData result;
-		 result = manager.RegisterHydricResources("data/hdss-rf01-validResourceName49.json");
+		 result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validResourceName49.json");
 
 		 List<WatershedPublicData> watershedList;
 		 watershedList = result.getWatershedList();
@@ -504,7 +504,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void validResourceName50charTest() throws HydricDSSException{
 		 WatershedsListPublicData result;
-		 result = manager.RegisterHydricResources("data/hdss-rf01-validResourceName50.json");
+		 result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validResourceName50.json");
 
 		 List<WatershedPublicData> watershedList;
 		 watershedList = result.getWatershedList();
@@ -535,7 +535,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void invalidResourceNameTest(){
 		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-invalidResourceName.json");
+			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceName.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-6 failed")
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
@@ -550,7 +550,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void validResourceCapacityTest() throws HydricDSSException{
 		 WatershedsListPublicData result;
-		 result = manager.RegisterHydricResources("data/hdss-rf01-validResourceCapacity0_01.json");
+		 result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validResourceCapacity0_01.json");
 
 		 List<WatershedPublicData> watershedList;
 		 watershedList = result.getWatershedList();
@@ -581,7 +581,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void invalidResourceCapacityTest(){
 		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-invalidResourceCapacity.json");
+			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceCapacity.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-9 failed")
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
@@ -596,7 +596,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void validResourceCapacityTwoDecimalsTest() throws HydricDSSException{
 		 WatershedsListPublicData result;
-		 result = manager.RegisterHydricResources("data/hdss-rf01-validResourceCapacityTwoDecimals.json");
+		 result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validResourceCapacityTwoDecimals.json");
 
 		 List<WatershedPublicData> watershedList;
 		 watershedList = result.getWatershedList();
@@ -627,7 +627,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void validResourceCapacityOneDecimalTest() throws HydricDSSException{
 		 WatershedsListPublicData result;
-		 result = manager.RegisterHydricResources("data/hdss-rf01-validResourceCapacityOneDecimal.json");
+		 result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validResourceCapacityOneDecimal.json");
 
 		 List<WatershedPublicData> watershedList;
 		 watershedList = result.getWatershedList();
@@ -658,7 +658,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void validResourceCapacityZeroDecimalsTest() throws HydricDSSException{
 		 WatershedsListPublicData result;
-		 result = manager.RegisterHydricResources("hdss-rf01-validResourceCapacityZeroDecimals.json");
+		 result = manager.RegisterHydricResources("data/RF01/hdss-rf01-validResourceCapacityZeroDecimals.json");
 
 		 List<WatershedPublicData> watershedList;
 		 watershedList = result.getWatershedList();
@@ -689,7 +689,7 @@ public class RegisterHydricResourceTest {
 	 @Test
 	 public void invalidResourceCapacityThreeDecimalsTest(){
 		 try {
-			 manager.RegisterHydricResources("data/hdss-rf01-invalidResourceCapacityThreeDecimals.json");
+			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceCapacityThreeDecimals.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-13 failed")
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
