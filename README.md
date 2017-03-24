@@ -451,26 +451,35 @@
 
 ### Syntax analysis
 File::= Init_Object Body End_Object
-Init_Object::='{'
 Body::= Irrigation_Basin_Name Label_Value_Separator Resources
+
+Irrigation_Basin_Name::= Quotes Irrigation_Basin_Name_Value Quotes
+Resources::= Init_Array 0[Resource_Object Fields_Separator]n 0[Resource_Object]1 End_Array
+
+Resource_Object::= Init_Object Resource_Name Fields_Separator Resource_Type Fields_Separator Resource_Capacity End_Object
+
+Resource_Name::= Quotes Resource_Name_Label Quotes Label_Value_Separator Quotes Resource_Name_Value Quotes
+Resource_Type::= Quotes Resource_Type_Label Quotes Label_Value_Separator Quotes Resource_Type_Value Quotes
+Resource_Capacity::= Quotes Resource_Capacity_Label Quotes Label_Value_Separator Resource_Capacity_Value
+
+Resource_Name_Label::= 'Name'
+Resource_Type_Label::= 'Type'
+Resource_Capacity_Label::= 'Capacity'
+
+Resource_Name_Value::= 1[Character]50
+Resource_Type_Value::= 'Reservoir'|'Desalination plant'|'Aquifer'
+Resource_Capacity_Value::= 1[Number]n Point 2[Number]2
+
+Init_Object::='{'
 End_Object::='}'
 Label_Value_Separator::=':'
 Init_Array::='['
 End_Array::=']'
 Fields_Separator::=','
-Irrigation_Basin_Name::= Quotes Irrigation_Basin_Name_Value Quotes
 Quotes::='"'
-Resources::= Init_Array 0[Resource_Object]n End_Array
-Resource_Object::= Init_Object Resource_Name Resource_Type Resource_Capacity End_Object
-Resource_Name::= Quotes Resource_Name_Label Quotes Label_Value_Separator Quotes Resource_Name_Value Quotes
-Resource_Type::= Quotes Resource_Type_Label Quotes Label_Value_Separator Quotes Resource_Type_Value Quotes
-Resource_Capacity::= Quotes Resource_Capacity_Label Quotes Label_Value_Separator number
-Resource_Name_Label::= 'Name'
-Resource_Type_Label::= 'Type'
-Resource_Name_Value::= 1[Character]50
-Resource_Capacity_Label::= 'Capacity'
-Resource_Type_Value::= 'Reservoir'|'Desalination plant'|'Aquifer'
+
 Character::='a'|'b'|'c'|...|'z'
+Point::='.'
 Number::='0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'
 
 
@@ -739,6 +748,42 @@ Number::='0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'
 ### Boundary limits
 ### Test cases
 ### Syntax analysis
+File::= Init_Object Body End_Object
+
+Body::= Drainage_Basin Fields_Separator Requester Fields_Separator State Fields_Separator Amount Fields_Separator Irrigation_Date
+
+Fields_Separator::=','
+Label_Value_Separator::=':'
+Init_Object::='{'
+End_Object::='}'
+
+Drainage_Basin::= Quotes Drainage_Basin_Name_Label Quotes Label_Value_Separator Quotes Drainage_Basin_Name_Value Quotes
+Requester::= Quotes Requester_Label Quotes Label_Value_Separator Quotes Requester_Value Quotes
+State::= Quotes State_Label Quotes Label_Value_Separator Quotes State_Value Quotes
+Amount::= Quotes Amount_Label Quotes Label_Value_Separator Amount_Value
+Irrigation_Date::= Quotes Irrigation_Date_Label Quotes Label_Value_Separator Quotes Irrigation_Date_Value Quotes
+
+Drainage_Basin_Label::= 'Drainage Basin'
+Requester_Label::= 'Requester'
+State_Label::= 'State'
+Amount_Label::= 'Amount'
+Irrigation_Date_Label::= 'Irrigation Date'
+
+Drainage_Basin_Value::= 1[Character]50
+Requester_Value::= 1[Character]50
+State_Value::= 'PLENTY'|'NORMALITY'|'SHORTAGE'
+Amount_Value::= 1[Number]n Point 2[Number]2
+Irrigation_Date_Value::= '0'|'1'|'2'|'3' Number Bar '0'|'1' Number Bar 2[Number]2 Hyphen Hour
+
+Hour::= '0'|'1'|'2' Number Colon '0'|'1'|'2'|'3'|'4'|'5' Number
+
+Quotes::= '"'
+Bar::= '/'
+Hyphen::= '-'
+Colon::= ':'
+
+Character::='a'|'b'|'c'|...|'z'
+Number::='0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'
 
 ## HDSS-RF-03
 ### Syntax analysis
