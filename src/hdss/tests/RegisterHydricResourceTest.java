@@ -7,6 +7,7 @@ import java.util.List;
 import org.junit.Test;
 
 import hdss.WatershedManagerInterface;
+import hdss.WatershedManager;
 import hdss.exceptions.HydricDSSException;
 import hdss.io.AquiferPublicData;
 import hdss.io.DesalinationPlantPublicData;
@@ -16,7 +17,7 @@ import hdss.io.WatershedsListPublicData;
 
 public class RegisterHydricResourceTest {
 
-	private WatershedManagerInterface manager;
+	private WatershedManagerInterface manager = new WatershedManager();
 
 	/* Test case: HDSS-FN1-TC-1
 	 * Equivalence class: HDSS-FN1-EQ-2, HDSS-FN1-EQ-3, HDSS-FN1-EQ-6, HDSS-FN1-EQ-8, HDSS-FN1-EQ-9, HDSS-FN1-EQ-13,
