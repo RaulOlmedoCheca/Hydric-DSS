@@ -614,7 +614,7 @@
   - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-33
-  - Input: Capacity values is not a number "2.23"
+  - Input: Capacity values is not a number "word"
   - Result: Error: "The input file has no data or does not match the expected format"
 
 - Equivalence class: HDSS-FN2-EQ-34
@@ -754,11 +754,6 @@
 
 **Body::=** Drainage_Basin Fields_Separator Requester Fields_Separator State Fields_Separator Amount Fields_Separator Irrigation_Date
 
-**Fields_Separator::=**','
-**Label_Value_Separator::=**':'
-**Init_Object::=**'{'
-**End_Object::=**'}'
-
 **Drainage_Basin::=** Quotes Drainage_Basin_Name_Label Quotes Label_Value_Separator Quotes Drainage_Basin_Name_Value Quotes
 **Requester::=** Quotes Requester_Label Quotes Label_Value_Separator Quotes Requester_Value Quotes
 **State::=** Quotes State_Label Quotes Label_Value_Separator Quotes State_Value Quotes
@@ -775,14 +770,20 @@
 **Requester_Value::=** 1[Character]50
 **State_Value::=** 'PLENTY'|'NORMALITY'|'SHORTAGE'
 **Amount_Value::=** 1[Number]n Point 2[Number]2
-**Irrigation_Date_Value::=** '0'|'1'|'2'|'3' Number Bar '0'|'1' Number Bar 2[Number]2 Hyphen Hour
+**Irrigation_Date_Value::=** Date Hyphen Hour
 
-**Hour::=** '0'|'1'|'2' Number Colon '0'|'1'|'2'|'3'|'4'|'5' Number
+**Date::=** '0'|'1'|'2'|'3' Number Bar '0'|'1' Number Bar 2[Number]2
+**Hour::=** '0'|'1'|'2' Number Label_Value_Separator '0'|'1'|'2'|'3'|'4'|'5' Number
+
+**Fields_Separator::=**','
+**Label_Value_Separator::=**':'
+**Init_Object::=**'{'
+**End_Object::=**'}'
 
 **Quotes::=** '"'
 **Bar::=** '/'
 **Hyphen::=** '-'
-**Colon::=** ':'
+**Point::=** '.'
 
 **Character::=**'a'|'b'|'c'|...|'z'
 **Number::=**'0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'
