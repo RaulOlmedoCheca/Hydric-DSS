@@ -460,7 +460,7 @@ public class RegisterHydricResourceTest {
 	 public void invalidIrrigationBasinNameTest(){
 		 try {
 			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidIrrigationBasinName.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-3 failed")
+			 fail("Boundary limit class test HDSS-FN1-BL-3 failed");
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
 		 }
@@ -537,7 +537,7 @@ public class RegisterHydricResourceTest {
 	 public void invalidResourceNameTest(){
 		 try {
 			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceName.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-6 failed")
+			 fail("Boundary limit class test HDSS-FN1-BL-6 failed");
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
 		 }
@@ -583,7 +583,7 @@ public class RegisterHydricResourceTest {
 	 public void invalidResourceCapacityTest(){
 		 try {
 			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceCapacity.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-9 failed")
+			 fail("Boundary limit class test HDSS-FN1-BL-9 failed");
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
 		 }
@@ -691,7 +691,7 @@ public class RegisterHydricResourceTest {
 	 public void invalidResourceCapacityThreeDecimalsTest(){
 		 try {
 			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceCapacityThreeDecimals.json");
-			 fail("Boundary limit class test HDSS-FN1-BL-13 failed")
+			 fail("Boundary limit class test HDSS-FN1-BL-13 failed");
 		 }catch (HydricDSSException e){
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
 		 }
