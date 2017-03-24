@@ -140,7 +140,7 @@ public class RegisterHydricResourceTest {
 	@Test
 	public void emptyFileTest() {
 		try {
-			manager.RegisterHydricResources("data/RF01/hdss-rf01-empty.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-emptyFile.json");
 			fail("Equivalence class test HDSS-FN1-EQ-5 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -153,9 +153,10 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws Exception. Error message: "Tried to record an irrigation basin with an existing name"
  	 */
 	@Test
-	public void existingIrrigationBasinTest() {
+	public void existingIrrigationBasinTest() throws HydricDSSException {
+		manager.RegisterHydricResources("data/RF01/hdss-rf01-existingIrrigationBasinName1.json");
 		try {
-			manager.RegisterHydricResources("data/RF01/hdss-rf01-existingIrrigationBasinName.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-existingIrrigationBasinName2.json");
 			fail("Equivalence class test HDSS-FN1-EQ-7 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "Tried to record an irrigation basin with an existing name");
@@ -243,10 +244,10 @@ public class RegisterHydricResourceTest {
  	 * Expected value: Throws Exception. Error message: "Tried to record a resource basin with an existing name"
  	 */
 	@Test
-	public void existingResourceNameTest() {
-		manager.RegisterHydricResources("data/RF01/hdss-rf01-validRegisterHydricResourcesCase.json");
+	public void existingResourceNameTest() throws HydricDSSException {
+		manager.RegisterHydricResources("data/RF01/hdss-rf01-existingResourceName.json");
 		try {
-			manager.RegisterHydricResources("data/RF01/hdss-rf01-validRegisterHydricResourcesCase.json");
+			manager.RegisterHydricResources("data/RF01/hdss-rf01-existingResourceName.json");
 			fail("Equivalence class test HDSS-FN1-EQ-17 failed");
 		}catch (HydricDSSException e) {
 			assertEquals(e.getMessage(), "Tried to record a resource basin with an existing name");
