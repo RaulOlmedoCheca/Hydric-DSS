@@ -747,6 +747,221 @@
 
 ### Boundary limits
 ### Test cases
+#### HDSS-FN2-TC-1
+- Equivalence classes considered:   HDSS-FN2-EQ-2, HDSS-FN2-EQ-3, HDSS-FN2-EQ-6, HDSS-FN2-EQ-8, HDSS-FN2-EQ-9, HDSS-FN2-EQ-13, HDSS-FN2-EQ-16, HDSS-FN2-EQ-18, HDSS-FN2-EQ-19, HDSS-FN2-EQ-23, HDSS-FN2-EQ-24, HDSS-FN2-EQ-25, HDSS-FN2-EQ-26, HDSS-FN2-EQ-30, HDSS-FN2-EQ-32, HDSS-FN2-EQ-34, HDSS-FN2-EQ-36, HDSS-FN2-EQ-39, HDSS-FN2-EQ-40
+- Input:
+  - Filename: "hdss-rf02-validRegisterHydricResourcesCase.json"
+  - Expected output: "hdss-rf02-expectedValidRegisterHydricResourcesCase.json"
+
+#### HDSS-FN2-TC-2
+- Equivalence class considered: HDSS-FN2-EQ-1
+- Input:
+  - Filename "nonexists.json"
+  - Expected output: Throws Exception. Error message: "An input data file is not found"
+
+#### HDSS-FN2-TC-3
+- Boundary limit considered: HDSS-FN2-BL-7
+- Input:
+  - Filename "hdss-rf02-capacityZero.json"
+  - Expected output: "hdss-rf02-expectedCapacityZero.json"
+
+#### HDSS-FN2-TC-4
+- Equivalence class considered: HDSS-FN2-EQ-4
+- Input:
+  - Filename "hdss-rf02-invalidJson.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-5
+- Equivalence class considered: HDSS-FN2-EQ-5
+- Input:
+  - Filename "hdss-rf02-empty.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-6
+- Equivalence class considered: HDSS-FN2-EQ-7
+- Input:
+  - Filename "hdss-rf02-existingIrrigationBasinName.json"
+  - Expected output: Throws Exception. Error message: "Tried to record an irrigation basin with an existing name"
+
+#### HDSS-FN2-TC-7
+- Equivalence class considered: HDSS-FN2-EQ-10
+- Input:
+  - Filename "hdss-rf02-longIrrigationBasinName.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-8
+- Equivalence class considered: HDSS-FN2-EQ-11
+- Input:
+  - Filename "hdss-rf02-noIrrigationBasinName.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-9
+- Equivalence class considered: HDSS-FN2-EQ-12
+- Input:
+  - Filename "hdss-rf02-severalIrrigationBasinNames.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-10
+- Equivalence class considered: HDSS-FN2-EQ-14
+- Input:
+  - Filename "hdss-rf02-noResourcesList.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-11
+- Equivalence class considered: HDSS-FN2-EQ-15
+- Input:
+  - Filename "hdss-rf02-severalResourcesLists.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-12
+- Equivalence class considered: HDSS-FN2-EQ-17
+- Input:
+  - Filename "hdss-rf02-existingResourceName.json"
+  - Expected output: Throws Exception. Error message: "Tried to record a resource basin with an existing name"
+
+#### HDSS-FN2-TC-13
+- Equivalence class considered: HDSS-FN2-EQ-20
+- Input:
+  - Filename "hdss-rf02-longResourceName.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-14
+- Equivalence class considered: HDSS-FN2-EQ-21
+- Input:
+  - Filename "hdss-rf02-noResourceName.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-15
+- Equivalence class considered: HDSS-FN2-EQ-22
+- Input:
+  - Filename "hdss-rf02-severalResourceNames.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-16
+- Equivalence class considered: HDSS-FN2-EQ-27
+- Input:
+  - Filename "hdss-rf02-invalidResourceType.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-17
+- Equivalence class considered: HDSS-FN2-EQ-28
+- Input:
+  - Filename "hdss-rf02-noResourceType.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-18
+- Equivalence class considered: HDSS-FN2-EQ-29
+- Input:
+  - Filename "hdss-rf02-severalResourceTypes.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-19
+- Equivalence class considered: HDSS-FN2-EQ-31
+- Input:
+  - Filename "hdss-rf02-negativeResourceCapacity.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-20
+- Equivalence class considered: HDSS-FN2-EQ-33
+- Input:
+  - Filename "hdss-rf02-notValidResourceCapacity.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-21
+- Equivalence class considered: HDSS-FN2-EQ-35
+- Input:
+  - Filename "hdss-rf02-notValidResourceCapacityDecimalFormat.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-22
+- Equivalence class considered: HDSS-FN2-EQ-37
+- Input:
+  - Filename "nonexists.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-23
+- Equivalence class considered: HDSS-FN2-EQ-38
+- Input:
+  - Filename "nonexists.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-24
+- Equivalence class considered: HDSS-FN2-EQ-41
+- Input:
+  - Filename "nonexists.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-25
+- Boundary limit considered: HDSS-FN2-BL-1
+- Input:
+    - Filename "hdss-rf02-validIrrigationBasinName49.json"
+    - Expected output: "hdss-rf02-expectedValidIrrigationBasinName49.json"
+
+#### HDSS-FN2-TC-26
+- Boundary limit considered: HDSS-FN2-BL-2
+- Input:
+    - Filename "hdss-rf02-validIrrigationBasinName50.json"
+    - Expected output: "hdss-rf02-expectedValidIrrigationBasinName50.json"
+
+#### HDSS-FN2-TC-27
+- Boundary limit considered: HDSS-FN2-BL-3
+- Input:
+    - Filename "hdss-rf02-invalidIrrigationBasinName.json"
+    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-28
+- Boundary limit considered: HDSS-FN2-BL-4
+- Input:
+    - Filename "hdss-rf02-validResourceName49.json"
+    - Expected output: "hdss-rf02-expectedValidResourceName49.json"
+
+#### HDSS-FN2-TC-29
+- Boundary limit considered: HDSS-FN2-BL-5
+- Input:
+    - Filename "hdss-rf02-validResourceName50.json"
+    - Expected output: "hdss-rf02-expectedValidResourceName50.json"
+
+#### HDSS-FN2-TC-30
+- Boundary limit considered: HDSS-FN2-BL-6
+- Input:
+    - Filename "hdss-rf02-invalidResourceName.json"
+    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-31
+- Boundary limit considered: HDSS-FN2-BL-8
+- Input:
+    - Filename "hdss-rf02-validResourceCapacity0_01.json"
+    - Expected output: "hdss-rf02-expectedValidResourceCapacity0_01.json"
+
+#### HDSS-FN2-TC-32
+- Boundary limit considered: HDSS-FN2-BL-9
+- Input:
+    - Filename "hdss-rf02-invalidResourceCapacity.json"
+    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-33
+- Boundary limit considered: HDSS-FN2-BL-10
+- Input:
+    - Filename "hdss-rf02-validResourceCapacityTwoDecimals.json"
+    - Expected output: "hdss-rf02-expectedValidResourceCapacityTwoDecimals.json"
+
+#### HDSS-FN2-TC-34
+- Boundary limit considered: HDSS-FN2-BL-11
+- Input:
+    - Filename "hdss-rf02-validResourceCapacityOneDecimal.json"
+    - Expected output: "hdss-rf02-expectedValidResourceCapacityOneDecimal.json"
+
+#### HDSS-FN2-TC-35
+- Boundary limit considered: HDSS-FN2-BL-12
+- Input:
+    - Filename "hdss-rf02-validResourceCapacityZeroDecimals.json"
+    - Expected output: "hdss-rf02-expectedValidResourceCapacityZeroDecimals.json"
+
+#### HDSS-FN2-TC-36
+- Boundary limit considered: HDSS-FN2-BL-13
+- Input:
+    - Filename "hdss-rf02-invalidResourceCapacityThreeDecimals.json"
+    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 ## HDSS-RF-03
 ### Syntax analysis
