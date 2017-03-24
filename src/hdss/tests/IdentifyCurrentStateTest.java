@@ -21,6 +21,14 @@ public class IdentifyCurrentStateTest {
 
 	private WatershedManagerInterface manager = new WatershedManager();
 
+	// PLANTILLA
+	public void test() throws HydricDSSException {
+		ScenarioPublicData result;
+		manager.RegisterHydricResources("data/file.json");
+		result = manager.IdentifyCurrentState("data/aquifer.json o esto o lo otro")
+		assertEquals("SHORTAGE", result.getScenarioEvaluation);
+	}
+
 	/* Test case: HDSS-FN2-TC-1
 	 * Equivalence class: HDSS-FN2-EQ-2, HDSS-FN2-EQ-3, HDSS-FN2-EQ-6, HDSS-FN2-EQ-8,
 	 * HDSS-FN2-EQ-9, HDSS-FN2-EQ-13, HDSS-FN2-EQ-16, HDSS-FN2-EQ-18, HDSS-FN2-EQ-19,
