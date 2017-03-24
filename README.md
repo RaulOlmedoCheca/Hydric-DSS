@@ -449,6 +449,30 @@
     - Filename "hdss-rf01-invalidResourceCapacityThreeDecimals.json"
     - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
+### Syntax analysis
+File::= Init_Object Body End_Object
+Init_Object::='{'
+Body::= Irrigation_Basin_Name Label_Value_Separator Resources
+End_Object::='}'
+Label_Value_Separator::=':'
+Init_Array::='['
+End_Array::=']'
+Fields_Separator::=','
+Irrigation_Basin_Name::= Quotes Irrigation_Basin_Name_Value Quotes
+Quotes::='"'
+Resources::= Init_Array 0[Resource_Object]n End_Array
+Resource_Object::= Init_Object Resource_Name Resource_Type Resource_Capacity End_Object
+Resource_Name::= Quotes Resource_Name_Label Quotes Label_Value_Separator Quotes Resource_Name_Value Quotes
+Resource_Type::= Quotes Resource_Type_Label Quotes Label_Value_Separator Quotes Resource_Type_Value Quotes
+Resource_Capacity::= Quotes Resource_Capacity_Label Quotes Label_Value_Separator number
+Resource_Name_Label::= 'Name'
+Resource_Type_Label::= 'Type'
+Resource_Name_Value::= 1[Character]50
+Resource_Capacity_Label::= 'Capacity'
+Resource_Type_Value::= 'Reservoir'|'Desalination plant'|'Aquifer'
+Character::='a'|'b'|'c'|...|'z'
+Number::='0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'
+
 
 ## HDSS-RF-02
 ### Equivalence classes
@@ -713,14 +737,6 @@
   - Result: Valid case
 
 ### Boundary limits
-Catchment basin no more than 50 chars
-resource name no more than 50 chars
-plenty if the sum of resources of that type is above 90% of the capacity (if aquifer, above sea level)
-normality if the sum of resources of that type is between 40 and 90% (if aquifer, over -8 meters but nor plenty state)
-shortage if summ of that type under 40% of theur total capacity (if aquifer under -8 meters)
-
-
-
 ### Test cases
 ### Syntax analysis
 
