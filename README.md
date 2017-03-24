@@ -713,6 +713,14 @@
   - Result: Valid case
 
 ### Boundary limits
+Catchment basin no more than 50 chars
+resource name no more than 50 chars
+plenty if the sum of resources of that type is above 90% of the capacity (if aquifer, above sea level)
+normality if the sum of resources of that type is between 40 and 90% (if aquifer, over -8 meters but nor plenty state)
+shortage if summ of that type under 40% of theur total capacity (if aquifer under -8 meters)
+
+
+
 ### Test cases
 ### Syntax analysis
 

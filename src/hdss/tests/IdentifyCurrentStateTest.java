@@ -85,7 +85,7 @@ public class IdentifyCurrentStateTest {
 	 * Expected value:
 	 */
 
-	 /* Test case: HDSS-FN2-TC-2
+	/* Test case: HDSS-FN2-TC-2
  	 * Equivalence class: HDSS-FN2-EQ-1
  	 * Testing technique: Equivalence Classes Analysis
   	 * Expected value: Throws Exception. Error message: "An input data file is not found"
@@ -103,7 +103,7 @@ public class IdentifyCurrentStateTest {
  	/* Test case: HDSS-FN2-TC-3
  	 * Equivalence class: HDSS-FN2-BL-7
  	 * Testing technique: Boundary Limit Analysis
-   * Expected value: hdss-rf01-expectedCapacityZero.json
+     * Expected value: hdss-rf01-expectedCapacityZero.json
  	 */
  	@Test
  	public void zeroCapacityBasinTest() throws HydricDSSException {
@@ -131,7 +131,7 @@ public class IdentifyCurrentStateTest {
  		assertEquals(reservoir.getMaxCapacity(), 0.00, 0.001);
  	}
 
- 	/* Test case: HDSS-FN2-TC-4
+ 	 /* Test case: HDSS-FN2-TC-4
  	 * Equivalence class: HDSS-FN2-EQ-4
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
@@ -147,7 +147,7 @@ public class IdentifyCurrentStateTest {
   	}
 
  	 /* Test case: HDSS-FN2-TC-5
-   * Equivalence class: HDSS-FN2-EQ-5
+     * Equivalence class: HDSS-FN2-EQ-5
 	 * Testing technique: Equivalence Classes Analysis
 	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 	 */
