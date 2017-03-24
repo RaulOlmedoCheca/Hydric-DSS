@@ -2,10 +2,8 @@
   "shortName": [
     {
       "name": "shortName",
-      "type": [
-        "reservoir",
-        "aquifer"
-      ],
+      "type1": "reservoir",
+      "type2": "aquifer",
       "capacity": 2.23
     }
   ]
