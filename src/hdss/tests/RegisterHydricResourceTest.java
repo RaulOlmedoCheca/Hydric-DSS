@@ -542,7 +542,7 @@ public class RegisterHydricResourceTest {
 		 }
 	 }
 
-	 /* Test case: HDSS-FN1-TC-32
+	 /* Test case: HDSS-FN1-TC-31
  	 * Boundary limit:  HDSS-FN1-BL-8
  	 * Testing technique: Boundary Limit Analysis
  	 * Expected value: hdss-rf01-expectedValidResourceCapacity0_01.json
@@ -573,7 +573,7 @@ public class RegisterHydricResourceTest {
 		 assertEquals(reservoir.getMaxCapacity(), 0.01, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN1-TC-33
+	 /* Test case: HDSS-FN1-TC-32
  	 * Boundary limit:  HDSS-FN1-BL-9
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
@@ -588,7 +588,7 @@ public class RegisterHydricResourceTest {
 		 }
 	 }
 
-	 /* Test case: HDSS-FN1-TC-34
+	 /* Test case: HDSS-FN1-TC-33
  	 * Boundary limit:  HDSS-FN1-BL-10
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf01-expectedValidResourceCapacityTwoDecimals.json
@@ -619,7 +619,7 @@ public class RegisterHydricResourceTest {
 		 assertEquals(reservoir.getMaxCapacity(), 2.23, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN1-TC-35
+	 /* Test case: HDSS-FN1-TC-34
  	 * Boundary limit:  HDSS-FN1-BL-11
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf01-expectedValidResourceCapacityOneDecimal.json
@@ -650,7 +650,7 @@ public class RegisterHydricResourceTest {
 		 assertEquals(reservoir.getMaxCapacity(), 2.2, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN1-TC-36
+	 /* Test case: HDSS-FN1-TC-35
  	 * Boundary limit:  HDSS-FN1-BL-12
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf01-expectedValidResourceCapacityZeroDecimals.json
@@ -681,7 +681,7 @@ public class RegisterHydricResourceTest {
 		 assertEquals(reservoir.getMaxCapacity(), 2, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN1-TC-37
+	 /* Test case: HDSS-FN1-TC-36
  	 * Boundary limit:  HDSS-FN1-BL-13
  	 * Testing technique: Boundary Limit Analysis
  	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”

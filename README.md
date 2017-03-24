@@ -236,73 +236,8 @@
 #### HDSS-FN1-TC-1
 - Equivalence classes considered:   HDSS-FN1-EQ-2, HDSS-FN1-EQ-3, HDSS-FN1-EQ-6, HDSS-FN1-EQ-8, HDSS-FN1-EQ-9, HDSS-FN1-EQ-13, HDSS-FN1-EQ-16, HDSS-FN1-EQ-18, HDSS-FN1-EQ-19, HDSS-FN1-EQ-23, HDSS-FN1-EQ-24, HDSS-FN1-EQ-25, HDSS-FN1-EQ-26, HDSS-FN1-EQ-30, HDSS-FN1-EQ-32, HDSS-FN1-EQ-34, HDSS-FN1-EQ-36, HDSS-FN1-EQ-39, HDSS-FN1-EQ-40
 - Input:
-  - Filename: "validRegisterHydricResourcesCase.json"
-  - Content:
-```JSON
-{
-	"irrigation_basin_name": "shortName",
-	"resources": [
-		{
-			"name": "shortName",
-			"type": "reservoir",
-			"capacity": 2.23
-		},
-		{
-			"name": "plant1",
-			"type": "desalination plant",
-			"capacity": 23.46
-		},
-		{
-			"name": "aquifer1",
-			"type": "aquifer"
-		}
-	]
-}
-```
-  - Output:
-```JSON
-{
-	"shortName": {
-		"resources": [
-			{
-				"reservoirs": {
-					"amount": 1,
-					"capacity": 2.23,
-					"list": [
-						{
-							"name": "shortName",
-							"capacity": 2.23
-						}
-					]
-				}
-			},
-			{
-				"plants": {
-					"amount": 1,
-					"capacity": 23.46,
-					"list": [
-						{
-							"name": "plant1",
-							"capacity": 23.46
-						}
-					]
-				}
-			},
-			{
-				"aquifers": {
-					"amount": 1,
-					"list": [
-						{
-							"name": "aquifer1",
-							"capacity": 2.23
-						}
-					]
-				}
-			}
-		]
-	}
-}
-```
+  - Filename: "hdss-rf01-validRegisterHydricResourcesCase.json"
+  - Expected output: "hdss-rf01-expectedValidRegisterHydricResourcesCase.json"
 
 #### HDSS-FN1-TC-2
 - Equivalence class considered: HDSS-FN1-EQ-1
@@ -313,40 +248,8 @@
 #### HDSS-FN1-TC-3
 - Boundary limit considered: HDSS-FN1-BL-7
 - Input:
-  - Filename "hdss-rf01-capacity-zero.json"
-```JSON  
-{
-	"irrigation_basin_name": "zero-capacity-basin",
-	"resources": [
-		{
-			"name": "zero-capacity-reservoir",
-			"type": "reservoir",
-			"capacity": 0.00
-		}
-	]
-}
-```
-- Expected output:
-```JSON
-{
-	"zero-capacity-basin": {
-		"resources": [
-			{
-				"reservoirs": {
-					"amount": 1,
-					"capacity": 0.00,
-					"list": [
-						{
-							"name": "zero-capacity-reservoir",
-							"capacity": 0.00
-						}
-					]
-				}
-			}
-		]
-	}
-}
-```
+  - Filename "hdss-rf01-capacityZero.json"
+  - Expected output: "hdss-rf01-expectedCapacityZero.json"
 
 #### HDSS-FN1-TC-4
 - Equivalence class considered: HDSS-FN1-EQ-4
@@ -475,82 +378,76 @@
   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN1-TC-25
-- Equivalence class considered: HDSS-FN1-BL-1
+- Boundary limit considered: HDSS-FN1-BL-1
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-validIrrigationBasinName49.json"
+    - Expected output: "hdss-rf01-expectedValidIrrigationBasinName49.json"
 
 #### HDSS-FN1-TC-26
-- Equivalence class considered: HDSS-FN1-BL-2
+- Boundary limit considered: HDSS-FN1-BL-2
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-validIrrigationBasinName50.json"
+    - Expected output: "hdss-rf01-expectedValidIrrigationBasinName50.json"
 
 #### HDSS-FN1-TC-27
-- Equivalence class considered: HDSS-FN1-BL-3
+- Boundary limit considered: HDSS-FN1-BL-3
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-invalidIrrigationBasinName.json"
+    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN1-TC-28
-- Equivalence class considered: HDSS-FN1-BL-4
+- Boundary limit considered: HDSS-FN1-BL-4
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-validResourceName49.json"
+    - Expected output: "hdss-rf01-expectedValidResourceName49.json"
 
 #### HDSS-FN1-TC-29
-- Equivalence class considered: HDSS-FN1-BL-5
+- Boundary limit considered: HDSS-FN1-BL-5
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-validResourceName50.json"
+    - Expected output: "hdss-rf01-expectedValidResourceName50.json"
 
 #### HDSS-FN1-TC-30
-- Equivalence class considered: HDSS-FN1-BL-6
+- Boundary limit considered: HDSS-FN1-BL-6
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-invalidResourceName.json"
+    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN1-TC-31
-- Equivalence class considered: HDSS-FN1-BL-7
+- Boundary limit considered: HDSS-FN1-BL-8
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-validResourceCapacity0_01.json"
+    - Expected output: "hdss-rf01-expectedValidResourceCapacity0_01.json"
 
 #### HDSS-FN1-TC-32
-- Equivalence class considered: HDSS-FN1-BL-8
+- Boundary limit considered: HDSS-FN1-BL-9
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-invalidResourceCapacity.json"
+    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN1-TC-33
-- Equivalence class considered: HDSS-FN1-BL-9
+- Boundary limit considered: HDSS-FN1-BL-10
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-validResourceCapacityTwoDecimals.json"
+    - Expected output: "hdss-rf01-expectedValidResourceCapacityTwoDecimals.json"
 
 #### HDSS-FN1-TC-34
-- Equivalence class considered: HDSS-FN1-BL-10
+- Boundary limit considered: HDSS-FN1-BL-11
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-validResourceCapacityOneDecimal.json"
+    - Expected output: "hdss-rf01-expectedValidResourceCapacityOneDecimal.json"
 
 #### HDSS-FN1-TC-35
-- Equivalence class considered: HDSS-FN1-BL-11
+- Boundary limit considered: HDSS-FN1-BL-12
 - Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-validResourceCapacityZeroDecimals.json"
+    - Expected output: "hdss-rf01-expectedValidResourceCapacityZeroDecimals.json"
 
 #### HDSS-FN1-TC-36
-- Equivalence class considered: HDSS-FN1-BL-12
+- Boundary limit considered: HDSS-FN1-BL-13
 - Input:
-    - Filename
-    - Expected output:
-
-#### HDSS-FN1-TC-37
-- Equivalence class considered: HDSS-FN1-BL-13
-- Input:
-    - Filename
-    - Expected output:
+    - Filename "hdss-rf01-invalidResourceCapacityThreeDecimals.json"
+    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 
 ## HDSS-RF-02
