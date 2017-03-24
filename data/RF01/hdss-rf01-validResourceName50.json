@@ -1,6 +1,5 @@
 {
-  "irrigation_basin_name": "shortName",
-  "resources": [
+  "shortName": [
     {
       "name": "reallyreallyreallyreallyreallyreallyreallyLongName",
       "type": "reservoir",

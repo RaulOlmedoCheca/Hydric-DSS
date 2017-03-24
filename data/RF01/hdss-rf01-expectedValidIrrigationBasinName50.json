@@ -1,6 +1,5 @@
 {
-  "irrigation_basin_name": "reallyreallyreallyreallyreallyreallyreallyLongName",
-  "resources": [
+  "reallyreallyreallyreallyreallyreallyreallyLongName": [
     {
       "reservoirs": {
         "amount": 1,

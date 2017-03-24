@@ -1,6 +1,5 @@
 {
-  "irrigationBasinName": 22,
-  "resources": [
+  22: [
     {
       "name": "reservoir 1",
       "type": "reservoir",

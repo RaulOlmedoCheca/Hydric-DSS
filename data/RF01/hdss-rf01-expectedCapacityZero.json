@@ -1,6 +1,5 @@
 {
-  "zero-capacity-basin": {
-    "resources": [
+  "zero-capacity-basin": [
       {
         "reservoirs": {
           "amount": 1,
@@ -14,5 +13,4 @@
         }
       }
     ]
-  }
 }

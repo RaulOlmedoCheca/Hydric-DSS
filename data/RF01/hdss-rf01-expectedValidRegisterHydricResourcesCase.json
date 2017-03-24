@@ -1,41 +1,39 @@
 {
-  "shortName": {
-    "resources": [
-      {
-        "reservoirs": {
-          "amount": 1,
-          "capacity": 2.23,
-          "list": [
-            {
-              "name": "shortName",
-              "capacity": 2.23
-            }
-          ]
-        }
-      },
-      {
-        "plants": {
-          "amount": 1,
-          "capacity": 23.46,
-          "list": [
-            {
-              "name": "plant1",
-              "capacity": 23.46
-            }
-          ]
-        }
-      },
-      {
-        "aquifers": {
-          "amount": 1,
-          "list": [
-            {
-              "name": "aquifer1",
-              "capacity": 2.23
-            }
-          ]
-        }
+  "shortName": [
+    {
+      "reservoirs": {
+        "amount": 1,
+        "capacity": 2.23,
+        "list": [
+          {
+            "name": "shortName",
+            "capacity": 2.23
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "plants": {
+        "amount": 1,
+        "capacity": 23.46,
+        "list": [
+          {
+            "name": "plant1",
+            "capacity": 23.46
+          }
+        ]
+      }
+    },
+    {
+      "aquifers": {
+        "amount": 1,
+        "list": [
+          {
+            "name": "aquifer1",
+            "capacity": 2.23
+          }
+        ]
+      }
+    }
+  ]
 }

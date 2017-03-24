@@ -1,6 +1,5 @@
 {
-  "irrigation_basin_name": "New Basin",
-  "resources": [
+  "New Basin": [
     {
       "reservoirs": {
         "amount": 1,
