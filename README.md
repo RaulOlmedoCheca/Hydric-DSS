@@ -876,19 +876,19 @@
 #### HDSS-FN2-TC-22
 - Equivalence class considered: HDSS-FN2-EQ-37
 - Input:
-  - Filename "nonexists.json"
+  - Filename "hdss-rf02-noCapacityNotAquifer.json"
   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN2-TC-23
 - Equivalence class considered: HDSS-FN2-EQ-38
 - Input:
-  - Filename "nonexists.json"
+  - Filename "hdss-rf02-severalCapacityValuesNotAquifer.json"
   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN2-TC-24
 - Equivalence class considered: HDSS-FN2-EQ-41
 - Input:
-  - Filename "nonexists.json"
+  - Filename "hdss-rf02-capacityFoundAquifer.json"
   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN2-TC-25
