@@ -157,26 +157,26 @@
 
 - Equivalence class: HDSS-FN1-EQ-36
   - Input: Capacity values is a number with 2 or less decimals "2.23"
-  - Result: Error: valid case
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-37
-  - Input: No resource type found and resource type is not "aquifer"
+  - Input: No capacity found and resource type is not "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
 - Equivalence class: HDSS-FN1-EQ-38
-  - Input: Two or more resource types found and resource type is not "aquifer"
+  - Input: Two or more capacity values found and resource type is not "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
 - Equivalence class: HDSS-FN1-EQ-39
-  - Input: One resource basin type found and resource type is not "aquifer"
+  - Input: One capacity value found and resource type is not "aquifer"
   - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-40
-  - Input: No resource type found and resource type is "aquifer"
+  - Input: No capacity found and resource type is "aquifer"
   - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-41
-  - Input: One or more resource types found and resource type is not "aquifer"
+  - Input: One or more capacity values found and resource type is not "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
 ### Boundary limits
@@ -468,7 +468,7 @@
 
 **Resource_Name_Value::=** 1[Character]50
 **Resource_Type_Value::=** 'Reservoir'|'Desalination plant'|'Aquifer'
-**Resource_Capacity_Value::=** 1[Number]n Point 2[Number]2
+**Resource_Capacity_Value::=** 1[Number]n 0[Point 0[Number]2 ]1
 
 **Init_Object::=**'{'
 **End_Object::=**'}'
