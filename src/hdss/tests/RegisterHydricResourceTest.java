@@ -394,18 +394,45 @@ public class RegisterHydricResourceTest {
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	 @Test
+ 	 public void noCapacityFoundNotAquiferTest() {
+  		try {
+  			manager.RegisterHydricResources("data/RF01/hdss-rf01-noCapacityNotAquifer.json");
+  			fail("Equivalence class test HDSS-FN1-EQ-37 failed");
+  		}catch (HydricDSSException e) {
+  			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+  		}
+  	}
 
 	 /* Test case: HDSS-FN1-TC-23
  	 * Equivalence class: HDSS-FN1-EQ-38
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	 @Test
+ 	 public void severalCapacityValuesNotAquiferTest() {
+  		try {
+  			manager.RegisterHydricResources("data/RF01/hdss-rf01-severalCapacityValuesNotAquifer.json");
+  			fail("Equivalence class test HDSS-FN1-EQ-38 failed");
+  		}catch (HydricDSSException e) {
+  			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+  		}
+  	}
 
 	 /* Test case: HDSS-FN1-TC-24
  	 * Equivalence class: HDSS-FN1-EQ-41
  	 * Testing technique: Equivalence Classes Analysis
  	 * Expected value: Throws Exception. Error message: "The input file has no data or does not match the expected format"
  	 */
+	 @Test
+ 	 public void capacityFoundAquiferTest() {
+  		try {
+  			manager.RegisterHydricResources("data/RF01/hdss-rf01-capacityFoundAquifer.json");
+  			fail("Equivalence class test HDSS-FN1-EQ-41 failed");
+  		}catch (HydricDSSException e) {
+  			assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
+  		}
+  	}
 
 	 /* Test case: HDSS-FN1-TC-25
  	 * Boundary limit:  HDSS-FN1-BL-1
