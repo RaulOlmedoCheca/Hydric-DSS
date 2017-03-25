@@ -176,7 +176,7 @@
   - Result: Valid case
 
 - Equivalence class: HDSS-FN1-EQ-41
-  - Input: One or more capacity values found and resource type is not "aquifer"
+  - Input: One or more capacity values found and resource type is "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
 ### Boundary limits
@@ -362,19 +362,19 @@
 #### HDSS-FN1-TC-22
 - Equivalence class considered: HDSS-FN1-EQ-37
 - Input:
-  - Filename "nonexists.json"
+  - Filename "hdss-rf01-noCapacityNotAquifer.json"
   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN1-TC-23
 - Equivalence class considered: HDSS-FN1-EQ-38
 - Input:
-  - Filename "nonexists.json"
+  - Filename "hdss-rf01-severalCapacityValuesNotAquifer.json"
   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN1-TC-24
 - Equivalence class considered: HDSS-FN1-EQ-41
 - Input:
-  - Filename "nonexists.json"
+  - Filename "hdss-rf01-capacityFoundAquifer.json"
   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN1-TC-25
