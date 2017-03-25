@@ -629,24 +629,24 @@
   - Input: Capacity values is a number with 2 or less decimals "2.23"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-37
-  - Input: No resource type found and resource type is not "aquifer"
+- Equivalence class: HDSS-FN1-EQ-37
+  - Input: No capacity found and resource type is not "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
-- Equivalence class: HDSS-FN2-EQ-38
-  - Input: Two or more resource types found and resource type is not "aquifer"
+- Equivalence class: HDSS-FN1-EQ-38
+  - Input: Two or more capacity values found and resource type is not "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
-- Equivalence class: HDSS-FN2-EQ-39
-  - Input: One resource basin type found and resource type is not "aquifer"
+- Equivalence class: HDSS-FN1-EQ-39
+  - Input: One capacity value found and resource type is not "aquifer"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-40
-  - Input: No resource type found and resource type is "aquifer"
+- Equivalence class: HDSS-FN1-EQ-40
+  - Input: No capacity found and resource type is "aquifer"
   - Result: Valid case
 
-- Equivalence class: HDSS-FN2-EQ-41
-  - Input: One or more resource types found and resource type is not "aquifer"
+- Equivalence class: HDSS-FN1-EQ-41
+  - Input: One or more capacity values found and resource type is "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
 - Equivalence class: HDSS-FN2-EQ-42
