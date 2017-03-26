@@ -456,6 +456,8 @@
 **Irrigation_Basin_Name::=** Quotes Irrigation_Basin_Name_Value Quotes
 **Resources::=** Init_Array 0[Resource_Object Fields_Separator]n 0[Resource_Object]1 End_Array
 
+**Irrigation_Basin_Name_Value::==** 1[Character]50
+
 **Resource_Object::=** Init_Object Resource_Name Fields_Separator Resource_Type Fields_Separator Resource_Capacity End_Object
 
 **Resource_Name::=** Quotes Resource_Name_Label Quotes Label_Value_Separator Quotes Resource_Name_Value Quotes
