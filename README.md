@@ -454,9 +454,9 @@
 **Body::=** Irrigation_Basin_Name Label_Value_Separator Resources
 
 **Irrigation_Basin_Name::=** Quotes Irrigation_Basin_Name_Value Quotes
-**Resources::=** Init_Array 0[Resource_Object Fields_Separator]n 0[Resource_Object]1 End_Array
+**Resources::=** Init_Array 0{Resource_Object Fields_Separator}n 0{Resource_Object}1 End_Array
 
-**Irrigation_Basin_Name_Value::==** 1[Character]50
+**Irrigation_Basin_Name_Value::==** 1{Character}50
 
 **Resource_Object::=** Init_Object Resource_Name Fields_Separator Resource_Type Fields_Separator Resource_Capacity End_Object
 
@@ -468,9 +468,9 @@
 **Resource_Type_Label::=** 'Type'
 **Resource_Capacity_Label::=** 'Capacity'
 
-**Resource_Name_Value::=** 1[Character]50
+**Resource_Name_Value::=** 1{Character}50
 **Resource_Type_Value::=** 'Reservoir'|'Desalination plant'|'Aquifer'
-**Resource_Capacity_Value::=** 1[Number]n 0[Point 0[Number]2 ]1
+**Resource_Capacity_Value::=** 1{Number}n 0{Point 0{Number}2 }1
 
 **Init_Object::=**'{'
 **End_Object::=**'}'
@@ -984,12 +984,12 @@
 **Irrigation_Date_Label::=** 'Irrigation Date'
 
 **Drainage_Basin_Value::=** 1[Character]50
-**Requester_Value::=** 1[Character]50
+**Requester_Value::=** 1{Character}50
 **State_Value::=** 'PLENTY'|'NORMALITY'|'SHORTAGE'
-**Amount_Value::=** 1[Number]n Point 2[Number]2
+**Amount_Value::=** 1{Number}n Point 2{Number}2
 **Irrigation_Date_Value::=** Date Hyphen Hour
 
-**Date::=** '0'|'1'|'2'|'3' Number Bar '0'|'1' Number Bar 2[Number]2
+**Date::=** '0'|'1'|'2'|'3' Number Bar '0'|'1' Number Bar 2{Number}2
 **Hour::=** '0'|'1'|'2' Number Label_Value_Separator '0'|'1'|'2'|'3'|'4'|'5' Number
 
 **Fields_Separator::=**','
