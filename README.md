@@ -1004,3 +1004,13 @@
 
 **Character::=**'a'|'b'|'c'|...|'z'
 **Number::=**'0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'
+
+### Derivation trees
+![](img/FN3/DerivationTreeFN3-01.png?raw=true)
+![](img/FN3/DerivationTreeFN3-02.png?raw=true)
+![](img/FN3/DerivationTreeFN3-03.png?raw=true)
+![](img/FN3/DerivationTreeFN3-04.png?raw=true)
+![](img/FN3/DerivationTreeFN3-05.png?raw=true)
+![](img/FN3/DerivationTreeFN3-06.png?raw=true)
+![](img/FN3/DerivationTreeFN3-07.png?raw=true)
+![](img/FN3/DerivationTreeFN3-08.png?raw=true)
