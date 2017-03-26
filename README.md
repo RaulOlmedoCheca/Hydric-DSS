@@ -484,6 +484,28 @@
 **Point::=**'.'
 **Number::=**'0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'
 
+### Derivation trees
+#### Derivation tree 1
+![](img/FN1/DerivationTreeFN1-01.png?raw=true)
+#### Derivation tree 2
+![](img/FN1/DerivationTreeFN1-02.png?raw=true)
+#### Derivation tree 3
+![](img/FN1/DerivationTreeFN1-03.png?raw=true)
+#### Derivation tree 4
+![](img/FN1/DerivationTreeFN1-04.png?raw=true)
+#### Derivation tree 5
+![](img/FN1/DerivationTreeFN1-05.png?raw=true)
+#### Derivation tree 6
+![](img/FN1/DerivationTreeFN1-06.png?raw=true)
+#### Derivation tree 7
+![](img/FN1/DerivationTreeFN1-07.png?raw=true)
+#### Derivation tree 8
+![](img/FN1/DerivationTreeFN1-08.png?raw=true)
+#### Derivation tree 9
+![](img/FN1/DerivationTreeFN1-09.png?raw=true)
+#### Derivation tree 10
+![](img/FN1/DerivationTreeFN1-10.png?raw=true)
+
 
 ## HDSS-RF-02
 ### Equivalence classes
