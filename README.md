@@ -971,7 +971,7 @@
 
 **Body::=** Drainage_Basin Fields_Separator Requester Fields_Separator State Fields_Separator Amount Fields_Separator Irrigation_Date
 
-**Drainage_Basin::=** Quotes Drainage_Basin_Name_Label Quotes Label_Value_Separator Quotes Drainage_Basin_Name_Value Quotes
+**Drainage_Basin::=** Quotes Drainage_Basin_Label Quotes Label_Value_Separator Quotes Drainage_Basin_Value Quotes
 **Requester::=** Quotes Requester_Label Quotes Label_Value_Separator Quotes Requester_Value Quotes
 **State::=** Quotes State_Label Quotes Label_Value_Separator Quotes State_Value Quotes
 **Amount::=** Quotes Amount_Label Quotes Label_Value_Separator Amount_Value
