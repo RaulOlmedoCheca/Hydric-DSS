@@ -498,7 +498,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-27
      * Boundary limit:  HDSS-FN2-BL-3
      * Testing technique: Boundary Values Limits
-     * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected formatâ€�
+     * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected format"
     */
     @Test
     public void invalidIrrigationBasinNameTest() {
@@ -575,7 +575,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-30
      * Boundary limit:  HDSS-FN2-BL-6
      * Testing technique: Boundary Values Limits
-     * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected formatâ€�
+     * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected format"
     */
     @Test
     public void invalidResourceNameTest() {
@@ -621,7 +621,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-32
      * Boundary limit:  HDSS-FN2-BL-9
      * Testing technique: Boundary Values Limits
-     * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected formatâ€�
+     * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected format"
     */
     @Test
     public void invalidResourceCapacityTest() {
@@ -729,7 +729,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-36
      * Boundary limit:  HDSS-FN2-BL-13
      * Testing technique: Boundary Limit Analysis
-     * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected formatâ€�
+     * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected format"
     */
     @Test
     public void invalidResourceCapacityThreeDecimalsTest() {
