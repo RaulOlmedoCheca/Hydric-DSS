@@ -857,9 +857,9 @@ public class IdentifyCurrentState_EClasses {
     public void test() throws HydricDSSException {
         ScenarioPublicData result;
         try {
-            manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
-            result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "aquifer");
-            fail("Boundary limit class test HDSS-FN2-EQ failed");
+            manager.RegisterHydricResources("data/RF02/hdss-rf02-invalidCapacityResources.json");
+            result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-invalidCapacityResources.json", "reservoir");
+            fail("Boundary limit class test HDSS-FN2-EQ- failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
         }
