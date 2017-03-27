@@ -1,2 +1,18 @@
-//This shait is the same as: "hdss-rf01-validRegisterHydricResourcesCase.json"
-Ke asemo
+{
+  "shortName": [
+    {
+      "name": "shortName",
+      "type": "reservoir",
+      "capacity": 2.23
+    },
+    {
+      "name": "plant1",
+      "type": "desalination plant",
+      "capacity": 23.46
+    },
+    {
+      "name": "aquifer1",
+      "type": "aquifer"
+    }
+  ]
+}
