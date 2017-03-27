@@ -1,0 +1,16 @@
+{
+  "shortName": [
+    {
+      "reservoirs": {
+        "amount": 1,
+        "capacity": 2,
+        "list": [
+          {
+            "name": "shortName",
+            "capacity": 2
+          }
+        ]
+      }
+    }
+  ]
+}

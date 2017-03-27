@@ -1,0 +1,9 @@
+{
+  "reallyreallyreallyreallyreallyreallyreallyLongNam": [
+    {
+      "name": "shortName",
+      "type": "reservoir",
+      "capacity": 2.23
+    }
+  ]
+}
