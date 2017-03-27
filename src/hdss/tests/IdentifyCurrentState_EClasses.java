@@ -25,8 +25,8 @@ public class IdentifyCurrentState_EClasses {
 	public void test() throws HydricDSSException {
 		ScenarioPublicData result;
 		manager.RegisterHydricResources("data/file.json");
-		result = manager.IdentifyCurrentState("data/aquifer.json o esto o lo otro")
-		assertEquals("SHORTAGE", result.getScenarioEvaluation);
+		result = manager.IdentifyCurrentState("data/aquifer.json", "aquifer");
+		assertEquals("SHORTAGE", result.getScenarioEvaluation());
 	}
 
 	/* Test case: HDSS-FN2-TC-1
