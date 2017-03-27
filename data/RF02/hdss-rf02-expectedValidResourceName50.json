@@ -1,0 +1,16 @@
+{
+  "shortName": [
+    {
+      "reservoirs": {
+        "amount": 1,
+        "capacity": 2.23,
+        "list": [
+          {
+            "name": "reallyreallyreallyreallyreallyreallyreallyLongName",
+            "capacity": 2.23
+          }
+        ]
+      }
+    }
+  ]
+}

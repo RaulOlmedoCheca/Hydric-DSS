@@ -1,0 +1,16 @@
+{
+  "shortName": [
+    {
+      "name": "shortName2",
+      "type": "reservoir",
+      "capacity": 2.23
+    }
+  ],
+  "shortName3": [
+    {
+      "name": "shortName4",
+      "type": "reservoir",
+      "capacity": 2.23
+    }
+  ]
+}
