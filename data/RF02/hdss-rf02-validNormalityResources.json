@@ -1,0 +1,18 @@
+{
+  "shortName": [
+    {
+      "name": "shortName1",
+      "type": "reservoir",
+      "capacity": 50
+    },
+    {
+      "name": "shortName2",
+      "type": "desalination plant",
+      "capacity": 50
+    },
+    {
+      "name": "shortName3",
+      "type": "aquifer"
+    }
+  ]
+}
