@@ -919,7 +919,7 @@
 - Equivalence class considered: HDSS-FN2-EQ-43
 - Input:
   - Filename "hdss-rf02-notExistingDrainageBasin.json"
-  - Expected output: Throws exception. Error message: "The drainage basin does not exists"
+  - Expected output: Throws exception. Error message: "The drainage basin does not exist"
 
 #### HDSS-FN2-TC-26
 - Equivalence class considered: HDSS-FN2-EQ-45
