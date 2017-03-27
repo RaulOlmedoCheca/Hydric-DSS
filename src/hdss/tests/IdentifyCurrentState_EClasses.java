@@ -7,6 +7,7 @@ import java.util.List;
 import org.junit.Test;
 
 import hdss.WatershedManagerInterface;
+import hdss.WatershedManager;
 import hdss.exceptions.HydricDSSException;
 
 import hdss.io.AquiferPublicData;
@@ -468,7 +469,7 @@ public class IdentifyCurrentState_EClasses {
         watershed = watershedList.get(0);
 
         assertEquals(watershed.getName(), "reallyreallyreallyreallyreallyreallyreallyLongNam");
-        assertEquals(watershed.getName().getLength(), 49, 0.01);
+        assertEquals(watershed.getName().length(), 49, 0.01);
 
     }
 
@@ -491,13 +492,13 @@ public class IdentifyCurrentState_EClasses {
         watershed = watershedList.get(0);
 
         assertEquals(watershed.getName(), "reallyreallyreallyreallyreallyreallyreallyLongName");
-        assertEquals(watershed.getName().getLength(), 50, 0.01);
+        assertEquals(watershed.getName().length(), 50, 0.01);
     }
 
     /* Test case: HDSS-FN2-TC-27
      * Boundary limit:  HDSS-FN2-BL-3
      * Testing technique: Boundary Values Limits
-     * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
+     * Expected value: Throws exception. Error message: "The input file has no data or doesnâ€™t match the expected formatâ€�
     */
     @Test
     public void invalidIrrigationBasinNameTest() {
@@ -505,7 +506,7 @@ public class IdentifyCurrentState_EClasses {
             manager.RegisterHydricResources("data/RF02/hdss-rf02-invalidIrrigationBasinName.json");
             fail("Boundary limit class test HDSS-FN2-BL-3 failed");
         } catch (HydricDSSException e) {
-            assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+            assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
         }
     }
 
@@ -537,7 +538,7 @@ public class IdentifyCurrentState_EClasses {
         ReservoirPublicData reservoir = reservoirList.get(0);
 
         assertEquals(reservoir.getMyName(), "reallyreallyreallyreallyreallyreallyreallyLongNam");
-        assertEquals(reservoir.getMyName().getLength(), 49, 0.001);
+        assertEquals(reservoir.getMyName().length(), 49, 0.001);
     }
 
     /* Test case: HDSS-FN2-TC-29
@@ -568,13 +569,13 @@ public class IdentifyCurrentState_EClasses {
         ReservoirPublicData reservoir = reservoirList.get(0);
 
         assertEquals(reservoir.getMyName(), "reallyreallyreallyreallyreallyreallyreallyLongName");
-        assertEquals(reservoir.getMyName().getLength(), 50, 0.001);
+        assertEquals(reservoir.getMyName().length(), 50, 0.001);
     }
 
     /* Test case: HDSS-FN2-TC-30
      * Boundary limit:  HDSS-FN2-BL-6
      * Testing technique: Boundary Values Limits
-     * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
+     * Expected value: Throws exception. Error message: "The input file has no data or doesnâ€™t match the expected formatâ€�
     */
     @Test
     public void invalidResourceNameTest() {
@@ -582,7 +583,7 @@ public class IdentifyCurrentState_EClasses {
             manager.RegisterHydricResources("data/RF02/hdss-rf02-invalidResourceName.json");
             fail("Boundary limit class test HDSS-FN2-BL-6 failed");
         } catch (HydricDSSException e) {
-            assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+            assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
         }
     }
 
@@ -620,7 +621,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-32
      * Boundary limit:  HDSS-FN2-BL-9
      * Testing technique: Boundary Values Limits
-     * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
+     * Expected value: Throws exception. Error message: "The input file has no data or doesnâ€™t match the expected formatâ€�
     */
     @Test
     public void invalidResourceCapacityTest() {
@@ -628,7 +629,7 @@ public class IdentifyCurrentState_EClasses {
             manager.RegisterHydricResources("data/RF02/hdss-rf02-invalidResourceCapacity.json");
             fail("Boundary limit class test HDSS-FN2-BL-9 failed");
         } catch (HydricDSSException e) {
-            assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+            assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
         }
     }
 
@@ -728,7 +729,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-36
      * Boundary limit:  HDSS-FN2-BL-13
      * Testing technique: Boundary Limit Analysis
-     * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
+     * Expected value: Throws exception. Error message: "The input file has no data or doesnâ€™t match the expected formatâ€�
     */
     @Test
     public void invalidResourceCapacityThreeDecimalsTest() {
@@ -736,7 +737,7 @@ public class IdentifyCurrentState_EClasses {
             manager.RegisterHydricResources("data/RF02/hdss-rf02-invalidResourceCapacityThreeDecimals.json");
             fail("Boundary limit class test HDSS-FN2-BL-13 failed");
         } catch (HydricDSSException e) {
-            assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+            assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
         }
     }
 
@@ -749,8 +750,8 @@ public class IdentifyCurrentState_EClasses {
     public void validPlentyReservoirTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "reservoir")
-        assertEquals("PLENTY", result.getScenarioEvaluation);
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "reservoir");
+        assertEquals("PLENTY", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-38
@@ -762,8 +763,8 @@ public class IdentifyCurrentState_EClasses {
     public void validPlentyDesalinationPlantTest()throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "desalination plant")
-        assertEquals("PLENTY", result.getScenarioEvaluation);
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "desalination plant");
+        assertEquals("PLENTY", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-39
@@ -775,8 +776,8 @@ public class IdentifyCurrentState_EClasses {
     public void validPlentyAquiferTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "aquifer")
-        assertEquals("PLENTY", result.getScenarioEvaluation);
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "aquifer");
+        assertEquals("PLENTY", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-40
@@ -788,8 +789,8 @@ public class IdentifyCurrentState_EClasses {
     public void validPlentyAllTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "all")
-        assertEquals("PLENTY", result.getScenarioEvaluation);
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "all");
+        assertEquals("PLENTY", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-41
@@ -801,8 +802,8 @@ public class IdentifyCurrentState_EClasses {
     public void validNormalityReservoirTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validNormalityResources.json");
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "reservoir")
-        assertEquals("NORMALITY", result.getScenarioEvaluation);
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "reservoir");
+        assertEquals("NORMALITY", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-42
@@ -815,7 +816,7 @@ public class IdentifyCurrentState_EClasses {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validNormalityResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "desalination plant");
-        assertEquals("NORMALITY", result.getScenarioEvaluation);
+        assertEquals("NORMALITY", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-43
@@ -828,7 +829,7 @@ public class IdentifyCurrentState_EClasses {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validNormalityResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "aquifer");
-        assertEquals("NORMALITY", result.getScenarioEvaluation);
+        assertEquals("NORMALITY", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-44
@@ -840,8 +841,8 @@ public class IdentifyCurrentState_EClasses {
     public void validNormalityAllTest()throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validNormalityResources.json");
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "all")
-        assertEquals("NORMALITY", result.getScenarioEvaluation);
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "all");
+        assertEquals("NORMALITY", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-45
@@ -854,7 +855,7 @@ public class IdentifyCurrentState_EClasses {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "reservoir");
-        assertEquals("SHORTAGE", result.getScenarioEvaluation);
+        assertEquals("SHORTAGE", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-46
@@ -867,7 +868,7 @@ public class IdentifyCurrentState_EClasses {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "desalination plant");
-        assertEquals("SHORTAGE", result.getScenarioEvaluation);
+        assertEquals("SHORTAGE", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-47
@@ -880,7 +881,7 @@ public class IdentifyCurrentState_EClasses {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "aquifer");
-        assertEquals("SHORTAGE", result.getScenarioEvaluation);
+        assertEquals("SHORTAGE", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-48
@@ -889,11 +890,11 @@ public class IdentifyCurrentState_EClasses {
     * Expected value:
     */
     @Test
-    public void validShortageAquiferTest() throws HydricDSSException {
+    public void validShortageAllTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "all")
-        assertEquals("SHORTAGE", result.getScenarioEvaluation);
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "all");
+        assertEquals("SHORTAGE", result.getScenarioEvaluation());
     }
 
     /* Test case: HDSS-FN2-TC-49
@@ -908,7 +909,7 @@ public class IdentifyCurrentState_EClasses {
             manager.IdentifyCurrentState("data/RF02/hdss-rf02-invalidCapacityResources.json", "reservoir");
             fail("Boundary limit class test HDSS-FN2-EQ- failed");
         } catch (HydricDSSException e) {
-            assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
+            assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
         }
     }
 
