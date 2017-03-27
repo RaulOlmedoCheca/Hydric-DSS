@@ -22,12 +22,13 @@ public class IdentifyCurrentState_EClasses {
     private WatershedManagerInterface manager = new WatershedManager();
 
     // PLANTILLA
-    public void test() throws HydricDSSException {
+   /* public void test() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/file.json");
         result = manager.IdentifyCurrentState("data/aquifer.json", "aquifer");
         assertEquals("SHORTAGE", result.getScenarioEvaluation());
     }
+    */
 
     /* Test case: HDSS-FN2-TC-1
      * Equivalence class: HDSS-FN2-EQ-2, HDSS-FN2-EQ-3, HDSS-FN2-EQ-6, HDSS-FN2-EQ-8,
@@ -739,126 +740,172 @@ public class IdentifyCurrentState_EClasses {
         }
     }
 
-    /* Test case: HDSS-FN2-TC-49
+    /* Test case: HDSS-FN2-TC-37
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validPlentyReservoirTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "reservoir")
         assertEquals("PLENTY", result.getScenarioEvaluation);
     }
 
-    /* Test case: HDSS-FN2-TC-50
+    /* Test case: HDSS-FN2-TC-38
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validPlentyDesalinationPlantTest()throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "desalination plant")
         assertEquals("PLENTY", result.getScenarioEvaluation);
     }
 
-    /* Test case: HDSS-FN2-TC-51
+    /* Test case: HDSS-FN2-TC-39
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validPlentyAquiferTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "aquifer")
         assertEquals("PLENTY", result.getScenarioEvaluation);
     }
 
-    //ALL pa todos
-
-    /* Test case: HDSS-FN2-TC-52
+    /* Test case: HDSS-FN2-TC-40
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validPlentyAllTest() throws HydricDSSException {
+        ScenarioPublicData result;
+        manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "all")
+        assertEquals("PLENTY", result.getScenarioEvaluation);
+    }
+
+    /* Test case: HDSS-FN2-TC-41
+     * Equivalence class: HDSS-FN2-EQ-
+     * Testing technique: Equivalence Classes Analysis
+     * Expected value:
+     */
+    @Test
+    public void validNormalityReservoirTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validNormalityResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "reservoir")
         assertEquals("NORMALITY", result.getScenarioEvaluation);
     }
 
-    /* Test case: HDSS-FN2-TC-53
+    /* Test case: HDSS-FN2-TC-42
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validNormalityDesalinationPlantTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validNormalityResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "desalination plant");
         assertEquals("NORMALITY", result.getScenarioEvaluation);
     }
 
-    /* Test case: HDSS-FN2-TC-54
+    /* Test case: HDSS-FN2-TC-43
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validNormalityAquiferTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validNormalityResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "aquifer");
         assertEquals("NORMALITY", result.getScenarioEvaluation);
     }
 
-    /* Test case: HDSS-FN2-TC-55
+    /* Test case: HDSS-FN2-TC-44
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validNormalityAllTest()throws HydricDSSException {
+        ScenarioPublicData result;
+        manager.RegisterHydricResources("data/RF02/hdss-rf02-validNormalityResources.json");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validNormalityResources.json", "all")
+        assertEquals("NORMALITY", result.getScenarioEvaluation);
+    }
+
+    /* Test case: HDSS-FN2-TC-45
+     * Equivalence class: HDSS-FN2-EQ-
+     * Testing technique: Equivalence Classes Analysis
+     * Expected value:
+     */
+    @Test
+    public void validShortageReservoirTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "reservoir");
         assertEquals("SHORTAGE", result.getScenarioEvaluation);
     }
 
-    /* Test case: HDSS-FN2-TC-56
+    /* Test case: HDSS-FN2-TC-46
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validShortageDesalinationPlantTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "desalination plant");
         assertEquals("SHORTAGE", result.getScenarioEvaluation);
     }
 
-    /* Test case: HDSS-FN2-TC-57
+    /* Test case: HDSS-FN2-TC-47
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
+    @Test
+    public void validShortageAquiferTest() throws HydricDSSException {
         ScenarioPublicData result;
         manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
         result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "aquifer");
         assertEquals("SHORTAGE", result.getScenarioEvaluation);
     }
 
-    /* Test case: HDSS-FN2-TC-58
+    /* Test case: HDSS-FN2-TC-48
+    * Equivalence class: HDSS-FN2-EQ-
+    * Testing technique: Equivalence Classes Analysis
+    * Expected value:
+    */
+    @Test
+    public void validShortageAquiferTest() throws HydricDSSException {
+        ScenarioPublicData result;
+        manager.RegisterHydricResources("data/RF02/hdss-rf02-validShortageResources.json");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validShortageResources.json", "all")
+        assertEquals("SHORTAGE", result.getScenarioEvaluation);
+    }
+
+    /* Test case: HDSS-FN2-TC-49
      * Equivalence class: HDSS-FN2-EQ-
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
-    public void test() throws HydricDSSException {
-        ScenarioPublicData result;
+    @Test
+    public void invalidCapacityResourcesTest() {
         try {
             manager.RegisterHydricResources("data/RF02/hdss-rf02-invalidCapacityResources.json");
-            result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-invalidCapacityResources.json", "reservoir");
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-invalidCapacityResources.json", "reservoir");
             fail("Boundary limit class test HDSS-FN2-EQ- failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
