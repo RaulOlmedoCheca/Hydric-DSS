@@ -673,61 +673,57 @@
   - Input: One or more capacity values found and resource type is "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
-  Guilermo superdeficiente 42
-
 - Equivalence class: HDSS-FN2-EQ-42
-  - Input:
-  - Result:
+  - Input: One "reservoir" resource over 90% of capacity (PLENTY)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-43
-  - Input:
-  - Result:
+  - Input: One "desalination plant" resource over 90% of capacity (PLENTY)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-44
-  - Input:
-  - Result:
+  - Input: One "aquifer" resource over sea level capacity (PLENTY)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-45
-  - Input:
-  - Result:
+  - Input: One resource of each type with capacities over 90% (PLENTY)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-46
-  - Input:
-  - Result:
+  - Input: One "reservoir" resource between 40% and 90% of capacity (NORMALITY)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-47
-  - Input:
-  - Result:
+  - Input: One "desalination plant" resource between 40% and 90% of capacity (NORMALITY)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-48
-  - Input:
-  - Result:
+  - Input: One "aquifer" resource between -8 meters and sea level (NORMALITY)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-49
-  - Input:
-  - Result:
+  - Input: One resource of each type with capacities between 40% and 90% (NORMALITY)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-50
-  - Input:
-  - Result:
+  - Input: One "reservoir" resource with capacity below 40% (SHORTAGE)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-51
-  - Input:
-  - Result:
+  - Input: One "desalination plant" resource with capacity below 40% (SHORTAGE)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-52
-  - Input:
-  - Result:
+  - Input: One "aquifer" resource with level below -8 meters (SHORTAGE)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-53
-  - Input:
-  - Result:
+  - Input: One resource of each type with capacities below 40% (SHORTAGE)
+  - Result: Valid case
 
 - Equivalence class: HDSS-FN2-EQ-54
-  - Input:
-  - Result:
-
-
+  - Input: One "reservoir" type with percentage over 100%
+  - Result: Error: "The input file has no data or does not match the expected format"
 
 ### Boundary limits
 - Boundary limit: HDSS-FN2-BL-1
@@ -930,74 +926,153 @@
 #### HDSS-FN2-TC-25
 - Boundary limit considered: HDSS-FN2-BL-1
 - Input:
-   - Filename "hdss-rf02-validIrrigationBasinName49.json"
-   - Expected output: "hdss-rf02-expectedValidIrrigationBasinName49.json"
+  - Filename "hdss-rf02-validIrrigationBasinName49.json"
+  - Expected output: "hdss-rf02-expectedValidIrrigationBasinName49.json"
 
 #### HDSS-FN2-TC-26
 - Boundary limit considered: HDSS-FN2-BL-2
 - Input:
-    - Filename "hdss-rf02-validIrrigationBasinName50.json"
-    - Expected output: "hdss-rf02-expectedValidIrrigationBasinName50.json"
+   - Filename "hdss-rf02-validIrrigationBasinName50.json"
+   - Expected output: "hdss-rf02-expectedValidIrrigationBasinName50.json"
 
 #### HDSS-FN2-TC-27
 - Boundary limit considered: HDSS-FN2-BL-3
 - Input:
-    - Filename "hdss-rf02-invalidIrrigationBasinName.json"
-    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+   - Filename "hdss-rf02-invalidIrrigationBasinName.json"
+   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN2-TC-28
 - Boundary limit considered: HDSS-FN2-BL-4
 - Input:
-    - Filename "hdss-rf02-validResourceName49.json"
-    - Expected output: "hdss-rf02-expectedValidResourceName49.json"
+   - Filename "hdss-rf02-validResourceName49.json"
+   - Expected output: "hdss-rf02-expectedValidResourceName49.json"
 
 #### HDSS-FN2-TC-29
 - Boundary limit considered: HDSS-FN2-BL-5
 - Input:
-    - Filename "hdss-rf02-validResourceName50.json"
-    - Expected output: "hdss-rf02-expectedValidResourceName50.json"
+   - Filename "hdss-rf02-validResourceName50.json"
+   - Expected output: "hdss-rf02-expectedValidResourceName50.json"
 
 #### HDSS-FN2-TC-30
 - Boundary limit considered: HDSS-FN2-BL-6
 - Input:
-    - Filename "hdss-rf02-invalidResourceName.json"
-    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+   - Filename "hdss-rf02-invalidResourceName.json"
+   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN2-TC-31
 - Boundary limit considered: HDSS-FN2-BL-8
 - Input:
-    - Filename "hdss-rf02-validResourceCapacity0_01.json"
-    - Expected output: "hdss-rf02-expectedValidResourceCapacity0_01.json"
+   - Filename "hdss-rf02-validResourceCapacity0_01.json"
+   - Expected output: "hdss-rf02-expectedValidResourceCapacity0_01.json"
 
 #### HDSS-FN2-TC-32
 - Boundary limit considered: HDSS-FN2-BL-9
 - Input:
-    - Filename "hdss-rf02-invalidResourceCapacity.json"
-    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+   - Filename "hdss-rf02-invalidResourceCapacity.json"
+   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
 
 #### HDSS-FN2-TC-33
 - Boundary limit considered: HDSS-FN2-BL-10
 - Input:
-    - Filename "hdss-rf02-validResourceCapacityTwoDecimals.json"
-    - Expected output: "hdss-rf02-expectedValidResourceCapacityTwoDecimals.json"
+   - Filename "hdss-rf02-validResourceCapacityTwoDecimals.json"
+   - Expected output: "hdss-rf02-expectedValidResourceCapacityTwoDecimals.json"
 
 #### HDSS-FN2-TC-34
 - Boundary limit considered: HDSS-FN2-BL-11
 - Input:
-    - Filename "hdss-rf02-validResourceCapacityOneDecimal.json"
-    - Expected output: "hdss-rf02-expectedValidResourceCapacityOneDecimal.json"
+   - Filename "hdss-rf02-validResourceCapacityOneDecimal.json"
+   - Expected output: "hdss-rf02-expectedValidResourceCapacityOneDecimal.json"
 
 #### HDSS-FN2-TC-35
 - Boundary limit considered: HDSS-FN2-BL-12
 - Input:
-    - Filename "hdss-rf02-validResourceCapacityZeroDecimals.json"
-    - Expected output: "hdss-rf02-expectedValidResourceCapacityZeroDecimals.json"
+   - Filename "hdss-rf02-validResourceCapacityZeroDecimals.json"
+   - Expected output: "hdss-rf02-expectedValidResourceCapacityZeroDecimals.json"
 
 #### HDSS-FN2-TC-36
 - Boundary limit considered: HDSS-FN2-BL-13
 - Input:
-    - Filename "hdss-rf02-invalidResourceCapacityThreeDecimals.json"
-    - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+   - Filename "hdss-rf02-invalidResourceCapacityThreeDecimals.json"
+   - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
+#### HDSS-FN2-TC-37
+- Equivalence class considered: HDSS-FN2-EQ-42
+- Input:
+  - Filename "hdss-rf02-validPlentyResources.json"
+  - Expected output: "hdss-rf02-expectedValidPlentyReservoir.json"
+
+#### HDSS-FN2-TC-38
+- Equivalence class considered: HDSS-FN2-EQ-43
+- Input:
+  - Filename "hdss-rf02-validPlentyResources.json"
+  - Expected output: "hdss-rf02-expectedValidPlentyDesalinationPlant.json"
+
+#### HDSS-FN2-TC-39
+- Equivalence class considered: HDSS-FN2-EQ-44
+- Input:
+  - Filename "hdss-rf02-validPlentyResources.json"
+  - Expected output: "hdss-rf02-expectedValidPlentyAquifer.json"
+
+#### HDSS-FN2-TC-40
+- Equivalence class considered: HDSS-FN2-EQ-45
+- Input:
+  - Filename "hdss-rf02-validPlentyResources.json"
+  - Expected output: ""
+
+#### HDSS-FN2-TC-41
+- Equivalence class considered: HDSS-FN2-EQ-46
+- Input:
+  - Filename "hdss-rf02-validNormalityResources.json"
+  - Expected output: "hdss-rf02-expectedValidNormalityReservoir.json"
+
+#### HDSS-FN2-TC-42
+- Equivalence class considered: HDSS-FN2-EQ-47
+- Input:
+  - Filename "hdss-rf02-validNormalityResources.json"
+  - Expected output: "hdss-rf02-expectedValidNormalityDesalinationPlant.json"
+
+#### HDSS-FN2-TC-43
+- Equivalence class considered: HDSS-FN2-EQ-48
+- Input:
+  - Filename "hdss-rf02-validNormalityResources.json"
+  - Expected output: "hdss-rf02-expectedValidNormalityAquifer.json"
+
+#### HDSS-FN2-TC-44
+- Equivalence class considered: HDSS-FN2-EQ-49
+- Input:
+  - Filename "hdss-rf02-validNormalityResources.json"
+  - Expected output: ""
+
+#### HDSS-FN2-TC-45
+- Equivalence class considered: HDSS-FN2-EQ-50
+- Input:
+  - Filename "hdss-rf02-validShortageResources.json"
+  - Expected output: "hdss-rf02-expectedValidShortageReservoir.json"
+
+#### HDSS-FN2-TC-46
+- Equivalence class considered: HDSS-FN2-EQ-51
+- Input:
+  - Filename "hdss-rf02-validShortageResources.json"
+  - Expected output: "hdss-rf02-expectedValidShortageDesalinationPlant.json"
+
+#### HDSS-FN2-TC-47
+- Equivalence class considered: HDSS-FN2-EQ-52
+- Input:
+  - Filename "hdss-rf02-validShortageResources.json"
+  - Expected output: "hdss-rf02-expectedValidShortageAquifer.json"
+
+#### HDSS-FN2-TC-48
+- Equivalence class considered: HDSS-FN2-EQ-53
+- Input:
+  - Filename "hdss-rf02-validShortageResources.json"
+  - Expected output: ""
+
+#### HDSS-FN2-TC-49
+- Equivalence class considered: HDSS-FN2-EQ-54
+- Input:
+  - Filename "hdss-rf02-invalidCapacityResources.json"
+  - Expected output: Throws Exception. Error message: "The input file has no data or does not match the expected format"
+
 
 ## HDSS-RF-03
 ### Syntax analysis
