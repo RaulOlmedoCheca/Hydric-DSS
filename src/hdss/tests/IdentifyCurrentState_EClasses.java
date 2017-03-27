@@ -448,7 +448,7 @@ public class IdentifyCurrentState_EClasses {
   		}
   	}
 
-	 /* Test case: HDSS-FN2-TC-25
+	 /* Test case: HDSS-FN2-TC-37
  	 * Boundary limit:  HDSS-FN2-BL-1
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf02-expectedValidIrrigationBasinName49.json
@@ -471,7 +471,7 @@ public class IdentifyCurrentState_EClasses {
 
 	 }
 
-	 /* Test case: HDSS-FN2-TC-26
+	 /* Test case: HDSS-FN2-TC-38
  	 * Boundary limit:  HDSS-FN2-BL-2
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf02-expectedValidIrrigationBasinName50.json
@@ -493,7 +493,7 @@ public class IdentifyCurrentState_EClasses {
 		 assertEquals(watershed.getName().getLength(), 50, 0.01);
 	 }
 
-	 /* Test case: HDSS-FN2-TC-27
+	 /* Test case: HDSS-FN2-TC-39
  	 * Boundary limit:  HDSS-FN2-BL-3
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
@@ -508,7 +508,7 @@ public class IdentifyCurrentState_EClasses {
 		 }
 	 }
 
-	 /* Test case: HDSS-FN2-TC-28
+	 /* Test case: HDSS-FN2-TC-40
  	 * Boundary limit:  HDSS-FN2-BL-4
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf02-expectedValidResourceName49.json
@@ -539,7 +539,7 @@ public class IdentifyCurrentState_EClasses {
 		 assertEquals(reservoir.getMyName().getLength(), 49, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN2-TC-29
+	 /* Test case: HDSS-FN2-TC-41
  	 * Boundary limit:  HDSS-FN2-BL-5
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf02-expectedValidResourceName50.json
@@ -570,7 +570,7 @@ public class IdentifyCurrentState_EClasses {
 		 assertEquals(reservoir.getMyName().getLength(), 50, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN2-TC-30
+	 /* Test case: HDSS-FN2-TC-42
  	 * Boundary limit:  HDSS-FN2-BL-6
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
@@ -585,7 +585,7 @@ public class IdentifyCurrentState_EClasses {
 		 }
 	 }
 
-	 /* Test case: HDSS-FN2-TC-31
+	 /* Test case: HDSS-FN2-TC-43
  	 * Boundary limit:  HDSS-FN2-BL-8
  	 * Testing technique: Boundary Limit Analysis
  	 * Expected value: hdss-rf02-expectedValidResourceCapacity0_01.json
@@ -616,7 +616,7 @@ public class IdentifyCurrentState_EClasses {
 		 assertEquals(reservoir.getMaxCapacity(), 0.01, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN2-TC-32
+	 /* Test case: HDSS-FN2-TC-44
  	 * Boundary limit:  HDSS-FN2-BL-9
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
@@ -631,7 +631,7 @@ public class IdentifyCurrentState_EClasses {
 		 }
 	 }
 
-	 /* Test case: HDSS-FN2-TC-33
+	 /* Test case: HDSS-FN2-TC-45
  	 * Boundary limit:  HDSS-FN2-BL-10
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf02-expectedValidResourceCapacityTwoDecimals.json
@@ -662,7 +662,7 @@ public class IdentifyCurrentState_EClasses {
 		 assertEquals(reservoir.getMaxCapacity(), 2.23, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN2-TC-34
+	 /* Test case: HDSS-FN2-TC-46
  	 * Boundary limit:  HDSS-FN2-BL-11
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf02-expectedValidResourceCapacityOneDecimal.json
@@ -693,7 +693,7 @@ public class IdentifyCurrentState_EClasses {
 		 assertEquals(reservoir.getMaxCapacity(), 2.2, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN2-TC-35
+	 /* Test case: HDSS-FN2-TC-47
  	 * Boundary limit:  HDSS-FN2-BL-12
  	 * Testing technique: Boundary Values Limits
  	 * Expected value: hdss-rf02-expectedValidResourceCapacityZeroDecimals.json
@@ -724,7 +724,7 @@ public class IdentifyCurrentState_EClasses {
 		 assertEquals(reservoir.getMaxCapacity(), 2, 0.001);
 	 }
 
-	 /* Test case: HDSS-FN2-TC-36
+	 /* Test case: HDSS-FN2-TC-48
  	 * Boundary limit:  HDSS-FN2-BL-13
  	 * Testing technique: Boundary Limit Analysis
  	 * Expected value: Throws exception. Error message: "The input file has no data or doesn’t match the expected format”
@@ -738,6 +738,43 @@ public class IdentifyCurrentState_EClasses {
 			 assertEquals(e.getMessage(), "The input file has no data or doesn’t match the expected format");
 		 }
 	 }
+
+	/* Test case: HDSS-FN2-TC-49
+     * Equivalence class: HDSS-FN2-EQ-
+     * Testing technique: Equivalence Classes Analysis
+     * Expected value:
+     */
+	public void test() throws HydricDSSException {
+		ScenarioPublicData result;
+		manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
+		result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "reservoir")
+		assertEquals("PLENTY", result.getScenarioEvaluation);
+	}
+
+	/* Test case: HDSS-FN2-TC-50
+     * Equivalence class: HDSS-FN2-EQ-
+     * Testing technique: Equivalence Classes Analysis
+     * Expected value:
+     */
+	public void test() throws HydricDSSException {
+		ScenarioPublicData result;
+		manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
+		result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "desalination plant")
+		assertEquals("PLENTY", result.getScenarioEvaluation);
+	}
+
+	/* Test case: HDSS-FN2-TC-51
+     * Equivalence class: HDSS-FN2-EQ-
+     * Testing technique: Equivalence Classes Analysis
+     * Expected value:
+     */
+	public void test() throws HydricDSSException {
+		ScenarioPublicData result;
+		manager.RegisterHydricResources("data/RF02/hdss-rf02-validPlentyResources.json");
+		result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validPlentyResources.json", "aquifer")
+		assertEquals("PLENTY", result.getScenarioEvaluation);
+	}
+
 
 	/* Test case: HDSS-FN2-TC-2
 	 * Equivalence class: HDSS-FN2-EQ-42, HDSS-FN2-EQ-44, HDSS-FN2-EQ-48, HDSS-FN2-EQ-51,
