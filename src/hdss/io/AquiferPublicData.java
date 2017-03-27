@@ -4,7 +4,7 @@ public class AquiferPublicData implements WaterResourceTypePublicData {
 
 	private String myName;
 	private float currentHeight;
-	
+
 	public AquiferPublicData (String name, float current)
 	{
 		myName = name;
@@ -13,5 +13,9 @@ public class AquiferPublicData implements WaterResourceTypePublicData {
 
 	public String getMyName() {
 		return myName;
+	}
+
+	public float getCurrentHeight() {
+		return currentHeight;
 	}
 }
