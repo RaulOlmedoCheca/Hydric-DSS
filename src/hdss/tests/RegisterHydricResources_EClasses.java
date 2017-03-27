@@ -482,7 +482,7 @@ public class RegisterHydricResources_EClasses {
 	 /* Test case: HDSS-FN1-TC-27
  	 * Boundary limit:  HDSS-FN1-BL-3
  	 * Testing technique: Boundary Values Limits
- 	 * Expected value: Throws exception. Error message: "The input file has no data or doesnâ€™t match the expected formatâ€�
+ 	 * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected formatâ€�
      */
 	 @Test
 	 public void invalidIrrigationBasinNameTest(){
@@ -490,7 +490,7 @@ public class RegisterHydricResources_EClasses {
 			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidIrrigationBasinName.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-3 failed");
 		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
+			 assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
 		 }
 	 }
 
@@ -559,7 +559,7 @@ public class RegisterHydricResources_EClasses {
 	 /* Test case: HDSS-FN1-TC-30
  	 * Boundary limit:  HDSS-FN1-BL-6
  	 * Testing technique: Boundary Values Limits
- 	 * Expected value: Throws exception. Error message: "The input file has no data or doesnâ€™t match the expected formatâ€�
+ 	 * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected formatâ€�
      */
 	 @Test
 	 public void invalidResourceNameTest(){
@@ -567,7 +567,7 @@ public class RegisterHydricResources_EClasses {
 			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceName.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-6 failed");
 		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
+			 assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
 		 }
 	 }
 
@@ -605,7 +605,7 @@ public class RegisterHydricResources_EClasses {
 	 /* Test case: HDSS-FN1-TC-32
  	 * Boundary limit:  HDSS-FN1-BL-9
  	 * Testing technique: Boundary Values Limits
- 	 * Expected value: Throws exception. Error message: "The input file has no data or doesnâ€™t match the expected formatâ€�
+ 	 * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected formatâ€�
      */
 	 @Test
 	 public void invalidResourceCapacityTest(){
@@ -613,7 +613,7 @@ public class RegisterHydricResources_EClasses {
 			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceCapacity.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-9 failed");
 		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
+			 assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
 		 }
 	 }
 
@@ -713,7 +713,7 @@ public class RegisterHydricResources_EClasses {
 	 /* Test case: HDSS-FN1-TC-36
  	 * Boundary limit:  HDSS-FN1-BL-13
  	 * Testing technique: Boundary Limit Analysis
- 	 * Expected value: Throws exception. Error message: "The input file has no data or doesnâ€™t match the expected formatâ€�
+ 	 * Expected value: Throws exception. Error message: "The input file has no data or does not match the expected formatâ€�
      */
 	 @Test
 	 public void invalidResourceCapacityThreeDecimalsTest(){
@@ -721,7 +721,7 @@ public class RegisterHydricResources_EClasses {
 			 manager.RegisterHydricResources("data/RF01/hdss-rf01-invalidResourceCapacityThreeDecimals.json");
 			 fail("Boundary limit class test HDSS-FN1-BL-13 failed");
 		 }catch (HydricDSSException e){
-			 assertEquals(e.getMessage(), "The input file has no data or doesnâ€™t match the expected format");
+			 assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
 		 }
 	 }
 
