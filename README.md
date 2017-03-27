@@ -673,6 +673,61 @@
   - Input: One or more capacity values found and resource type is "aquifer"
   - Result: Error: "The input file has no data or does not match the expected format"
 
+  Guilermo superdeficiente 42
+
+- Equivalence class: HDSS-FN2-EQ-42
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-43
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-44
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-45
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-46
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-47
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-48
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-49
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-50
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-51
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-52
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-53
+  - Input:
+  - Result:
+
+- Equivalence class: HDSS-FN2-EQ-54
+  - Input:
+  - Result:
+
+
 
 ### Boundary limits
 - Boundary limit: HDSS-FN2-BL-1
@@ -726,38 +781,6 @@
 - Boundary limit: HDSS-FN2-BL-13
   - Input capacity: capacity with 3 decimal "2.223"
   - Result: Error: "The input file has no data or does not match the expected format"
-
-- Boundary limit: HDSS-FN2-BL-
-  - Input capacity:
-  - Result:
-
-- Boundary limit: HDSS-FN2-BL-
-  - Input capacity:
-  - Result:
-
-- Boundary limit: HDSS-FN2-BL-
-   - Input capacity:
-   - Result:
-
-- Boundary limit: HDSS-FN2-BL-
-  - Input capacity:
-  - Result:
-
-- Boundary limit: HDSS-FN2-BL-
-  - Input capacity:
-  - Result:
-
-- Boundary limit: HDSS-FN2-BL-
-  - Input capacity:
-  - Result:
-
-- Boundary limit: HDSS-FN2-BL-
-  - Input capacity:
-  - Result:
-
-- Boundary limit: HDSS-FN2-BL-
-  - Input capacity:
-  - Result:
 
 ### Test cases
 #### HDSS-FN2-TC-1
@@ -907,8 +930,8 @@
 #### HDSS-FN2-TC-25
 - Boundary limit considered: HDSS-FN2-BL-1
 - Input:
-    - Filename "hdss-rf02-validIrrigationBasinName49.json"
-    - Expected output: "hdss-rf02-expectedValidIrrigationBasinName49.json"
+   - Filename "hdss-rf02-validIrrigationBasinName49.json"
+   - Expected output: "hdss-rf02-expectedValidIrrigationBasinName49.json"
 
 #### HDSS-FN2-TC-26
 - Boundary limit considered: HDSS-FN2-BL-2

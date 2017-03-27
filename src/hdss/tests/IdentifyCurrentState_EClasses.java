@@ -742,7 +742,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-37
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-42
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -755,7 +755,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-38
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-43
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -768,7 +768,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-39
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-44
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -781,7 +781,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-40
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-45
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -794,7 +794,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-41
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-46
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -807,7 +807,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-42
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-47
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -820,7 +820,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-43
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-48
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -833,7 +833,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-44
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-49
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -846,7 +846,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-45
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-50
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -859,7 +859,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-46
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-51
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -872,7 +872,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-47
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-52
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -885,7 +885,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-48
-    * Equivalence class: HDSS-FN2-EQ-
+    * Equivalence class: HDSS-FN2-EQ-53
     * Testing technique: Equivalence Classes Analysis
     * Expected value:
     */
@@ -898,7 +898,7 @@ public class IdentifyCurrentState_EClasses {
     }
 
     /* Test case: HDSS-FN2-TC-49
-     * Equivalence class: HDSS-FN2-EQ-
+     * Equivalence class: HDSS-FN2-EQ-54
      * Testing technique: Equivalence Classes Analysis
      * Expected value:
      */
@@ -914,13 +914,4 @@ public class IdentifyCurrentState_EClasses {
     }
 
 
-	/* Test case: HDSS-FN2-TC-2
-     * Equivalence class: HDSS-FN2-EQ-42, HDSS-FN2-EQ-44, HDSS-FN2-EQ-48, HDSS-FN2-EQ-51,
-	 * HDSS-FN2-EQ-52, HDSS-FN2-EQ-53, HDSS-FN2-EQ-54, HDSS-FN2-EQ-58, HDSS-FN2-EQ-59,
-	 * HDSS-FN2-EQ-60, HDSS-FN2-EQ-61, HDSS-FN2-EQ-65
-	 * Testing technique: Equivalence Classes Analysis
-	 * Expected value:
-	 */
-
-    //TODO: ESTO PARA EL OUTPUT
 }
