@@ -20,7 +20,7 @@ public class RegisterIrrigationDemand_Syntax {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {"data/RF03_syntax/hdss-rf03-correctFile.json.jsonRF01_syntax/hdss-rf01-syntaxError1.json", "Valid file", "HDSS-RF-03 Syntactically Valid File"},
+                {"data/RF03_syntax/hdss-rf03-correctFile.json", "Valid file", "HDSS-RF-03 Syntactically Valid File"},
                 {"data/RF03_syntax/hdss-rf03-syntaxError2.json", "Missing {", "HDSS-RF-03 Syntax Error: Omission of nodes"},
                 {"data/RF03_syntax/hdss-rf03-syntaxError3.json", "Missing }", "HDSS-RF-03 Syntax Error: Omission of nodes"},
                 {"data/RF03_syntax/hdss-rf03-syntaxError4.json", "Missing body", "HDSS-RF-03 Syntax Error: Omission of nodes"},
