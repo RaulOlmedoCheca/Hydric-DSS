@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 import hdss.WatershedManagerInterface;
@@ -81,7 +80,7 @@ public class RegisterHydricResources_Syntax {
 	private String expectedErrorMessage;
 	private String helpingFailMessage;
 
-	public ParametrizedFallingTests(String filepath, String expectedErrorMessage, String helpingFailMessage) {
+	public RegisterHydricResources_Syntax(String filepath, String expectedErrorMessage, String helpingFailMessage) {
 		this.filepath = filepath;
 		this.expectedErrorMessage = expectedErrorMessage;
 		this.helpingFailMessage = helpingFailMessage;
@@ -96,7 +95,7 @@ public class RegisterHydricResources_Syntax {
 		try{
 			manager.RegisterHydricResources(filepath);
 			fail(helpingFailMessage);
-		}catch(e HydricDSSException){
+		}catch(HydricDSSException e){
 			assertEquals(e.getMessage(), expectedErrorMessage);
 		}
 	}
