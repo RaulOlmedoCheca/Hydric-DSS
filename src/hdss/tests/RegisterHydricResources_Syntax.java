@@ -1,22 +1,23 @@
 package hdss.tests;
 
-import static org.junit.Assert.*;
+import java.util.Arrays;
+import java.util.Collection;
 
+import static org.junit.Assert.*;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
 
 import hdss.WatershedManagerInterface;
 import hdss.WatershedManager;
 import hdss.exceptions.HydricDSSException;
 
+@RunWith(Parametrized.class)
 public class RegisterHydricResources_Syntax {
 
-	private WatershedManagerInterface manager = new WatershedManager();
-
-  /* Test case: PARAMETRIZED TEST SUITE
-	* Testing technique: Syntax analysis
-	* Expected value: Throws an exception.
-	*/
-	@RunWith(Parametrized.class)
+	@Parameters
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
 			{"data/RF01_syntax/hdss-rf01-syntaxError1.json", "Empty file", "HDSS-RF-01 Syntax Error: Omission of nodes"},
@@ -71,6 +72,32 @@ public class RegisterHydricResources_Syntax {
 			{"data/RF01_syntax/hdss-rf01-syntaxError50.json", "Modification of .", "HDSS-RF-01 Syntax Error: HDSS-RF-01 Syntax Error: Modification of nodes"},
 			{"data/RF01_syntax/hdss-rf01-syntaxError51.json", "Modification of ,", "HDSS-RF-01 Syntax Error: HDSS-RF-01 Syntax Error: Modification of nodes"}
 		});
+	}
+
+	private WatershedManagerInterface manager = new WatershedManager();
+
+	private String filepath;
+	private String expectedErrorMessage;
+	private String helpingFailMessage;
+
+	public ParametrizedFallingTests(String filepath, String expectedErrorMessage, String helpingFailMessage) {
+		this.filepath = filepath;
+		this.expectedErrorMessage = expectedErrorMessage;
+		this.helpingFailMessage = helpingFailMessage;
+	}
+
+	/* Test case: PARAMETERIZED TEST SUITE
+	* Testing technique: Syntax analysis
+	* Expected value: Throws an exception.
+	*/
+	@Test
+	public void fallingTest() {
+		try{
+			manager.RegisterHydricResources(filepath);
+			fail(helpingFailMessage);
+		}catch(e HydricDSSException){
+			assertEquals(e.getMessage(), expectedErrorMessage);
+		}
 	}
 
 }
