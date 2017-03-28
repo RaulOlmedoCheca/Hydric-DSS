@@ -1,0 +1,9 @@
+{
+  "name" :: [
+    {
+      "Name": "abc",
+      "Type": "reservoir",
+      "Capacity": 2.23
+    }
+  ]
+}
