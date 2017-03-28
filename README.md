@@ -1017,7 +1017,7 @@
 - Equivalence class considered: HDSS-FN2-EQ-45
 - Input:
   - Filename "hdss-rf02-validPlentyResources.json"
-  - Expected output: ""
+  - Expected output: "hdss-rf02-expectedValidPlentyAll.json"
 
 #### HDSS-FN2-TC-41
 - Equivalence class considered: HDSS-FN2-EQ-46
@@ -1041,7 +1041,7 @@
 - Equivalence class considered: HDSS-FN2-EQ-49
 - Input:
   - Filename "hdss-rf02-validNormalityResources.json"
-  - Expected output: ""
+  - Expected output: "hdss-rf02-expectedValidNormalityAll.json"
 
 #### HDSS-FN2-TC-45
 - Equivalence class considered: HDSS-FN2-EQ-50
@@ -1065,7 +1065,7 @@
 - Equivalence class considered: HDSS-FN2-EQ-53
 - Input:
   - Filename "hdss-rf02-validShortageResources.json"
-  - Expected output: ""
+  - Expected output: "hdss-rf02-expectedValidShortageAll.json"
 
 #### HDSS-FN2-TC-49
 - Equivalence class considered: HDSS-FN2-EQ-54

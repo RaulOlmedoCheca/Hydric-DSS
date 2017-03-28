@@ -828,7 +828,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-40
      * Equivalence class: HDSS-FN2-EQ-45
      * Testing technique: Equivalence Classes Analysis
-     * Expected value:
+     * Expected value: hdss-rf02-expectedValidPlentyAll.json
      */
     @Test
     public void validPlentyAllTest() throws HydricDSSException {
@@ -880,7 +880,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-44
      * Equivalence class: HDSS-FN2-EQ-49
      * Testing technique: Equivalence Classes Analysis
-     * Expected value:
+     * Expected value: hdss-rf02-expectedValidNormalityAll.json
      */
     @Test
     public void validNormalityAllTest() throws HydricDSSException {
@@ -932,7 +932,7 @@ public class IdentifyCurrentState_EClasses {
     /* Test case: HDSS-FN2-TC-48
     * Equivalence class: HDSS-FN2-EQ-53
     * Testing technique: Equivalence Classes Analysis
-    * Expected value:
+    * Expected value: hdss-rf02-expectedValidShortageAll.json
     */
     @Test
     public void validShortageAllTest() throws HydricDSSException {
