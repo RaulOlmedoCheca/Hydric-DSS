@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -74,30 +75,30 @@ public class RegisterHydricResources_Syntax {
 		});
 	}
 
-	private WatershedManagerInterface manager = new WatershedManager();
+    private WatershedManagerInterface manager = new WatershedManager();
 
-	private String filepath;
-	private String expectedErrorMessage;
-	private String helpingFailMessage;
+    private String filepath;
+    private String expectedErrorMessage;
+    private String helpingFailMessage;
 
-	public RegisterHydricResources_Syntax(String filepath, String expectedErrorMessage, String helpingFailMessage) {
-		this.filepath = filepath;
-		this.expectedErrorMessage = expectedErrorMessage;
-		this.helpingFailMessage = helpingFailMessage;
-	}
+    public RegisterHydricResources_Syntax(String filepath, String expectedErrorMessage, String helpingFailMessage) {
+        this.filepath = filepath;
+        this.expectedErrorMessage = expectedErrorMessage;
+        this.helpingFailMessage = helpingFailMessage;
+    }
 
-	/* Test case: PARAMETERIZED TEST SUITE
-	* Testing technique: Syntax analysis
-	* Expected value: Throws an exception.
-	*/
-	@Test
-	public void fallingTest() {
-		try{
-			manager.RegisterHydricResources(filepath);
-			fail(helpingFailMessage);
-		}catch(HydricDSSException e){
-			assertEquals(e.getMessage(), expectedErrorMessage);
-		}
-	}
+    /* Test case: PARAMETERIZED TEST SUITE
+    * Testing technique: Syntax analysis
+    * Expected value: Throws an exception.
+    */
+    @Test
+    public void fallingTest() {
+        try {
+            manager.RegisterHydricResources(filepath);
+            fail(helpingFailMessage);
+        } catch (HydricDSSException e) {
+            assertEquals(e.getMessage(), expectedErrorMessage);
+        }
+    }
 
 }
