@@ -373,3 +373,233 @@
 ![](img/FN3/DerivationTreeFN3-08.png?raw=true)
 
 ### Test cases
+#### HDSS-FN3-S-TC-1
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError1.json
+- Expected value: Error: "Missing {"
+
+#### HDSS-FN3-S-TC-2
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError2.json
+- Expected value: Error: "Missing }"
+
+#### HDSS-FN3-S-TC-3
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError3.json
+- Expected value: Error: "Missing body"
+
+#### HDSS-FN3-S-TC-4
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError4.json
+- Expected value: Error: "Missing drainage basin field"
+
+#### HDSS-FN3-S-TC-5
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError5.json
+- Expected value: Error: "Missing drainage basin field"
+
+#### HDSS-FN3-S-TC-6
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError6.json
+- Expected value: Error: "Missing requester field"
+ 
+#### HDSS-FN3-S-TC-7
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError7.json
+- Expected value: Error: "Missing state field"
+
+#### HDSS-FN3-S-TC-8
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError8.json
+- Expected value: Error: "Missing amount field"
+
+#### HDSS-FN3-S-TC-9
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError9.json
+- Expected value: Error: "Missing irrigation date field"
+
+#### HDSS-FN3-S-TC-10
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError10.json
+- Expected value: Error: "Missing drainage basin value"
+
+#### HDSS-FN3-S-TC-11
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError11.json
+- Expected value: Error: "Missing drainage basin label"
+
+#### HDSS-FN3-S-TC-12
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError12.json
+- Expected value: Error: "Missing ,"
+
+#### HDSS-FN3-S-TC-13
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError13.json
+- Expected value: Error: "Missing :"
+
+#### HDSS-FN3-S-TC-14
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError14.json
+- Expected value: Error: "Missing ."
+
+#### HDSS-FN3-S-TC-15
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError15json
+- Expected value: Error: "Empty drainage basin value"
+
+#### HDSS-FN3-S-TC-16
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError16.json
+- Expected value: Error: "Empty drainage basin label"
+
+#### HDSS-FN3-S-TC-17
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError17.json
+- Expected value: Error: "Missing right \" in value"
+
+#### HDSS-FN3-S-TC-18
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError18.json
+- Expected value: Error: "Missing left \" in value"
+
+#### HDSS-FN3-S-TC-19
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError19.json
+- Expected value: Error: "Missing right \" in label"
+
+#### HDSS-FN3-S-TC-20
+- Type of case: Node omission
+- Input: hdss-rf03-syntaxError20.json
+- Expected value: Error: "Missing left \" in label"
+ 
+#### HDSS-FN3-S-TC-21
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError21.json
+- Expected value: Error: "Repetition of file"
+ 
+#### HDSS-FN3-S-TC-22
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError22.json
+- Expected value: Error: "Repetition of {"
+
+#### HDSS-FN3-S-TC-23
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError23.json
+- Expected value: Error: "Repetition of }"
+
+#### HDSS-FN3-S-TC-24
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError24.json
+- Expected value: Error: "Repetition of body"
+
+#### HDSS-FN3-S-TC-25
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError25.json
+- Expected value: Error: "Repetition of drainage basin label"
+
+#### HDSS-FN3-S-TC-26
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError26.json
+- Expected value: Error: "Repetition of left \" in label"
+
+#### HDSS-FN3-S-TC-27
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError27.json
+- Expected value: Error: "Repetition of right \" in label"
+
+#### HDSS-FN3-S-TC-28
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError28.json
+- Expected value: Error: "Repetition of left \" in value"
+
+#### HDSS-FN3-S-TC-29
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError29.json
+- Expected value: Error: "Repetition of right \" in value"
+
+#### HDSS-FN3-S-TC-30
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError30.json
+- Expected value: Error: "Repetition of : "
+
+#### HDSS-FN3-S-TC-31
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError31.json
+- Expected value: Error: "Repetition of value"
+
+#### HDSS-FN3-S-TC-32
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError32.json
+- Expected value: Error: "Repetition of ,"
+
+#### HDSS-FN3-S-TC-33
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError33.json
+- Expected value: Error: "Repetition of field"
+
+#### HDSS-FN3-S-TC-34
+- Type of case: Node repetition
+- Input: hdss-rf03-syntaxError34.json
+- Expected value: Error: "Repetition of ."
+
+#### HDSS-FN3-S-TC-35
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError35.json
+- Expected value: Error: "Modification of drainage basin label"
+
+#### HDSS-FN3-S-TC-37
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError37.json
+- Expected value: Error: "Modification of {"
+
+#### HDSS-FN3-S-TC-38
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError38.json
+- Expected value: Error: "Modification of }"
+
+#### HDSS-FN3-S-TC-39
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError39.json
+- Expected value: Error: "Modification of amount type value"
+
+#### HDSS-FN3-S-TC-40
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError40.json
+- Expected value: Error: "Modification of \""
+
+#### HDSS-FN3-S-TC-41
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError41.json
+- Expected value: Error: "Modification of ."
+ 
+#### HDSS-FN3-S-TC-42
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError42.json
+- Expected value: Error: "Modification of state value"
+ 
+#### HDSS-FN3-S-TC-43
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError43.json
+- Expected value: Error: "Modification of ,"
+ 
+#### HDSS-FN3-S-TC-44
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError44.json
+- Expected value: Error: "Modification of drainage basin value"
+
+#### HDSS-FN3-S-TC-45
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError45.json
+- Expected value: Error: "Modification of requester label"
+
+#### HDSS-FN3-S-TC-46
+- Type of case: Node modification
+- Input: hdss-rf03-syntaxError46.json
+- Expected value: Error: "Modification of irrigation date label"
+
+#### HDSS-FN3-S-TC-47
+- Type of case: Valid case
+- Input: hdss-rf03-correctFile.json
+- Expected value: "Syntactically Valid File"
+
