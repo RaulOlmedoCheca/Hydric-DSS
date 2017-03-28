@@ -2,8 +2,6 @@ package hdss.tests;
 
 import static org.junit.Assert.*;
 
-import java.text.Format;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.junit.Test;
@@ -45,16 +43,6 @@ public class IdentifyCurrentState_EClasses {
      */
     @Test
     public void basicValidTest() throws HydricDSSException {
-        WatershedsListPublicData input;
-        input = manager.RegisterHydricResources("data/hdss-rf02-validRegisterHydricResourcesCase.json");
-
-        List<WatershedPublicData> watershedList;
-        watershedList = input.getWatershedList();
-
-        assertEquals(watershedList.size(), 1);
-
-        WatershedPublicData watershed;
-        watershed = watershedList.get(0);
         /*
 
         ScenarioPublicData result;
@@ -72,6 +60,17 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(result.getScenarioEvaluation(),expectedEvalutaion);
 
         */
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/hdss-rf02-validRegisterHydricResourcesCase.json");
+
+        List<WatershedPublicData> watershedList;
+        watershedList = input.getWatershedList();
+
+        assertEquals(watershedList.size(), 1);
+
+        WatershedPublicData watershed;
+        watershed = watershedList.get(0);
+
         assertEquals(watershed.getName(), "shortName");
 
         List<ReservoirPublicData> reservoirList;
