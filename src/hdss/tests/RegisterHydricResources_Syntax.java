@@ -20,6 +20,7 @@ public class RegisterHydricResources_Syntax {
 	@Parameters
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
+			{"data/RF01_syntax/hdss-rf01-correctFile.json", "Empty file", "HDSS-RF-01 Syntactically Valid File "},
 			{"data/RF01_syntax/hdss-rf01-syntaxError1.json", "Empty file", "HDSS-RF-01 Syntax Error: Omission of nodes"},
 			{"data/RF01_syntax/hdss-rf01-syntaxError2.json", "Missing {", "HDSS-RF-01 Syntax Error: Omission of nodes"},
 			{"data/RF01_syntax/hdss-rf01-syntaxError3.json", "Missing body", "HDSS-RF-01 Syntax Error: Omission of nodes"},
