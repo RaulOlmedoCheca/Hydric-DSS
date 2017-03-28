@@ -14,7 +14,7 @@ import hdss.WatershedManagerInterface;
 import hdss.WatershedManager;
 import hdss.exceptions.HydricDSSException;
 
-@RunWith(Parametrized.class)
+@RunWith(Parameterized.class)
 public class RegisterHydricResources_Syntax {
 
 	@Parameters
