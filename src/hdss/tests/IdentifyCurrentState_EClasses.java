@@ -127,7 +127,7 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(reservoir.getMaxCapacity(), 0.00, 0.001);
 
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-capacityZero.json","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-capacityZero.json", "reservoir");
 
         assertEquals(watershed.getName(), result.getWatershedName());
 
@@ -138,7 +138,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"PLENTY");
+        assertEquals(result.getScenarioEvaluation(), "PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-4
@@ -166,7 +166,7 @@ public class IdentifyCurrentState_EClasses {
     public void emptyFileTest() throws HydricDSSException {
         manager.RegisterHydricResources("data/RF02/hdss-rf02-emptyFile.json");
         try {
-            manager.IdentifyCurrentState("data/RF02/hdss-rf02-emptyFile.json","reservoir");
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-emptyFile.json", "reservoir");
             fail("Equivalence class test HDSS-FN2-EQ-5 failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -181,10 +181,10 @@ public class IdentifyCurrentState_EClasses {
     @Test
     public void existingIrrigationBasinTest() throws HydricDSSException {
         manager.RegisterHydricResources("data/RF02/hdss-rf02-existingIrrigationBasinName1.json");
-        manager.IdentifyCurrentState("data/RF02/hdss-rf02-existingIrrigationBasinName1.json","reservoir");
+        manager.IdentifyCurrentState("data/RF02/hdss-rf02-existingIrrigationBasinName1.json", "reservoir");
         try {
             manager.RegisterHydricResources("data/RF02/hdss-rf02-existingIrrigationBasinName2.json");
-            manager.IdentifyCurrentState("data/RF02/hdss-rf02-existingIrrigationBasinName2.json","reservoir");
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-existingIrrigationBasinName2.json", "reservoir");
             fail("Equivalence class test HDSS-FN2-EQ-7 failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "Tried to record an irrigation basin with an existing name");
@@ -200,7 +200,7 @@ public class IdentifyCurrentState_EClasses {
     public void longIrrigationBasinNameTest() throws HydricDSSException {
         manager.RegisterHydricResources("data/RF02/hdss-rf02-longIrrigationBasinName.json");
         try {
-            manager.IdentifyCurrentState("data/RF02/hdss-rf02-longIrrigationBasinName.json","reservoir");
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-longIrrigationBasinName.json", "reservoir");
             fail("Equivalence class test HDSS-FN2-EQ-10 failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -216,7 +216,7 @@ public class IdentifyCurrentState_EClasses {
     public void noIrrigationBasinNameTest() throws HydricDSSException {
         manager.RegisterHydricResources("data/RF02/hdss-rf02-noIrrigationBasinName.json");
         try {
-            manager.IdentifyCurrentState("data/RF02/hdss-rf02-noIrrigationBasinName.json","desalination plant");
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-noIrrigationBasinName.json", "desalination plant");
             fail("Equivalence class test HDSS-FN2-EQ-11 failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -232,7 +232,7 @@ public class IdentifyCurrentState_EClasses {
     public void severalIrrigationBasinNamesTest() throws HydricDSSException {
         manager.RegisterHydricResources("data/RF02/hdss-rf02-severalIrrigationBasinNames.json");
         try {
-            manager.IdentifyCurrentState("data/RF02/hdss-rf02-severalIrrigationBasinNames.json","reservoir");
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-severalIrrigationBasinNames.json", "reservoir");
             fail("Equivalence class test HDSS-FN2-EQ-12 failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -248,7 +248,7 @@ public class IdentifyCurrentState_EClasses {
     public void noResourcesListTest() throws HydricDSSException {
         manager.RegisterHydricResources("data/RF02/hdss-rf02-noResourcesList.json");
         try {
-            manager.IdentifyCurrentState("data/RF02/hdss-rf02-noResourcesList.json","reservoir");
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-noResourcesList.json", "reservoir");
             fail("Equivalence class test HDSS-FN2-EQ-14 failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -502,7 +502,7 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(watershed.getName().length(), 49, 0.01);
 
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validIrrigationBasinName49.json","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validIrrigationBasinName49.json", "reservoir");
 
         assertEquals(watershed.getName(), result.getWatershedName());
 
@@ -513,7 +513,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"PLENTY");
+        assertEquals(result.getScenarioEvaluation(), "PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-26
@@ -538,7 +538,7 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(watershed.getName().length(), 50, 0.01);
 
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validIrrigationBasinName50.json","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validIrrigationBasinName50.json", "reservoir");
 
         assertEquals(watershed.getName(), result.getWatershedName());
 
@@ -549,7 +549,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"PLENTY");
+        assertEquals(result.getScenarioEvaluation(), "PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-27
@@ -599,7 +599,7 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(reservoir.getMyName().length(), 49, 0.001);
 
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceName49.json","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceName49.json", "reservoir");
 
         Format formatter = new SimpleDateFormat("dd/MM/yy");
         String date = formatter.format(result.getScenarioEvaluationDate());
@@ -608,7 +608,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"PLENTY");
+        assertEquals(result.getScenarioEvaluation(), "PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-29
@@ -642,7 +642,7 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(reservoir.getMyName().length(), 50, 0.001);
 
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceName50.json","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceName50.json", "reservoir");
 
         assertEquals(watershed.getName(), result.getWatershedName());
 
@@ -653,7 +653,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"PLENTY");
+        assertEquals(result.getScenarioEvaluation(), "PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-30
@@ -703,7 +703,7 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(reservoir.getMaxCapacity(), 0.01, 0.001);
 
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacity0_01.json","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacity0_01.json", "reservoir");
 
         assertEquals(watershed.getName(), result.getWatershedName());
 
@@ -714,7 +714,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"SHORTAGE");
+        assertEquals(result.getScenarioEvaluation(), "SHORTAGE");
     }
 
     /* Test case: HDSS-FN2-TC-32
@@ -764,7 +764,7 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(reservoir.getMaxCapacity(), 2.23, 0.001);
 
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityTwoDecimals.json","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityTwoDecimals.json", "reservoir");
 
         assertEquals(watershed.getName(), result.getWatershedName());
 
@@ -775,7 +775,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"PLENTY");
+        assertEquals(result.getScenarioEvaluation(), "PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-34
@@ -809,7 +809,7 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(reservoir.getMaxCapacity(), 2.2, 0.001);
 
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityOneDecimal.jso","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityOneDecimal.jso", "reservoir");
 
         assertEquals(watershed.getName(), result.getWatershedName());
 
@@ -820,7 +820,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"PLENTY");
+        assertEquals(result.getScenarioEvaluation(), "PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-35
@@ -854,10 +854,8 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(reservoir.getMaxCapacity(), 2, 0.001);
 
 
-
-
         ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityZeroDecimals.json","reservoir");
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityZeroDecimals.json", "reservoir");
 
         assertEquals(watershed.getName(), result.getWatershedName());
 
@@ -868,7 +866,7 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(result.getEvaluationScope(), "reservoir");
 
-        assertEquals(result.getScenarioEvaluation(),"SHORTAGE");
+        assertEquals(result.getScenarioEvaluation(), "SHORTAGE");
     }
 
     /* Test case: HDSS-FN2-TC-36
