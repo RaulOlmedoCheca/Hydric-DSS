@@ -14,8 +14,4 @@ public class AquiferPublicData implements WaterResourceTypePublicData {
 	public String getMyName() {
 		return myName;
 	}
-
-	public float getCurrentHeight() {
-		return currentHeight;
-	}
 }
