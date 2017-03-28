@@ -257,7 +257,7 @@ public class IdentifyCurrentState_EClasses {
     public void severalResourcesListsTest() throws HydricDSSException {
         manager.RegisterHydricResources("data/RF02/hdss-rf02-severalResourcesLists.json");
         try {
-            manager.IdentifyCurrentState("data/RF02/hdss-rf02-severalResourcesLists.json", "reservoir")
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-severalResourcesLists.json", "reservoir");
             fail("Equivalence class test HDSS-FN2-EQ-15 failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");
@@ -354,7 +354,7 @@ public class IdentifyCurrentState_EClasses {
     public void noResourceTypeTest() throws HydricDSSException {
         manager.RegisterHydricResources("data/RF02/hdss-rf02-noResourceType.json");
         try {
-            manager.IdentifyCurrentState("data/RF02/hdss-rf02-noResourceType.json", "reservoir")
+            manager.IdentifyCurrentState("data/RF02/hdss-rf02-noResourceType.json", "reservoir");
             fail("Equivalence class test HDSS-FN2-EQ-28 failed");
         } catch (HydricDSSException e) {
             assertEquals(e.getMessage(), "The input file has no data or does not match the expected format");

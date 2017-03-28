@@ -10,10 +10,10 @@ import hdss.exceptions.HydricDSSException;
 
 public class RegisterIrrigationDemand_Syntax {
 
-	private WatershedManagerInterface manager = new WatershedManager();
+    private WatershedManagerInterface manager = new WatershedManager();
 
   /* Test case:
-	* Derivation Tree Node:
+    * Derivation Tree Node:
 	* Type of case:
 	* Testing technique: Syntax analysis
 	* Expected value:
