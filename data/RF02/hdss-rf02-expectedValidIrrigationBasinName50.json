@@ -1,16 +1,6 @@
 {
-  "reallyreallyreallyreallyreallyreallyreallyLongName": [
-    {
-      "reservoirs": {
-        "amount": 1,
-        "capacity": 2.23,
-        "list": [
-          {
-            "name": "shortName",
-            "capacity": 2.23
-          }
-        ]
-      }
-    }
-  ]
+  "Drainage Basin": "reallyreallyreallyreallyreallyreallyreallyLongName",
+  "Date": "04/06/17",
+  "Scope":"reservoir",
+  "State": "PLENTY"
 }
