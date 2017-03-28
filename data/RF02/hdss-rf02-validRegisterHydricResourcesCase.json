@@ -3,12 +3,12 @@
     {
       "name": "shortName",
       "type": "reservoir",
-      "capacity": 2.23
+      "capacity": 100.00
     },
     {
       "name": "plant1",
       "type": "desalination plant",
-      "capacity": 23.46
+      "capacity": 100.00
     },
     {
       "name": "aquifer1",
