@@ -2,6 +2,8 @@ package hdss.tests;
 
 import static org.junit.Assert.*;
 
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.junit.Test;
@@ -43,17 +45,33 @@ public class IdentifyCurrentState_EClasses {
      */
     @Test
     public void basicValidTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/hdss-rf02-validRegisterHydricResourcesCase.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/hdss-rf02-validRegisterHydricResourcesCase.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
         WatershedPublicData watershed;
         watershed = watershedList.get(0);
+        /*
 
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("filepath","scope");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "scope");
+
+        assertEquals(result.getScenarioEvaluation(),expectedEvalutaion);
+
+        */
         assertEquals(watershed.getName(), "shortName");
 
         List<ReservoirPublicData> reservoirList;
