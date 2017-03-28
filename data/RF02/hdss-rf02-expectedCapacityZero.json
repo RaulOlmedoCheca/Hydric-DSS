@@ -1,16 +1,6 @@
 {
-  "zero-capacity-basin": [
-      {
-        "reservoirs": {
-          "amount": 1,
-          "capacity": 0.00,
-          "list": [
-            {
-              "name": "zero-capacity-reservoir",
-              "capacity": 0.00
-            }
-          ]
-        }
-      }
-    ]
+  "Drainage Basin": "zero-capacity-basin",
+  "Date": "04/06/17",
+  "Scope":"reservoir",
+  "State": "SHORTAGE"
 }

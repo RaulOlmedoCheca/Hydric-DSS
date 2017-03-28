@@ -1,16 +1,6 @@
 {
-  "shortName": [
-    {
-      "reservoirs": {
-        "amount": 1,
-        "capacity": 2.2,
-        "list": [
-          {
-            "name": "shortName",
-            "capacity": 2.2
-          }
-        ]
-      }
-    }
-  ]
+  "Drainage Basin": "shortName",
+  "Date": "04/06/17",
+  "Scope":"reservoir",
+  "State": "PLENTY"
 }
