@@ -2,6 +2,8 @@ package hdss.tests;
 
 import static org.junit.Assert.*;
 
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.junit.Test;
@@ -22,15 +24,6 @@ public class IdentifyCurrentState_EClasses {
 
     private WatershedManagerInterface manager = new WatershedManager();
 
-    // PLANTILLA
-   /* public void test() throws HydricDSSException {
-        ScenarioPublicData result;
-        manager.RegisterHydricResources("data/file.json");
-        result = manager.IdentifyCurrentState("data/aquifer.json", "aquifer");
-        assertEquals("SHORTAGE", result.getScenarioEvaluation());
-    }
-    */
-
     /* Test case: HDSS-FN2-TC-1
      * Equivalence class: HDSS-FN2-EQ-2, HDSS-FN2-EQ-3, HDSS-FN2-EQ-6, HDSS-FN2-EQ-8,
      * HDSS-FN2-EQ-9, HDSS-FN2-EQ-13, HDSS-FN2-EQ-16, HDSS-FN2-EQ-18, HDSS-FN2-EQ-19,
@@ -39,27 +32,10 @@ public class IdentifyCurrentState_EClasses {
      * HDSS-FN2-EQ-42, HDSS-FN2-EQ-44, HDSS-FN2-EQ-48, HDSS-FN2-EQ-51, HDSS-FN2-EQ-52,
      * HDSS-FN2-EQ-2
      * Testing technique: Equivalence Classes Analysis
-     * Expected value:
+     * Expected value: hdss-rf02-expectedValidRegisterHydricResourcesCase.json
      */
     @Test
     public void basicValidTest() throws HydricDSSException {
-        /*
-
-        ScenarioPublicData result;
-        result = manager.IdentifyCurrentState("filepath","scope");
-
-        assertEquals(watershed.getName(), result.getWatershedName());
-
-        Format formatter = new SimpleDateFormat("dd/MM/yy");
-        String date = formatter.format(result.getScenarioEvaluationDate());
-
-        assertEquals(date, "04/06/17");
-
-        assertEquals(result.getEvaluationScope(), "scope");
-
-        assertEquals(result.getScenarioEvaluation(),expectedEvalutaion);
-
-        */
         WatershedsListPublicData input;
         input = manager.RegisterHydricResources("data/hdss-rf02-validRegisterHydricResourcesCase.json");
 
@@ -127,11 +103,11 @@ public class IdentifyCurrentState_EClasses {
      */
     @Test
     public void zeroCapacityBasinTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-capacityZero.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-capacityZero.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -149,6 +125,20 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(reservoir.getMyName(), "zero-capacity-reservoir");
         assertEquals(reservoir.getMaxCapacity(), 0.00, 0.001);
+
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-capacityZero.json","reservoir");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-4
@@ -497,11 +487,11 @@ public class IdentifyCurrentState_EClasses {
     */
     @Test
     public void validIrrigationBasinName49charTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-validIrrigationBasinName49.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-validIrrigationBasinName49.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -511,6 +501,19 @@ public class IdentifyCurrentState_EClasses {
         assertEquals(watershed.getName(), "reallyreallyreallyreallyreallyreallyreallyLongNam");
         assertEquals(watershed.getName().length(), 49, 0.01);
 
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validIrrigationBasinName49.json","reservoir");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-26
@@ -520,11 +523,11 @@ public class IdentifyCurrentState_EClasses {
     */
     @Test
     public void validIrrigationBasinName50charTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-validIrrigationBasinName50.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-validIrrigationBasinName50.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -533,6 +536,20 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(watershed.getName(), "reallyreallyreallyreallyreallyreallyreallyLongName");
         assertEquals(watershed.getName().length(), 50, 0.01);
+
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validIrrigationBasinName50.json","reservoir");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-27
@@ -558,11 +575,11 @@ public class IdentifyCurrentState_EClasses {
     */
     @Test
     public void validResourceName49charTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceName49.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceName49.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -580,6 +597,18 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(reservoir.getMyName(), "reallyreallyreallyreallyreallyreallyreallyLongNam");
         assertEquals(reservoir.getMyName().length(), 49, 0.001);
+
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceName49.json","reservoir");
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-29
@@ -589,11 +618,11 @@ public class IdentifyCurrentState_EClasses {
     */
     @Test
     public void validResourceName50charTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceName50.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceName50.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -611,6 +640,20 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(reservoir.getMyName(), "reallyreallyreallyreallyreallyreallyreallyLongName");
         assertEquals(reservoir.getMyName().length(), 50, 0.001);
+
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceName50.json","reservoir");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-30
@@ -636,11 +679,11 @@ public class IdentifyCurrentState_EClasses {
     */
     @Test
     public void validResourceCapacityTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceCapacity0_01.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceCapacity0_01.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -658,6 +701,20 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(reservoir.getMyName(), "shortName");
         assertEquals(reservoir.getMaxCapacity(), 0.01, 0.001);
+
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacity0_01.json","reservoir");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"SHORTAGE");
     }
 
     /* Test case: HDSS-FN2-TC-32
@@ -683,11 +740,11 @@ public class IdentifyCurrentState_EClasses {
     */
     @Test
     public void validResourceCapacityTwoDecimalsTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceCapacityTwoDecimals.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceCapacityTwoDecimals.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -705,6 +762,20 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(reservoir.getMyName(), "shortName");
         assertEquals(reservoir.getMaxCapacity(), 2.23, 0.001);
+
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityTwoDecimals.json","reservoir");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-34
@@ -714,11 +785,11 @@ public class IdentifyCurrentState_EClasses {
     */
     @Test
     public void validResourceCapacityOneDecimalTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceCapacityOneDecimal.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceCapacityOneDecimal.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -736,6 +807,20 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(reservoir.getMyName(), "shortName");
         assertEquals(reservoir.getMaxCapacity(), 2.2, 0.001);
+
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityOneDecimal.jso","reservoir");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"PLENTY");
     }
 
     /* Test case: HDSS-FN2-TC-35
@@ -745,11 +830,11 @@ public class IdentifyCurrentState_EClasses {
     */
     @Test
     public void validResourceCapacityZeroDecimalsTest() throws HydricDSSException {
-        WatershedsListPublicData result;
-        result = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceCapacityZeroDecimals.json");
+        WatershedsListPublicData input;
+        input = manager.RegisterHydricResources("data/RF02/hdss-rf02-validResourceCapacityZeroDecimals.json");
 
         List<WatershedPublicData> watershedList;
-        watershedList = result.getWatershedList();
+        watershedList = input.getWatershedList();
 
         assertEquals(watershedList.size(), 1);
 
@@ -767,6 +852,23 @@ public class IdentifyCurrentState_EClasses {
 
         assertEquals(reservoir.getMyName(), "shortName");
         assertEquals(reservoir.getMaxCapacity(), 2, 0.001);
+
+
+
+
+        ScenarioPublicData result;
+        result = manager.IdentifyCurrentState("data/RF02/hdss-rf02-validResourceCapacityZeroDecimals.json","reservoir");
+
+        assertEquals(watershed.getName(), result.getWatershedName());
+
+        Format formatter = new SimpleDateFormat("dd/MM/yy");
+        String date = formatter.format(result.getScenarioEvaluationDate());
+
+        assertEquals(date, "04/06/17");
+
+        assertEquals(result.getEvaluationScope(), "reservoir");
+
+        assertEquals(result.getScenarioEvaluation(),"SHORTAGE");
     }
 
     /* Test case: HDSS-FN2-TC-36
