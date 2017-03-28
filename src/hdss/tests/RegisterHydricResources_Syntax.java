@@ -87,7 +87,7 @@ public class RegisterHydricResources_Syntax {
         this.helpingFailMessage = helpingFailMessage;
     }
 
-    /* Test case: PARAMETERIZED TEST SUITE
+    /* Test case: PARAMETERIZED TEST SUITE (HDSS-FN1-S-TC-1 to HDSS-FN1-S-TC-52)
     * Testing technique: Syntax analysis
     * Expected value: Throws an exception.
     */
