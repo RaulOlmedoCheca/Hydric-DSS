@@ -3,8 +3,9 @@ package hdss.output;
 public class HourlyIrrigationSchedulePublicData {
 	private String myHour;
 	private float amount;
-	
+
 	// Esfuerzo : 2 minutos
+	// 4
 	public HourlyIrrigationSchedulePublicData (String hour, float value)
 	{
 		myHour = hour;

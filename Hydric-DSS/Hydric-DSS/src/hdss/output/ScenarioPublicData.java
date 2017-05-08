@@ -8,8 +8,9 @@ public class ScenarioPublicData {
 	private Date scenarioEvaluationDate;
 	private String evaluationScope;
 	private String scenarioEvaluation;
-	
+
 	// Esfuerzo : 2 minutos
+	// 6
 	public ScenarioPublicData (String name, Date evaluationDate, String scope, String evaluation)
 	{
 		watershedName = name;
@@ -17,7 +18,7 @@ public class ScenarioPublicData {
 		evaluationScope = scope;
 		scenarioEvaluation = evaluation;
 	}
-	
+
 	public String getWatershedName() {
 		return watershedName;
 	}
@@ -32,5 +33,5 @@ public class ScenarioPublicData {
 
 	public String getScenarioEvaluation() {
 		return scenarioEvaluation;
-	}	
+	}
 }

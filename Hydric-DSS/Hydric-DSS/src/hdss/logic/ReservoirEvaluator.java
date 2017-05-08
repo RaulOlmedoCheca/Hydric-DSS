@@ -7,13 +7,14 @@ public class ReservoirEvaluator implements HydricEvaluator {
 
 	@Override
 	// Esfuerzo : 15 minutos
+	// 26
 	public String Evaluate(Object[] obj) throws HydricDSSException {
 		ReservoirInternalData[] reservoirs = (ReservoirInternalData[])obj;
 		double additionCurrentCapacity = 0.0f;
 		double additionMaxCapacity = 0.0f;
 		double capacityPercentage = 0.0f;
 		String result = "";
-		
+
 		for (int i=0; i<reservoirs.length; i++)
 		{
 			additionCurrentCapacity += reservoirs[i].getCurrentCapacity();

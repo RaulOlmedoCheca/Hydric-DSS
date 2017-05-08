@@ -19,6 +19,7 @@ public class WatershedManager implements WatershedManagerInterface {
 
 	@Override
 	//Esfuerzo Actual: 41 minutos
+	//9
 	public WatershedsListPublicData RegisterHydricResources(String InputFile)
 			throws HydricDSSException {
 		IInputFileManager ioManager = new WatershedsInputFileManager ();
@@ -31,6 +32,7 @@ public class WatershedManager implements WatershedManagerInterface {
 
 	@Override
 	//Esfuerzo Actual: 52 minutos
+	//13
 	public ScenarioPublicData IdentifyCurrentState(String InputFile,
 			String Scope) throws HydricDSSException {
 		ScenarioSimulator myScenarioSimulator = new ScenarioSimulator (Scope);
@@ -40,12 +42,13 @@ public class WatershedManager implements WatershedManagerInterface {
 		WatershedInternalData upgradeResult = dataStoreManager.UpgradeCurrentState((ScenarioInputData) currentStateData);
 		String scenarioEvaluation = myScenarioSimulator.Evaluate((WatershedInternalData) upgradeResult);
 		Date CurrentDate = new Date();
-		ScenarioPublicData myResult = new ScenarioPublicData (upgradeResult.getName(), CurrentDate, Scope, scenarioEvaluation); 
+		ScenarioPublicData myResult = new ScenarioPublicData (upgradeResult.getName(), CurrentDate, Scope, scenarioEvaluation);
 		return myResult;
 	}
 
 	@Override
 	//Esfuerzo Actual: 48 minutos
+	// 9
 	public IrrigationDemandPublicData RegisterIrrigationDemand(String InputFile)
 			throws HydricDSSException {
 		IInputFileManager ioManager = new IrrigationDemandFileDataManager ();

@@ -7,9 +7,9 @@ public class ScenarioInputData {
 	private String name;
 	private ReservoirCurrentData [] reservoirs;
 	private PlantCurrentData [] plants;
-	private AquiferCurrentData [] aquifers;	
+	private AquiferCurrentData [] aquifers;
 	private Boolean validated;
-	
+
 	public String getName() {
 		return name;
 	}
@@ -18,7 +18,7 @@ public class ScenarioInputData {
 	{
 		return reservoirs;
 	}
-	
+
 	public PlantCurrentData [] getPlantsCurrentData ()
 	{
 		return plants;
@@ -28,16 +28,18 @@ public class ScenarioInputData {
 	{
 		return aquifers;
 	}
-	
+
 	//Esfuerzo Actual: 2 minutos
+	// 5
     public ScenarioInputData (String watershedName) throws HydricDSSException
 	{
     	name = watershedName;
     	validated = false;
     	Validate();
 	}
-    
+
 	//Esfuerzo Actual: 5 minutos
+	// 9
 	public void Validate () throws HydricDSSException
 	{
     	if (!validated)
@@ -47,43 +49,47 @@ public class ScenarioInputData {
     		validatePlants();
     		validateAquifers();
     		validated = true;
-    	}		
+    	}
 	}
-	
+
 	//Esfuerzo Actual: 3 minutos
+	// 5
 	private void validateName() throws HydricDSSException {
 		if ((name.length()>50)||(name.length()<1))
 		{
-			throw (new HydricDSSException ("Nombre con un nœmero de caracteres mayor que 50 o menor que 1"));
+			throw (new HydricDSSException ("Nombre con un nï¿½mero de caracteres mayor que 50 o menor que 1"));
 		}
 	}
 
 	//Esfuerzo Actual: 4 minutos
+	// 7
 	private void validateReservoirs() throws HydricDSSException
 	{
 		for (int i=0; i<this.reservoirs.length; i++)
 		{
 			this.reservoirs[i].Validate();
 		}
-		
+
 	}
 
 	//Esfuerzo Actual: 4 minutos
+	// 7
 	private void validatePlants() throws HydricDSSException
 	{
 		for (int i=0; i<this.plants.length; i++)
 		{
-			this.plants[i].Validate();		
-		}		
+			this.plants[i].Validate();
+		}
 	}
-	
+
 	//Esfuerzo Actual: 4 minutos
+	// 7
 	private void validateAquifers() throws HydricDSSException
 	{
 		for (int i=0; i<this.aquifers.length; i++)
 		{
-			this.aquifers[i].Validate();		
-		}			
+			this.aquifers[i].Validate();
+		}
 	}
-	
+
 }

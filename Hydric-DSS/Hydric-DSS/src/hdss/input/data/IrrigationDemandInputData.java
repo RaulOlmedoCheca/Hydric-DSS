@@ -10,9 +10,9 @@ public class IrrigationDemandInputData {
 	private String parcelName;
 	private double amount;
 	private Date date;
-	
+
 	private Boolean validated;
-	
+
 	public String getWatershedName() {
 		return watershedName;
 	}
@@ -34,6 +34,7 @@ public class IrrigationDemandInputData {
 	}
 
 	//Esfuerzo Actual: 2 minutos
+	// 14
     public IrrigationDemandInputData (String watershed, String requester, String parcel, double mAmount, Date mDate) throws HydricDSSException
 	{
     	this.watershedName = watershed;
@@ -44,45 +45,49 @@ public class IrrigationDemandInputData {
     	validated = false;
     	Validate();
 	}
-    
+
 	//Esfuerzo Actual: 3 minutos
+	// 10
 	public void Validate () throws HydricDSSException
 	{
     	if (!validated)
     	{
     		this.validateName(this.getWatershedName());
-    		this.validateName(this.requesterName);   
+    		this.validateName(this.requesterName);
     		this.validateName(this.parcelName);
     		validateAmount();
     		validateDate();
     		validated = true;
-    	}		
+    	}
 	}
-	
+
 	//Esfuerzo Actual: 3 minutos
+	// 5
 	private void validateAmount() throws HydricDSSException
 	{
 		if (this.amount <= 0.0f)
 		{
-			throw (new HydricDSSException ("La cantidad de agua solicitada no es v‡lida"));			
+			throw (new HydricDSSException ("La cantidad de agua solicitada no es vï¿½lida"));
 		}
 	}
-	
+
 	//Esfuerzo Actual: 28 minutos
+	// 6
 	private void validateDate() throws HydricDSSException
 	{
 		Date currentDate = new Date(System.currentTimeMillis());
 		if (currentDate.before(this.date))
 		{
-			throw (new HydricDSSException ("La fecha de la petici—n no es correcta"));			
+			throw (new HydricDSSException ("La fecha de la peticiï¿½n no es correcta"));
 		}
 	}
-	
+
 	//Esfuerzo Actual: 3 minutos
+	// 5
 	private void validateName(String name) throws HydricDSSException {
 		if ((name.length()>50)||(name.length()<1))
 		{
-			throw (new HydricDSSException ("Nombre con un nœmero de caracteres mayor que 50 o menor que 1"));
+			throw (new HydricDSSException ("Nombre con un nï¿½mero de caracteres mayor que 50 o menor que 1"));
 		}
 	}
 

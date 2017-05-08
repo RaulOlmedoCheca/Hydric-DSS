@@ -5,8 +5,9 @@ import hdss.exceptions.HydricDSSException;
 
 public class ScenarioSimulator {
 	private String scope;
-	
+
 	// Esfuerzo : 6 minutos
+	// 9
 	public ScenarioSimulator (String inputScope) throws HydricDSSException
 	{
 		if (Validate(inputScope.toLowerCase()))
@@ -15,11 +16,12 @@ public class ScenarioSimulator {
 		}
 		else
 		{
-			throw (new HydricDSSException ("El alcance de la evaluaci—n del escenario es incorrecto"));
+			throw (new HydricDSSException ("El alcance de la evaluaciï¿½n del escenario es incorrecto"));
 		}
 	}
-	
+
 	// Esfuerzo : 7 minutos
+	// 8
 	private boolean Validate (String inputScope)
 	{
 		boolean valid = false;
@@ -29,17 +31,18 @@ public class ScenarioSimulator {
 		}
 		return valid;
 	}
-	
+
 	// Esfuerzo : 13 minutos
+	// 20
 	public String Evaluate(WatershedInternalData currentStateData) throws HydricDSSException
 	{
 		HydricEvaluator myEvaluator;
 		String result;
-				
+
 		if (this.scope.equals("reservoir"))
 		{
 			myEvaluator = new ReservoirEvaluator ();
-			result = myEvaluator.Evaluate(currentStateData.getReservoirs());			
+			result = myEvaluator.Evaluate(currentStateData.getReservoirs());
 		}
 		else if (this.scope.equals("plant"))
 		{
@@ -49,12 +52,12 @@ public class ScenarioSimulator {
 		{
 			myEvaluator = new AquiferEvaluator ();
 			result = myEvaluator.Evaluate(currentStateData.getAquifers());
-		}	
+		}
 		else
 		{
 			FullEvaluator myFullEvaluator = new FullEvaluator ();
-			result = myFullEvaluator.Evaluate(currentStateData);			
-		}		
+			result = myFullEvaluator.Evaluate(currentStateData);
+		}
 		return result;
 	}
 }

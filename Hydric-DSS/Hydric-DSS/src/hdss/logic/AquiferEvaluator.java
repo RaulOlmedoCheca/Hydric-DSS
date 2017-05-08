@@ -6,12 +6,13 @@ import hdss.exceptions.HydricDSSException;
 public class AquiferEvaluator implements HydricEvaluator {
 
 	// Esfuerzo : 15 minutos
+	// 20
 	@Override
 	public String Evaluate(Object[] obj) throws HydricDSSException {
 		AquiferInternalData[] aquifers = (AquiferInternalData[])obj;
 		double overallLevel = 0.0;
 		String result = "";
-		
+
 		for (int i=0; i<aquifers.length; i++)
 		{
 			overallLevel += aquifers[i].getCurrentLevel();

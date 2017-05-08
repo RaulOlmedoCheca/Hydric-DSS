@@ -12,13 +12,14 @@ public class PlantInputData {
 	{
 		return name;
 	}
-	
+
 	public double getMaxCapacity()
 	{
 		return maxCapacity;
 	}
-	
+
 	//Esfuerzo Actual: 5 minutos
+	// 7
 	public void Validate () throws HydricDSSException
 	{
     	if (!validated)
@@ -26,22 +27,24 @@ public class PlantInputData {
     		validateName();
     		vallidateMaxCapacity();
     		validated = true;
-    	}		
+    	}
 	}
-	
+
 	//Esfuerzo Actual: 3 minutos
+	// 5
 	private void validateName() throws HydricDSSException {
 		if ((name.length()>50)||(name.length()<1))
 		{
-			throw (new HydricDSSException ("Nombre con un nœmero de caracteres mayor que 50 o menor que 1"));
+			throw (new HydricDSSException ("Nombre con un nï¿½mero de caracteres mayor que 50 o menor que 1"));
 		}
 	}
 
 	//Esfuerzo Actual: 3 minutos
+	// 5
 	private void vallidateMaxCapacity() throws HydricDSSException {
 		if (maxCapacity<0.0f)
 		{
-			throw (new HydricDSSException ("La capacidad m‡xima de la planta es un valor incorrecto"));
+			throw (new HydricDSSException ("La capacidad mï¿½xima de la planta es un valor incorrecto"));
 		}
 	}
 }

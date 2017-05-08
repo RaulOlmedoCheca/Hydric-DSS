@@ -1,7 +1,7 @@
 package hdss.data;
 
 public class ReservoirInternalData {
-	
+
 	private String name;
 	private double maxCapacity;
 	private double currentCapacity;
@@ -9,23 +9,24 @@ public class ReservoirInternalData {
 	{
 		return this.name;
 	}
-	
+
 	public double getMaxCapacity()
 	{
 		return this.maxCapacity;
 	}
-	
+
 	public double getCurrentCapacity()
 	{
 		return this.currentCapacity;
 	}
-	
+
 	public void setCurrentCapacity (double value)
 	{
 		this.currentCapacity = value;
 	}
-	
+
 	// Esfuerzo : 5 minutos
+	//7
 
 	public ReservoirInternalData (String newName, double newMaxCapacity)
 	{

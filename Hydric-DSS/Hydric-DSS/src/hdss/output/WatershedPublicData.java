@@ -8,23 +8,25 @@ import hdss.data.ReservoirInternalData;
 import hdss.data.WatershedInternalData;
 
 public class WatershedPublicData {
-	private String name;	
+	private String name;
 	private List<ReservoirPublicData> reservoirList;
 	private List<AquiferPublicData> aquiferList;
 	private List<DesalinationPlantPublicData> desalinationPlantList;
 	private double maxCapacity;
-	
+
 	// Esfuerzo : 4 minutos
+	// 6
 	public WatershedPublicData (WatershedInternalData newWatershed)
 	{
 		this.name = newWatershed.getName();
-		
+
 		maxCapacity += this.createReservoirs(newWatershed.getReservoirs());
 		maxCapacity += this.createPlants(newWatershed.getPlants());
 		this.createAquifers(newWatershed.getAquifers());
 	}
 
 	// Esfuerzo : 9 minutos
+	// 10
 	private double createReservoirs (ReservoirInternalData[] newReservoirs)
 	{
 		double reservoirsMaxCapacity = 0.0f;
@@ -35,8 +37,9 @@ public class WatershedPublicData {
 		}
 		return reservoirsMaxCapacity;
 	}
-	
+
 	// Esfuerzo : 7 minutos
+	// 10
 	private double createPlants (PlantInternalData[] newPlants)
 	{
 		double plantsMaxCapacity = 0.0f;
@@ -49,6 +52,7 @@ public class WatershedPublicData {
 	}
 
 	// Esfuerzo : 3 minutos
+	// 7
 	private void createAquifers (AquiferInternalData[] newAquifers)
 	{
 		for (int i=0; i<newAquifers.length;i++)
@@ -56,8 +60,9 @@ public class WatershedPublicData {
 			this.aquiferList.add(new AquiferPublicData (newAquifers[i].getName()));
 		}
 	}
-	
+
 	// Esfuerzo : 1 minuto
+	// 7
 	public WatershedPublicData ()
 	{
 		name = "";

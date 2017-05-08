@@ -7,7 +7,7 @@ public class DemandRequest {
 	private String requester;
 	private Date demandDate;
 	private double demandAmount;
-	
+
 	public String getParcel ()
 	{
 		return parcel;
@@ -17,18 +17,19 @@ public class DemandRequest {
 	{
 		return requester;
 	}
-	
+
 	public Date getDemandDate ()
 	{
 		return demandDate;
 	}
-	
+
 	public double getDemandAmount ()
 	{
 		return demandAmount;
 	}
-	
+
 	// Esfuerzo : 5 minutos
+	//10
 
 	public DemandRequest (String myParcel, String myRequester, Date myDate, double myAmount)
 	{
@@ -37,5 +38,5 @@ public class DemandRequest {
 		this.demandDate = myDate;
 		this.demandAmount = myAmount;
 	}
-	
+
 }

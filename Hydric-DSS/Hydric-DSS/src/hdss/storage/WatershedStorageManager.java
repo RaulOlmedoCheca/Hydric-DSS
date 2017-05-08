@@ -8,16 +8,17 @@ import hdss.input.data.ScenarioInputData;
 import hdss.input.data.WatershedInputData;
 
 public class WatershedStorageManager {
-	
+
 	// Esfurzo: 96 minutos
+	// 11
 	public WatershedInternalData[] InsertWatershed (WatershedInputData watershedInputData) throws HydricDSSException
 	{
 		WatershedInternalData[] myResult;
-		
+
 		WatershedDataStore myStore = new WatershedJSONDataStore ();
-		
+
 		myStore.loadDataStore();
-		
+
 		if (myStore.getWatershed (watershedInputData.getName()) == null)
 		{
 			myResult = (WatershedInternalData[]) myStore.InsertWatershed (watershedInputData);
@@ -28,7 +29,7 @@ public class WatershedStorageManager {
 		}
 		return myResult;
 	}
-	
+
 	public DemandInternalData InsertIrrigationDemand (IrrigationDemandInputData demandInputData) throws HydricDSSException
 	{
 		//TO DO
@@ -37,16 +38,17 @@ public class WatershedStorageManager {
 	}
 
 	// Esfurzo: 111 minutos
+	// 12
 	public WatershedInternalData UpgradeCurrentState (ScenarioInputData currentStateData) throws HydricDSSException
 	{
 		WatershedInternalData myResult = new WatershedInternalData();
-		
+
 		WatershedDataStore myStore = new WatershedJSONDataStore ();
-		
+
 		myStore.loadDataStore();
-		
+
 		myResult = (WatershedInternalData) myStore.getWatershed (currentStateData.getName());
-		
+
 		if ( myResult != null)
 		{
 			myResult.UpdateResources(currentStateData);

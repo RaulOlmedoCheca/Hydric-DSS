@@ -9,14 +9,15 @@ public class DemandInternalData {
 	{
 		return name;
 	}
-	
+
 	private DemandRequest[] demands;
 	public  DemandRequest[] getDemands ()
 	{
 		return demands;
 	}
-	
+
 	// Esfuerzo : 5 minutos
+	// 6
 	public DemandInternalData (IrrigationDemandInputData newDemand)
 	{
 		demands = new DemandRequest [10];

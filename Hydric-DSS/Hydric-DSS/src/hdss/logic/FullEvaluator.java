@@ -7,6 +7,7 @@ import hdss.exceptions.HydricDSSException;
 public class FullEvaluator {
 
 	// Esfuerzo : 25 minutos
+	// 29
 	public String Evaluate(Object obj) throws HydricDSSException {
 		WatershedInternalData currentStateData = (WatershedInternalData)obj;
 		HydricEvaluator myEvaluator;
@@ -16,7 +17,7 @@ public class FullEvaluator {
 		int numberNormality = 0;
 		String result = "";
 		
-		
+
 		myEvaluator = new ReservoirEvaluator ();
 		results[0] = myEvaluator.Evaluate(currentStateData.getReservoirs());
 
@@ -25,7 +26,7 @@ public class FullEvaluator {
 
 		myEvaluator = new PlantEvaluator ();
 		results[2] = myEvaluator.Evaluate(currentStateData.getAquifers());
-		
+
 		for (int i=0; i<results.length; i++)
 		{
 			if (results[i].equals("PLENTY"))
@@ -39,15 +40,16 @@ public class FullEvaluator {
 			else if (results[i].equals("SHORTAGE"))
 			{
 				numberShortage++;
-			}	
+			}
 		}
-		
+
 		result = determineResult(numberPlenty, numberShortage, numberNormality);
 
 		return result;
 	}
 
 	// Esfuerzo : 3 minutos
+	// 17
 	private String determineResult(int numberPlenty, int numberShortage,
 			int numberNormality) {
 		String result;

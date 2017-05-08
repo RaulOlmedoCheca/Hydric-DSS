@@ -4,8 +4,9 @@ public class DesalinationPlantPublicData implements WaterResourceTypePublicData 
 
 	private String myName;
 	private double maxCapacity;
-	
+
 	// Esfuerzo : 2 minutos
+	// 4
 	public DesalinationPlantPublicData (String name, double max)
 	{
 		myName = name;
@@ -19,5 +20,5 @@ public class DesalinationPlantPublicData implements WaterResourceTypePublicData 
 	public double getMaxCapacity() {
 		return maxCapacity;
 	}
-	
+
 }

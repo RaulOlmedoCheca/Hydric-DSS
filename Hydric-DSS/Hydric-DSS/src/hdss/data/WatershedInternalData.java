@@ -17,7 +17,7 @@ public class WatershedInternalData {
 	private ReservoirInternalData [] reservoirs;
 	private PlantInternalData [] plants;
 	private AquiferInternalData [] aquifers;
-	
+
 	public WatershedInternalData() {
 		// TODO Auto-generated constructor stub
 		this.name ="";
@@ -26,9 +26,10 @@ public class WatershedInternalData {
 		this.aquifers = null;
 	}
 	// Esfuerzo : 5 minutos
+	//8
 	public WatershedInternalData(Object objectToInsert) {
 		WatershedInputData newObject = (WatershedInputData)objectToInsert;
-		
+
 		this.name= newObject.getName();
 		this.createReservoirs(newObject.getReservoirsInputData());
 		this.createPlants(newObject.getPlantsInputData());
@@ -36,6 +37,7 @@ public class WatershedInternalData {
 	}
 
 	// Esfuerzo : 8 minutos
+	// 9
 	private void createReservoirs (ReservoirInputData[] newReservoirs)
 	{
 		this.reservoirs = new ReservoirInternalData[newReservoirs.length];
@@ -44,8 +46,9 @@ public class WatershedInternalData {
 			this.reservoirs[i] = new ReservoirInternalData (newReservoirs[i].getName(), newReservoirs[i].getMaxCapacity());
 		}
 	}
-	
+
 	// Esfuerzo : 6 minutos
+	// 9
 	private void createPlants (PlantInputData[] newPlants)
 	{
 		this.plants = new PlantInternalData[newPlants.length];
@@ -56,6 +59,7 @@ public class WatershedInternalData {
 	}
 
 	// Esfuerzo : 6 minutos
+	//9
 	private void createAquifers (AquiferInputData[] newAquifers)
 	{
 		this.aquifers = new AquiferInternalData[newAquifers.length];
@@ -64,11 +68,11 @@ public class WatershedInternalData {
 			this.aquifers[i] = new AquiferInternalData (newAquifers[i].getName());
 		}
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public ReservoirInternalData [] getReservoirs() {
 		return reservoirs;
 	}
@@ -82,14 +86,16 @@ public class WatershedInternalData {
 	}
 
 	// Esfuerzo : 5 minutos
+	//6
 	public void UpdateResources (ScenarioInputData currentState) throws HydricDSSException
 	{
 		this.UpdateReservoirs (currentState.getReservoirsCurrentData());
 		this.updatePlants (currentState.getPlantsCurrentData());
 		this.updateAquifers(currentState.getAquifersCurrentData());
 	}
-	
+
 	// Esfuerzo : 14 minutos
+	//8
 	private void UpdateReservoirs (ReservoirCurrentData[] reservoirsList) throws HydricDSSException
 	{
 		for (int i=0; i<reservoirsList.length; i++)
@@ -99,29 +105,32 @@ public class WatershedInternalData {
 	}
 
 	// Esfuerzo : 7 minutos
+	// 8
 	private void updatePlants (PlantCurrentData [] plantsList) throws HydricDSSException
 	{
 		for (int i=0; i<plantsList.length; i++)
 		{
 			this.plants[this.searchPlant (plantsList[i].getName())].setCurrentCapacity(plantsList[i].getCurrentCapacity());
-		}		
+		}
 	}
 
 	// Esfuerzo : 7 minutos
+	// 8
 	private void updateAquifers (AquiferCurrentData [] aquifersList) throws HydricDSSException
 	{
 		for (int i=0; i<aquifersList.length; i++)
 		{
 			this.aquifers[this.searchAquifer (aquifersList[i].getName())].setCurrentLevel(aquifersList[i].getCurrentLevel());
-		}			
+		}
 	}
-	
+
 	// Esfuerzo : 17 minutos
+	// 15
 	private int searchReservoir (String resourceName) throws HydricDSSException
 	{
-		Boolean found = false; 
+		Boolean found = false;
 		int index = 0;
-		
+
 		while ((found==false) && (index<this.getReservoirs().length))
 		{
 			if (resourceName.equals(this.getReservoirs()[index].getName()))
@@ -129,20 +138,21 @@ public class WatershedInternalData {
 				found = true;
 			}
 			index++;
-		}	
+		}
 		if (found == false)
 		{
 			throw (new HydricDSSException(resourceName + "is not a resource of" + this.getName()));
 		}
 		return index;
 	}
-	
+
 	// Esfuerzo : 6 minutos
+	// 15
 	private int searchPlant (String resourceName) throws HydricDSSException
 	{
-		Boolean found = false; 
+		Boolean found = false;
 		int index = 0;
-		
+
 		while ((found==false) && (index<this.plants.length))
 		{
 			if (resourceName.equals(this.plants[index].getName()))
@@ -150,20 +160,21 @@ public class WatershedInternalData {
 				found = true;
 			}
 			index++;
-		}	
+		}
 		if (found == false)
 		{
 			throw (new HydricDSSException(resourceName + "is not a resource of" + this.getName()));
 		}
 		return index;
 	}
-	
+
 	// Esfuerzo : 6 minutos
+	// 15
 	private int searchAquifer (String resourceName) throws HydricDSSException
 	{
-		Boolean found = false; 
+		Boolean found = false;
 		int index = 0;
-		
+
 		while ((found==false) && (index<this.aquifers.length))
 		{
 			if (resourceName.equals(this.aquifers[index].getName()))
@@ -171,7 +182,7 @@ public class WatershedInternalData {
 				found = true;
 			}
 			index++;
-		}	
+		}
 		if (found == false)
 		{
 			throw (new HydricDSSException(resourceName + "is not a resource of" + this.getName()));

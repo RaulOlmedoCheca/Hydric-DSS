@@ -8,8 +8,9 @@ public class IrrigationDemandPublicData {
 
 	private String watershedName;
 	private List<DailyIrrigationSchedulePublicData> schedule;
-	
+
 	// Esfuerzo : 2 minutos
+	// 4
 	public IrrigationDemandPublicData (DemandInternalData dataStored)
 	{
 		watershedName = dataStored.getName();
@@ -22,5 +23,5 @@ public class IrrigationDemandPublicData {
 
 	public List<DailyIrrigationSchedulePublicData> getSchedule() {
 		return schedule;
-	}	
+	}
 }

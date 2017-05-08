@@ -8,31 +8,32 @@ public class PlantInternalData {
 	{
 		return name;
 	}
-	
+
 	public void setName (String value)
 	{
 		this.name = value;
 	}
-	
+
 	public void setMaxCapacity (double value)
 	{
 		this.maxCapacity = value;
 	}
-	
+
 	public double getCurrentCapacity() {
 		return currentCapacity;
 	}
-	
+
 	public double getMaxCapacity() {
 		return maxCapacity;
 	}
-	
+
 	public void setCurrentCapacity (double value)
 	{
 		this.currentCapacity = value;
 	}
-	
+
 	// Esfuerzo : 5 minutos
+	//7
 
 	public PlantInternalData (String newName, double newMaxCapacity)
 	{

@@ -8,6 +8,7 @@ public class DailyIrrigationSchedulePublicData {
 	private List<HourlyIrrigationSchedulePublicData> schedule;
 
 	// Esfuerzo : 2 minutos
+	// 4
 	public DailyIrrigationSchedulePublicData (String day)
 	{
 		myDay = day;
@@ -21,5 +22,5 @@ public class DailyIrrigationSchedulePublicData {
 	public List<HourlyIrrigationSchedulePublicData> getSchedule() {
 		return schedule;
 	}
-	
+
 }
